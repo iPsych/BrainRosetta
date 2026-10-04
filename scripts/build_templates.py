@@ -8,7 +8,7 @@ from scipy import ndimage
 for image,mask,outname,meshname in [
     (RAW/'colin27.nii.gz',RAW/'colin27-mask.nii.gz','colin27.nii.gz','braincolin.bin.gz'),
     (RAW/'julich/ICBM2009asym.nii.gz',None,'mni2009.nii.gz','brain2009.bin.gz'),
-    (RAW/'mni152.nii.gz',None,'mni152.nii.gz','brain.bin.gz'),
+    (RAW/'fsl-mni152-brain.nii.gz',None,'mni152.nii.gz','brain.bin.gz'),
 ]:
     im=nib.load(image);a=np.asarray(im.dataobj).copy()
     if mask:

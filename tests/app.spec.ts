@@ -30,7 +30,7 @@ test('real atlas lookup, tree selection, transforms, export and atlas switching'
   for(const [axis,value] of [['X','-38'],['Y','-8'],['Z','50']])await page.getByLabel(`Coordinate ${axis}`).fill(value);
   await page.getByRole('button',{name:'Locate in brain'}).click();
   await expect(page.locator('.region-original')).toHaveText('Precentral_L');
-  await page.getByLabel('Allow approximate comparison between MNI templates').check();
+  await page.getByLabel('Use unchanged coordinates when no transform is available').check();
   await expect(page.locator('.comparison-list')).not.toHaveClass(/updating/);
   await expect(page.locator('.comparison-card').first()).not.toContainText('Different reference template');
   await page.getByRole('button',{name:'Export',exact:true}).click();
@@ -52,20 +52,20 @@ test('real atlas lookup, tree selection, transforms, export and atlas switching'
   await expect(page.locator('.workspace-toolbar')).toContainText('Julich-Brain 3.1');
   await expect(page.locator('.canvas-loading')).toHaveCount(0);
   await expect(page.locator('.canvas-error')).toHaveCount(0);
-  await expect(page.locator('.region-original')).toBeVisible();
-  await page.getByLabel('Allow approximate comparison between MNI templates').uncheck();
-  await expect(page.locator('.empty-point')).toContainText('Different reference template');
-  await expect(page.locator('.region-original')).toHaveCount(0);
+  await expect(page.locator('.space-notice')).toContainText('Coordinate transformed successfully');
+  await page.getByLabel('Use unchanged coordinates when no transform is available').uncheck();
+  await expect(page.locator('.space-notice')).toContainText('Coordinate transformed successfully');
+  const registered=await exportJson(page);expect(registered.results[0].mappingStatus).toBe('registered');
   expect(errors).toEqual([]);expect(external).toEqual([]);
 });
 
 test('share URL restores state and narrow layout stays within viewport',async({page})=>{
   await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
-  await page.getByLabel('Allow approximate comparison between MNI templates').check();
+  await page.getByLabel('Use unchanged coordinates when no transform is available').check();
   await page.getByRole('button',{name:'Share view'}).click();
   await expect(page).toHaveURL(/#view=/);
   await page.reload();await expect(page.locator('.region-original')).toHaveText('Precentral_L');
-  await expect(page.getByLabel('Allow approximate comparison between MNI templates')).toBeChecked();
+  await expect(page.getByLabel('Use unchanged coordinates when no transform is available')).toBeChecked();
   await page.setViewportSize({width:390,height:844});
   await expect(page.getByLabel('Search regions')).toBeVisible();
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
@@ -78,7 +78,7 @@ test('batch CSV is processed locally and downloaded',async({page})=>{
   const promise=page.waitForEvent('download');
   await page.locator('input[accept=".csv,.tsv,.txt"]').setInputFiles({name:'points.csv',mimeType:'text/csv',buffer:Buffer.from('x,y,z\n-38,-8,50\n999,999,999')});
   const d=await promise;expect(d.suggestedFilename()).toBe('BrainRosetta-batch.csv');
-  const csv=await readFile((await d.path())!,'utf8');expect(csv).toContain('Precentral_L');expect(csv).toContain('outside');expect(csv).toContain('Different reference template');
+  const csv=await readFile((await d.path())!,'utf8');expect(csv).toContain('Precentral_L');expect(csv).toContain('outside');expect(csv).toContain('registered');expect(csv).toContain('syn-colin-to-2009');
   await expect(page.getByRole('status')).toContainText('2 coordinates');
 });
 
@@ -98,4 +98,64 @@ test('slice and 3D clicks update the coordinate with their provenance',async({pa
   await page.getByRole('button',{name:'Export',exact:true}).click();
   const second=page.waitForEvent('download');await page.getByRole('button',{name:'Results & selected regions · JSON'}).click();
   const t=JSON.parse(await readFile((await (await second).path())!,'utf8'));expect(t.point.method).toContain('3D mesh point');
+});
+
+async function exportJson(page:import('@playwright/test').Page){
+  await page.getByRole('button',{name:'Export',exact:true}).click();
+  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'Results & selected regions · JSON'}).click();
+  const json=JSON.parse(await readFile((await (await pending).path())!,'utf8'));
+  await page.getByLabel('Close dialog').click();return json;
+}
+
+test('JHU white matter maps to HCP coordinates even when the cortical atlas has no label',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByLabel('Atlas family').selectOption('JHU');
+  await expect(page.locator('.workspace-toolbar')).toContainText('JHU white matter');
+  await page.getByLabel('Search regions').fill('Genu of corpus callosum');
+  await page.locator('[data-region="3"] .region-name').click();
+  await expect(page.locator('.region-detail')).toContainText('Genu of corpus callosum');
+  const source=await exportJson(page);
+  expect(source.point.mm).toEqual([0,26,8]);expect(source.results[0].status).toBe('label');
+  await page.getByLabel('Atlas family').selectOption('HCP-MMP / Glasser');
+  await expect(page.locator('.space-notice')).toContainText('Coordinate transformed successfully');
+  await expect(page.locator('.empty-point')).toContainText('this atlas has no label at the mapped point');
+  await expect(page.locator('.empty-point')).toContainText('HCP-MMP labels cortical regions');
+  const mapped=await exportJson(page),row=mapped.results[0];
+  expect(mapped.point).toEqual(source.point);expect(row.mappingStatus).toBe('registered');
+  expect(row.status).toBe('unlabeled');expect(row.transformIds).toBe('tf-6-to-2009');
+  expect([row.x,row.y,row.z]).not.toEqual(source.point.mm);
+  await expect(page.getByLabel('Coordinate X')).toHaveValue(row.x.toFixed(1));
+  await expect(page.locator('.canvas-error')).toHaveCount(0);
+  await page.screenshot({path:'/private/tmp/brainrosetta-jhu-hcp.png'});
+});
+
+test('automatic registration drives displayed coordinates, export provenance and drift-free switching',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByLabel('Atlas family').selectOption('Schaefer');
+  await expect(page.locator('.space-notice')).toContainText('Coordinate transformed successfully');
+  const result=await exportJson(page),row=result.results[0];
+  expect(result.point.mm).toEqual([-38,-8,50]);expect(result.point.space).toBe('MNIColin27');
+  expect(row.mappingStatus).toBe('registered');expect(row.transformIds).toBe('syn-colin-to-2009 → tf-2009-to-6');
+  expect(row.x).not.toBe(-38);expect(row.approximate).toBe(false);
+  await expect(page.getByLabel('Coordinate X')).toHaveValue(row.x.toFixed(1));
+  await expect(page.locator('.viewer-coordinate')).toContainText('MNI152NLin6Asym');
+  await page.getByLabel('Atlas family').selectOption('Julich-Brain');await expect(page.locator('.space-notice')).toContainText('Coordinate transformed successfully');
+  await page.getByLabel('Atlas family').selectOption('AAL3');
+  await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await expect(page.getByLabel('Coordinate X')).toHaveValue('-38.0');
+  await page.getByLabel('Atlas family').selectOption('Brainnetome');
+  await expect(page.locator('.empty-point')).toContainText('No verified transform');
+  const blocked=await exportJson(page);expect(blocked.results[0].mappingStatus).toBe('unsupported');expect(blocked.results[0].x).toBe('');
+  await page.getByLabel('Use unchanged coordinates when no transform is available').check();
+  const approximate=await exportJson(page);expect(approximate.results[0].mappingStatus).toBe('approximate');expect(approximate.results[0].x).toBe(-38);
+});
+
+test('known poor landmark neighborhoods cannot silently fall back to unchanged coordinates',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  for(const [axis,value] of [['X','27.4747875'],['Y','-63.9652125'],['Z','2.0995312825']])await page.getByLabel(`Coordinate ${axis}`).fill(value);
+  await page.getByRole('button',{name:'Locate in brain'}).click();
+  await page.getByLabel('Use unchanged coordinates when no transform is available').check();
+  await page.getByLabel('Atlas family').selectOption('Schaefer');
+  await expect(page.locator('.empty-point')).toContainText('excluded area');
+  const result=await exportJson(page);expect(result.results[0].status).toBe('outside-transform');expect(result.results[0].x).toBe('');
 });

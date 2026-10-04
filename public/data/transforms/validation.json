@@ -1,0 +1,763 @@
+{
+  "accepted": [
+    {
+      "id": "tf-2009-to-6",
+      "gridStepMm": 2,
+      "interpolation": {
+        "meanMm": 0.013030974899945423,
+        "p95Mm": 0.032206074930064374,
+        "maxMm": 0.12297733055376955
+      },
+      "landmarks": {
+        "count": 32,
+        "registered": {
+          "meanMm": 0.7738280222104682,
+          "p95Mm": 1.646304289307557,
+          "maxMm": 1.7117331627164023
+        },
+        "unchangedCoordinates": {
+          "meanMm": 1.2678127262934924,
+          "p95Mm": 2.260622922577233,
+          "maxMm": 2.8352185221885344
+        },
+        "perLandmark": [
+          {
+            "name": "AC",
+            "errorMm": 0.8389358116023028
+          },
+          {
+            "name": "PC",
+            "errorMm": 0.3753040829789695
+          },
+          {
+            "name": "infracollicular sulcus",
+            "errorMm": 0.37588882470747365
+          },
+          {
+            "name": "PMJ",
+            "errorMm": 0.43715366524321725
+          },
+          {
+            "name": "superior interpeduncular fossa",
+            "errorMm": 0.3820079046410245
+          },
+          {
+            "name": "R superior LMS",
+            "errorMm": 1.6135370306325654
+          },
+          {
+            "name": "L superior LMS",
+            "errorMm": 1.3561963651548652
+          },
+          {
+            "name": "R inferior LMS",
+            "errorMm": 0.5222271473919772
+          },
+          {
+            "name": "L inferior LMS",
+            "errorMm": 0.2786162005546594
+          },
+          {
+            "name": "culmen",
+            "errorMm": 0.26766997532705594
+          },
+          {
+            "name": "intermammillary sulcus",
+            "errorMm": 0.4344351558748137
+          },
+          {
+            "name": "R MB",
+            "errorMm": 0.5764999986864483
+          },
+          {
+            "name": "L MB",
+            "errorMm": 0.5889620362496651
+          },
+          {
+            "name": "pineal gland",
+            "errorMm": 0.16901731289534602
+          },
+          {
+            "name": "R LV at AC",
+            "errorMm": 0.963084851606094
+          },
+          {
+            "name": "L LV at AC",
+            "errorMm": 1.1286026803770992
+          },
+          {
+            "name": "R LV at PC",
+            "errorMm": 1.7117331627164023
+          },
+          {
+            "name": "L LV at PC",
+            "errorMm": 1.686353161021436
+          },
+          {
+            "name": "genu of CC",
+            "errorMm": 0.537550770655244
+          },
+          {
+            "name": "splenium of CC",
+            "errorMm": 0.12088755969191578
+          },
+          {
+            "name": "R AL temporal horn",
+            "errorMm": 1.237233616945434
+          },
+          {
+            "name": "L AL temporal horn",
+            "errorMm": 0.9633614377687061
+          },
+          {
+            "name": "R superior AM temporal horn",
+            "errorMm": 0.6676399355701553
+          },
+          {
+            "name": "L superior AM temporal horn",
+            "errorMm": 0.5156880765125998
+          },
+          {
+            "name": "R inferior AM temporal horn",
+            "errorMm": 0.5430935923277325
+          },
+          {
+            "name": "L inferior AM temporal horn",
+            "errorMm": 1.2523146561840455
+          },
+          {
+            "name": "R indusium griseum origin",
+            "errorMm": 0.928363431953624
+          },
+          {
+            "name": "L indusium griseum origin",
+            "errorMm": 1.019143271762651
+          },
+          {
+            "name": "R ventral occipital horn",
+            "errorMm": 0.8944855225619776
+          },
+          {
+            "name": "L ventral occipital horn",
+            "errorMm": 1.2721582877640705
+          },
+          {
+            "name": "R olfactory sulcal fundus",
+            "errorMm": 0.6465983729319195
+          },
+          {
+            "name": "L olfactory sulcal fundus",
+            "errorMm": 0.4577528104434921
+          }
+        ]
+      },
+      "nonpositiveJacobians": 0,
+      "jacobianMinimum": 0.52718173209375,
+      "sha256": "6dd1952d9fec1c4fd0fb55a8e1a2488f27a363256a532dd04af562dbfdef2c9f",
+      "qualityExclusions": [],
+      "retainedLandmarkErrors": {
+        "meanMm": 0.7738280222104682,
+        "p95Mm": 1.646304289307557,
+        "maxMm": 1.7117331627164023
+      },
+      "retainedLandmarkCount": 32,
+      "roundTrip": {
+        "meanMm": 0.009785215278654946,
+        "p95Mm": 0.025006495652872364,
+        "maxMm": 0.08956218887434529
+      },
+      "antsCliCheck": {
+        "count": 12,
+        "maxErrorMm": 5.396783286795834e-05,
+        "inverseResidualCheck": false
+      }
+    },
+    {
+      "id": "tf-6-to-2009",
+      "gridStepMm": 2,
+      "interpolation": {
+        "meanMm": 0.016939173988638104,
+        "p95Mm": 0.04151618919777989,
+        "maxMm": 0.1978411518278347
+      },
+      "landmarks": {
+        "count": 32,
+        "registered": {
+          "meanMm": 0.7836058903717513,
+          "p95Mm": 1.635644526732494,
+          "maxMm": 1.6862649133610959
+        },
+        "unchangedCoordinates": {
+          "meanMm": 1.2678127262934924,
+          "p95Mm": 2.260622922577233,
+          "maxMm": 2.8352185221885344
+        },
+        "perLandmark": [
+          {
+            "name": "AC",
+            "errorMm": 0.8771715248229823
+          },
+          {
+            "name": "PC",
+            "errorMm": 0.3823350337354349
+          },
+          {
+            "name": "infracollicular sulcus",
+            "errorMm": 0.3876692105217194
+          },
+          {
+            "name": "PMJ",
+            "errorMm": 0.44146720251446897
+          },
+          {
+            "name": "superior interpeduncular fossa",
+            "errorMm": 0.40351024931983087
+          },
+          {
+            "name": "R superior LMS",
+            "errorMm": 1.637399643882084
+          },
+          {
+            "name": "L superior LMS",
+            "errorMm": 1.3659238579526345
+          },
+          {
+            "name": "R inferior LMS",
+            "errorMm": 0.5378461167757066
+          },
+          {
+            "name": "L inferior LMS",
+            "errorMm": 0.28287428057019515
+          },
+          {
+            "name": "culmen",
+            "errorMm": 0.28815521887087375
+          },
+          {
+            "name": "intermammillary sulcus",
+            "errorMm": 0.45005291892334004
+          },
+          {
+            "name": "R MB",
+            "errorMm": 0.5973105025968508
+          },
+          {
+            "name": "L MB",
+            "errorMm": 0.6059768071410676
+          },
+          {
+            "name": "pineal gland",
+            "errorMm": 0.17853269158009083
+          },
+          {
+            "name": "R LV at AC",
+            "errorMm": 0.9801003939591781
+          },
+          {
+            "name": "L LV at AC",
+            "errorMm": 1.1214262604402325
+          },
+          {
+            "name": "R LV at PC",
+            "errorMm": 1.6862649133610959
+          },
+          {
+            "name": "L LV at PC",
+            "errorMm": 1.6342085217919202
+          },
+          {
+            "name": "genu of CC",
+            "errorMm": 0.5622485250107722
+          },
+          {
+            "name": "splenium of CC",
+            "errorMm": 0.12298947327826758
+          },
+          {
+            "name": "R AL temporal horn",
+            "errorMm": 1.2291832769938562
+          },
+          {
+            "name": "L AL temporal horn",
+            "errorMm": 0.9325807657643577
+          },
+          {
+            "name": "R superior AM temporal horn",
+            "errorMm": 0.6921419418868537
+          },
+          {
+            "name": "L superior AM temporal horn",
+            "errorMm": 0.5387280478341415
+          },
+          {
+            "name": "R inferior AM temporal horn",
+            "errorMm": 0.5353050623461075
+          },
+          {
+            "name": "L inferior AM temporal horn",
+            "errorMm": 1.2888803321191726
+          },
+          {
+            "name": "R indusium griseum origin",
+            "errorMm": 0.9417612902089745
+          },
+          {
+            "name": "L indusium griseum origin",
+            "errorMm": 1.0669826260898199
+          },
+          {
+            "name": "R ventral occipital horn",
+            "errorMm": 0.9108423357973335
+          },
+          {
+            "name": "L ventral occipital horn",
+            "errorMm": 1.2933625876306964
+          },
+          {
+            "name": "R olfactory sulcal fundus",
+            "errorMm": 0.6484379587729504
+          },
+          {
+            "name": "L olfactory sulcal fundus",
+            "errorMm": 0.4537189194030304
+          }
+        ]
+      },
+      "nonpositiveJacobians": 0,
+      "jacobianMinimum": 0.606501189703125,
+      "sha256": "3d3021776c47b33665c156ef7f45b6ee282276da9a1f378039ca0571777e9139",
+      "qualityExclusions": [],
+      "retainedLandmarkErrors": {
+        "meanMm": 0.7836058903717513,
+        "p95Mm": 1.635644526732494,
+        "maxMm": 1.6862649133610959
+      },
+      "retainedLandmarkCount": 32,
+      "roundTrip": {
+        "meanMm": 0.00917694415460907,
+        "p95Mm": 0.023182452799969472,
+        "maxMm": 0.08166230364076542
+      },
+      "antsCliCheck": {
+        "count": 12,
+        "maxErrorMm": 6.874631174417687e-05,
+        "inverseResidualCheck": true
+      }
+    },
+    {
+      "id": "syn-2009-to-colin",
+      "gridStepMm": 1,
+      "interpolation": {
+        "meanMm": 0.00027557476042785225,
+        "p95Mm": 0.0004703420076217666,
+        "maxMm": 0.0006926194638704234
+      },
+      "landmarks": {
+        "count": 32,
+        "registered": {
+          "meanMm": 2.6637480958427826,
+          "p95Mm": 8.203916035915467,
+          "maxMm": 18.590019902064448
+        },
+        "unchangedCoordinates": {
+          "meanMm": 4.050347294864976,
+          "p95Mm": 9.855800219943678,
+          "maxMm": 17.5294198779582
+        },
+        "perLandmark": [
+          {
+            "name": "AC",
+            "errorMm": 1.2160937324013035
+          },
+          {
+            "name": "PC",
+            "errorMm": 0.9888846649934772
+          },
+          {
+            "name": "infracollicular sulcus",
+            "errorMm": 1.8895878409973894
+          },
+          {
+            "name": "PMJ",
+            "errorMm": 1.5854840395616963
+          },
+          {
+            "name": "superior interpeduncular fossa",
+            "errorMm": 1.418361437590909
+          },
+          {
+            "name": "R superior LMS",
+            "errorMm": 1.1402625574834937
+          },
+          {
+            "name": "L superior LMS",
+            "errorMm": 1.5562958204639694
+          },
+          {
+            "name": "R inferior LMS",
+            "errorMm": 2.15903810505287
+          },
+          {
+            "name": "L inferior LMS",
+            "errorMm": 2.163594244140684
+          },
+          {
+            "name": "culmen",
+            "errorMm": 0.8271488888448285
+          },
+          {
+            "name": "intermammillary sulcus",
+            "errorMm": 1.3377906370971813
+          },
+          {
+            "name": "R MB",
+            "errorMm": 1.5232013339228576
+          },
+          {
+            "name": "L MB",
+            "errorMm": 1.5670843781769532
+          },
+          {
+            "name": "pineal gland",
+            "errorMm": 1.8667884252978513
+          },
+          {
+            "name": "R LV at AC",
+            "errorMm": 3.3188244904492157
+          },
+          {
+            "name": "L LV at AC",
+            "errorMm": 1.772483495841613
+          },
+          {
+            "name": "R LV at PC",
+            "errorMm": 2.4564958976941633
+          },
+          {
+            "name": "L LV at PC",
+            "errorMm": 1.7144317456956644
+          },
+          {
+            "name": "genu of CC",
+            "errorMm": 1.0730403797115453
+          },
+          {
+            "name": "splenium of CC",
+            "errorMm": 2.089673202495625
+          },
+          {
+            "name": "R AL temporal horn",
+            "errorMm": 1.8030359439719577
+          },
+          {
+            "name": "L AL temporal horn",
+            "errorMm": 1.4502015901071066
+          },
+          {
+            "name": "R superior AM temporal horn",
+            "errorMm": 0.5781387106333122
+          },
+          {
+            "name": "L superior AM temporal horn",
+            "errorMm": 1.3296230013850365
+          },
+          {
+            "name": "R inferior AM temporal horn",
+            "errorMm": 3.144514044515425
+          },
+          {
+            "name": "L inferior AM temporal horn",
+            "errorMm": 2.624928390418974
+          },
+          {
+            "name": "R indusium griseum origin",
+            "errorMm": 0.6698066429357528
+          },
+          {
+            "name": "L indusium griseum origin",
+            "errorMm": 1.2889358912239164
+          },
+          {
+            "name": "R ventral occipital horn",
+            "errorMm": 18.590019902064448
+          },
+          {
+            "name": "L ventral occipital horn",
+            "errorMm": 14.174583480374237
+          },
+          {
+            "name": "R olfactory sulcal fundus",
+            "errorMm": 2.8849499554202263
+          },
+          {
+            "name": "L olfactory sulcal fundus",
+            "errorMm": 3.0366361960053636
+          }
+        ]
+      },
+      "nonpositiveJacobians": 0,
+      "jacobianMinimum": 0.2754418475000001,
+      "sha256": "5db3f8910889989a71bb2a7bbe7e6c6c8226a04f4e2c322973115f7c5a36cfaa",
+      "qualityExclusions": [
+        {
+          "center": [
+            20.5600675675676,
+            -79.8774891891892,
+            4.60286108108108
+          ],
+          "radiusMm": 20.590019902064448,
+          "landmark": "R ventral occipital horn",
+          "errorMm": 18.590019902064448
+        },
+        {
+          "center": [
+            -18.9085052631579,
+            -82.82955,
+            3.54751710526316
+          ],
+          "radiusMm": 16.17458348037424,
+          "landmark": "L ventral occipital horn",
+          "errorMm": 14.174583480374237
+        }
+      ],
+      "retainedLandmarkErrors": {
+        "meanMm": 1.7491778561510118,
+        "p95Mm": 3.095969012685897,
+        "maxMm": 3.3188244904492157
+      },
+      "retainedLandmarkCount": 30,
+      "roundTrip": {
+        "meanMm": 0.013863270837827492,
+        "p95Mm": 0.03799980251642564,
+        "maxMm": 0.10347211967860563
+      },
+      "antsCliCheck": {
+        "count": 12,
+        "maxErrorMm": 7.262794525703669e-05,
+        "inverseResidualCheck": false
+      }
+    },
+    {
+      "id": "syn-colin-to-2009",
+      "gridStepMm": 1,
+      "interpolation": {
+        "meanMm": 0.010365732648500187,
+        "p95Mm": 0.02967327156270662,
+        "maxMm": 0.10193041092216398
+      },
+      "landmarks": {
+        "count": 32,
+        "registered": {
+          "meanMm": 2.5809832048245362,
+          "p95Mm": 7.73243180455511,
+          "maxMm": 18.27226768959818
+        },
+        "unchangedCoordinates": {
+          "meanMm": 4.050347294864976,
+          "p95Mm": 9.855800219943678,
+          "maxMm": 17.5294198779582
+        },
+        "perLandmark": [
+          {
+            "name": "AC",
+            "errorMm": 1.2894428320648612
+          },
+          {
+            "name": "PC",
+            "errorMm": 0.9374621512453395
+          },
+          {
+            "name": "infracollicular sulcus",
+            "errorMm": 1.8225854488631652
+          },
+          {
+            "name": "PMJ",
+            "errorMm": 1.548443099340967
+          },
+          {
+            "name": "superior interpeduncular fossa",
+            "errorMm": 1.47211133944758
+          },
+          {
+            "name": "R superior LMS",
+            "errorMm": 1.0644388120932209
+          },
+          {
+            "name": "L superior LMS",
+            "errorMm": 1.602789496019587
+          },
+          {
+            "name": "R inferior LMS",
+            "errorMm": 2.0258966689698137
+          },
+          {
+            "name": "L inferior LMS",
+            "errorMm": 2.036136860287913
+          },
+          {
+            "name": "culmen",
+            "errorMm": 0.7984265053781626
+          },
+          {
+            "name": "intermammillary sulcus",
+            "errorMm": 1.0547893091822649
+          },
+          {
+            "name": "R MB",
+            "errorMm": 1.2719267446383298
+          },
+          {
+            "name": "L MB",
+            "errorMm": 1.3514343423592132
+          },
+          {
+            "name": "pineal gland",
+            "errorMm": 1.6486128404087987
+          },
+          {
+            "name": "R LV at AC",
+            "errorMm": 3.253453020675794
+          },
+          {
+            "name": "L LV at AC",
+            "errorMm": 1.8222321536854778
+          },
+          {
+            "name": "R LV at PC",
+            "errorMm": 2.693529571731766
+          },
+          {
+            "name": "L LV at PC",
+            "errorMm": 1.8114626526763384
+          },
+          {
+            "name": "genu of CC",
+            "errorMm": 1.1846401148600296
+          },
+          {
+            "name": "splenium of CC",
+            "errorMm": 2.2557102881372106
+          },
+          {
+            "name": "R AL temporal horn",
+            "errorMm": 1.9805628554622758
+          },
+          {
+            "name": "L AL temporal horn",
+            "errorMm": 1.8265690965338468
+          },
+          {
+            "name": "R superior AM temporal horn",
+            "errorMm": 0.5591459858859276
+          },
+          {
+            "name": "L superior AM temporal horn",
+            "errorMm": 1.4701912480352812
+          },
+          {
+            "name": "R inferior AM temporal horn",
+            "errorMm": 2.2193379894694387
+          },
+          {
+            "name": "L inferior AM temporal horn",
+            "errorMm": 2.2782211519699245
+          },
+          {
+            "name": "R indusium griseum origin",
+            "errorMm": 0.624825302710216
+          },
+          {
+            "name": "L indusium griseum origin",
+            "errorMm": 1.173751509788498
+          },
+          {
+            "name": "R ventral occipital horn",
+            "errorMm": 18.27226768959818
+          },
+          {
+            "name": "L ventral occipital horn",
+            "errorMm": 13.206739207074289
+          },
+          {
+            "name": "R olfactory sulcal fundus",
+            "errorMm": 3.0359448890268466
+          },
+          {
+            "name": "L olfactory sulcal fundus",
+            "errorMm": 2.998381376764598
+          }
+        ]
+      },
+      "nonpositiveJacobians": 0,
+      "jacobianMinimum": 0.25238663349999985,
+      "sha256": "7ab08152570033dddfe2cf897a19892bde25df6d9af41f05bd3286579a8b2a1c",
+      "qualityExclusions": [
+        {
+          "center": [
+            27.4747875,
+            -63.9652125,
+            2.0995312825
+          ],
+          "radiusMm": 20.27226768959818,
+          "landmark": "R ventral occipital horn",
+          "errorMm": 18.27226768959818
+        },
+        {
+          "center": [
+            -23.890625,
+            -69.7058125,
+            2.33407990625
+          ],
+          "radiusMm": 15.206739207074289,
+          "landmark": "L ventral occipital horn",
+          "errorMm": 13.206739207074289
+        }
+      ],
+      "retainedLandmarkErrors": {
+        "meanMm": 1.7037485219237558,
+        "p95Mm": 3.0190413085088346,
+        "maxMm": 3.253453020675794
+      },
+      "retainedLandmarkCount": 30,
+      "roundTrip": {
+        "meanMm": 0.01268256214047349,
+        "p95Mm": 0.03529715648121689,
+        "maxMm": 0.12263210019253791
+      },
+      "antsCliCheck": {
+        "count": 12,
+        "maxErrorMm": 6.70383701144975e-05,
+        "inverseResidualCheck": false
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "file": "tf-2009-to-6-image.h5",
+      "reason": "Fails reciprocal point-map check; not used by BrainRosetta",
+      "roundTrip": {
+        "meanMm": 1.8942390108402067,
+        "p95Mm": 3.317540349200209,
+        "maxMm": 3.385058612002767
+      }
+    }
+  ],
+  "notes": "Landmark errors measure anatomical registration; interpolation and round-trip errors measure numerical implementation. Neither implies exact anatomical equivalence.",
+  "registrationProvenance": {
+    "engine": "ANTs Version: 2.2.0\nCompiled: Nov  9 2019 22:05:00",
+    "inputSha256": {
+      "colin27.nii.gz": "4906f888266b52869eb1746d3a17320a2ee118f0863d405558fd414c50614a00",
+      "2009-brain.nii.gz": "97cee2cf7f51388d76d7b3632c8375d688d0fa171e1bede81fcef23726bb3d73"
+    },
+    "compositeSha256": {
+      "colin-to-2009-Composite.h5": "90bff6f1cb2a6a7184750af969edbcc4d32129d05b30cae32dd030c386081b71",
+      "colin-to-2009-InverseComposite.h5": "f8a78ad664ba772cc6d9b2c0b2cf003d727bf873a1e5be29e1449d46e5b041cc"
+    }
+  },
+  "imageQuality": {
+    "normalizedCrossCorrelationBefore": 0.6029490679982146,
+    "normalizedCrossCorrelationAfter": 0.8459673119454217,
+    "note": "Intensity correlation is a global diagnostic; it does not establish local anatomical correspondence."
+  },
+  "scope": "Numerical and anatomical landmark QC; restricted Colin27 domain; not clinical validation."
+}

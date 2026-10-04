@@ -8,3 +8,5 @@
 
 /* Keep secondary scientific metadata readable on a white background. */
 .eyebrow{color:#647d79;font-size:9px}.approx-toggle{color:#60745c;font-size:10px}.coordinate-note,.small-muted{color:#6e806a}.region-detail dl>div{font-size:11px}.comparison-atlas,.comparison-main small{font-size:10px;color:#647c57}.region-detail dt{color:#6f8268}.slice-labels{color:#647d79}
+
+.space-notice.registered{background:#f1f7f6;color:#356a63}.space-notice.registered svg{color:#356a63}

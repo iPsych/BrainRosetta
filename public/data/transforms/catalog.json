@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "transforms": [
+    {
+      "id": "tf-2009-to-6",
+      "to": "MNI152NLin6Asym",
+      "dims": [
+        97,
+        115,
+        97
+      ],
+      "affine": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          -132.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          -78.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseAffine": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          48.0
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          66.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          39.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "file": "transforms/tf-2009-to-6.bin.gz",
+      "sha256": "6dd1952d9fec1c4fd0fb55a8e1a2488f27a363256a532dd04af562dbfdef2c9f",
+      "scale": 0.001,
+      "method": "TemplateFlow nonlinear registration",
+      "source": "https://github.com/templateflow/tpl-MNI152NLin2009cAsym/tree/15d7c02160f79f5218d2545b4febebeecc11531d",
+      "validation": {
+        "landmarkMeanMm": 0.7738280222104682,
+        "landmarkMaxMm": 1.7117331627164023,
+        "interpolationP95Mm": 0.032206074930064374,
+        "interpolationMaxMm": 0.12297733055376955
+      },
+      "from": "MNI152NLin2009cAsym",
+      "qualityExclusions": []
+    },
+    {
+      "id": "tf-6-to-2009",
+      "to": "MNI152NLin2009cAsym",
+      "dims": [
+        91,
+        109,
+        91
+      ],
+      "affine": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          -91.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          -126.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseAffine": [
+        [
+          0.5,
+          0.0,
+          0.0,
+          45.5
+        ],
+        [
+          0.0,
+          0.5,
+          0.0,
+          63.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.5,
+          36.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "file": "transforms/tf-6-to-2009.bin.gz",
+      "sha256": "3d3021776c47b33665c156ef7f45b6ee282276da9a1f378039ca0571777e9139",
+      "scale": 0.001,
+      "method": "Numerically verified inverse of TemplateFlow registration",
+      "source": "https://github.com/templateflow/tpl-MNI152NLin2009cAsym/tree/15d7c02160f79f5218d2545b4febebeecc11531d",
+      "validation": {
+        "landmarkMeanMm": 0.7836058903717513,
+        "landmarkMaxMm": 1.6862649133610959,
+        "interpolationP95Mm": 0.04151618919777989,
+        "interpolationMaxMm": 0.1978411518278347
+      },
+      "from": "MNI152NLin6Asym",
+      "qualityExclusions": []
+    },
+    {
+      "id": "syn-2009-to-colin",
+      "to": "MNIColin27",
+      "dims": [
+        193,
+        229,
+        193
+      ],
+      "affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -132.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -78.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseAffine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          96.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          132.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          78.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "file": "transforms/syn-2009-to-colin.bin.gz",
+      "sha256": "5db3f8910889989a71bb2a7bbe7e6c6c8226a04f4e2c322973115f7c5a36cfaa",
+      "scale": 0.001,
+      "method": "BrainRosetta ANTs SyN; independently checked with AFIDs",
+      "source": "https://github.com/ANTsX/ANTs",
+      "validation": {
+        "landmarkMeanMm": 2.6637480958427826,
+        "landmarkMaxMm": 18.590019902064448,
+        "interpolationP95Mm": 0.0004703420076217666,
+        "interpolationMaxMm": 0.0006926194638704234
+      },
+      "from": "MNI152NLin2009cAsym",
+      "qualityExclusions": [
+        {
+          "center": [
+            20.5600675675676,
+            -79.8774891891892,
+            4.60286108108108
+          ],
+          "radiusMm": 20.590019902064448,
+          "landmark": "R ventral occipital horn",
+          "errorMm": 18.590019902064448
+        },
+        {
+          "center": [
+            -18.9085052631579,
+            -82.82955,
+            3.54751710526316
+          ],
+          "radiusMm": 16.17458348037424,
+          "landmark": "L ventral occipital horn",
+          "errorMm": 14.174583480374237
+        }
+      ]
+    },
+    {
+      "id": "syn-colin-to-2009",
+      "to": "MNI152NLin2009cAsym",
+      "dims": [
+        181,
+        217,
+        181
+      ],
+      "affine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -90.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -126.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          -72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "inverseAffine": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          90.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          126.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          72.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "file": "transforms/syn-colin-to-2009.bin.gz",
+      "sha256": "7ab08152570033dddfe2cf897a19892bde25df6d9af41f05bd3286579a8b2a1c",
+      "scale": 0.001,
+      "method": "BrainRosetta ANTs SyN; independently checked with AFIDs",
+      "source": "https://github.com/ANTsX/ANTs",
+      "validation": {
+        "landmarkMeanMm": 2.5809832048245362,
+        "landmarkMaxMm": 18.27226768959818,
+        "interpolationP95Mm": 0.02967327156270662,
+        "interpolationMaxMm": 0.10193041092216398
+      },
+      "from": "MNIColin27",
+      "qualityExclusions": [
+        {
+          "center": [
+            27.4747875,
+            -63.9652125,
+            2.0995312825
+          ],
+          "radiusMm": 20.27226768959818,
+          "landmark": "R ventral occipital horn",
+          "errorMm": 18.27226768959818
+        },
+        {
+          "center": [
+            -23.890625,
+            -69.7058125,
+            2.33407990625
+          ],
+          "radiusMm": 15.206739207074289,
+          "landmark": "L ventral occipital horn",
+          "errorMm": 13.206739207074289
+        }
+      ]
+    }
+  ],
+  "unsupported": {
+    "MNI152-HCP40": "No verified transform for the Brainnetome HCP40 reference is packaged."
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "file": "tf-2009-to-6-image.h5",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_from-MNI152NLin2009cAsym_mode-image_xfm.h5",
+    "sha256": "2a19853bc99ebd1d711d230ea4a4dc4db3b9a60f8b50b9181f93b44036dfbd0f",
+    "bytes": 204735104
+  },
+  {
+    "file": "6-brain.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_desc-brain_T1w.nii.gz",
+    "sha256": "72f8edc99d7e696da7717db20b73897d8da5909d7f30b1c9a7e2a79e9f64ff2f",
+    "bytes": 3293998
+  },
+  {
+    "file": "6-mask.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_desc-brain_mask.nii.gz",
+    "sha256": "6d540075dac093fa5070a929dc5ea52795d54cc9ab57fe1272086dc70314b428",
+    "bytes": 149930
+  },
+  {
+    "file": "6-template-description.json",
+    "url": "https://raw.githubusercontent.com/templateflow/tpl-MNI152NLin6Asym/c906e8d808a34719e5024a4bde61f03a4e411ddd/template_description.json",
+    "sha256": "4ae55cb140b6f3c38f5e48d50931d599c3bec49750173d8e2a589104e15acb07",
+    "bytes": 1850
+  },
+  {
+    "file": "tf-6-to-2009-image.h5",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_from-MNI152NLin6Asym_mode-image_xfm.h5",
+    "sha256": "2e3869a07b96aec406e0419ca2e434afc54882d37cc212b933b139d1b63a4dfe",
+    "bytes": 204735104
+  },
+  {
+    "file": "2009-brain.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-brain_T1w.nii.gz",
+    "sha256": "97cee2cf7f51388d76d7b3632c8375d688d0fa171e1bede81fcef23726bb3d73",
+    "bytes": 3472309
+  },
+  {
+    "file": "2009-mask.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-brain_mask.nii.gz",
+    "sha256": "e40bb1816736504d4c25abc243c1c8503df1d308f64c048318aa4b829e09a7ae",
+    "bytes": 159538
+  },
+  {
+    "file": "2009-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/templateflow/tpl-MNI152NLin2009cAsym/15d7c02160f79f5218d2545b4febebeecc11531d/LICENSE",
+    "sha256": "46e280fe1a24c6f37feef2445ed288435e0ad063504a06030b206b12fdd2629d",
+    "bytes": 682
+  },
+  {
+    "file": "2009-template-description.json",
+    "url": "https://raw.githubusercontent.com/templateflow/tpl-MNI152NLin2009cAsym/15d7c02160f79f5218d2545b4febebeecc11531d/template_description.json",
+    "sha256": "6b1b199ecc5fce65967e820f9a6a73247103ed6aa47b9df904d85a0d0c817571",
+    "bytes": 1551
+  },
+  {
+    "file": "MNIColin27-afids.fcsv",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNIColin27/0665fbc5bd30c96a4810d9af1974a25b454bbcf2/tpl-MNIColin27_desc-groundtruth_afids.fcsv",
+    "sha256": "7e0b9df97d1e3e8a80d9fc8613e3042c67c88356a3ad4777f7fe554b9e6f2e09",
+    "bytes": 4198
+  },
+  {
+    "file": "MNIColin27-AFIDS-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNIColin27/0665fbc5bd30c96a4810d9af1974a25b454bbcf2/LICENSE",
+    "sha256": "3f9cccbb17f9adc793f933160b44e6a14849be4956fa237ea71d0145bdbf86b8",
+    "bytes": 700
+  },
+  {
+    "file": "MNI152NLin2009cAsym-afids.fcsv",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNI152NLin2009cAsym/a44e5a7f5227a6219416ef842f149c05961133ab/tpl-MNI152NLin2009cAsym_res-01_desc-groundtruth_afids.fcsv",
+    "sha256": "8290b044e4198acf732700473db113985784cc6f0205534d88a38422fb94d4c0",
+    "bytes": 4624
+  },
+  {
+    "file": "MNI152NLin2009cAsym-AFIDS-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNI152NLin2009cAsym/a44e5a7f5227a6219416ef842f149c05961133ab/LICENSE",
+    "sha256": "46e280fe1a24c6f37feef2445ed288435e0ad063504a06030b206b12fdd2629d",
+    "bytes": 682
+  },
+  {
+    "file": "MNI152NLin6Asym-afids.fcsv",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNI152NLin6Asym/3fe7da44a7ce069a08ec4066723ef7e6b816583c/tpl-MNI152NLin6Asym_res-01_desc-groundtruth_afids.fcsv",
+    "sha256": "03ff4f63a1cd123a67e4a270e6ffda8651409a268022b9d0085bee53d72bb94c",
+    "bytes": 4127
+  },
+  {
+    "file": "MNI152NLin6Asym-AFIDS-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/afids/tpl-MNI152NLin6Asym/3fe7da44a7ce069a08ec4066723ef7e6b816583c/LICENSE",
+    "sha256": "5ac31999e4add5f60b1cf7e6ff2661501344465803c138e81db7a72167a2516a",
+    "bytes": 675
+  }
+]

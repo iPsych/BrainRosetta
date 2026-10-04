@@ -134,7 +134,7 @@ def main(only):
     rm={int(r['label_id']):dict(abbreviation=r['abbreviation'],hemisphere={'Midline':'M'}.get(r['hemisphere'],r['hemisphere'])) for r in rows}
     build('aal3-1mm','AAL3','AAL3',aal,labels,'MNIColin27','https://www.gin.cnrs.fr/en/tools/aal/','Rolls et al. (2020), NeuroImage 206:116189. doi:10.1016/j.neuroimage.2019.116189','GPL; see source AAL3 user guide','166 regions · 1 mm',rm,notes='AAL3v1_1mm image from the April 2024 AAL3v2 distribution. All 166 voxel counts and centroids match the supplied CSV. Navigation groups are curated, not an official AAL hierarchy.')
     # Native template used as anatomical context for the MNI152NLin6Asym family.
-    mni=RAW/'mni152.nii.gz'
+    mni=RAW/'fsl-mni152-brain.nii.gz'
     if mni.exists():
         shutil.copyfile(mni,OUT/'mni152.nii.gz')
         im=nib.load(mni);data=np.asarray(im.dataobj);mask=ndimage.binary_fill_holes(data>np.percentile(data[data>0],22))

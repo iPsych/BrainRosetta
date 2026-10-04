@@ -666,12 +666,6 @@
     "bytes": 3740787
   },
   {
-    "file": "mni152.nii.gz",
-    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/mni152.nii.gz",
-    "sha256": "dbbd4542823c1e2b12265c9b7e3cf959ee02ff7829bbf05cdcfbecc0013a00fa",
-    "bytes": 4336029
-  },
-  {
     "file": "aal-original.tar.gz",
     "url": "https://www.gin.cnrs.fr/AAL_files/aal_for_SPM12.tar.gz",
     "sha256": "1a2817b2745ceae8e92f97a82b8a8390965d8b636dd890348de7c908da18975b",
@@ -1037,5 +1031,11 @@
     "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo_JNeurophysiol11_MNI152_README",
     "sha256": "839f1990d7c4b058565d7f9beeaf00fabef4bd49510da366586856f730848086",
     "bytes": 6122
+  },
+  {
+    "file": "fsl-mni152-brain.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_desc-brain_T1w.nii.gz",
+    "sha256": "72f8edc99d7e696da7717db20b73897d8da5909d7f30b1c9a7e2a79e9f64ff2f",
+    "bytes": 3293998
   }
 ]

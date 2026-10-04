@@ -41,7 +41,7 @@ for fn in ['atl-Anatom_space-MNI_dseg.nii','atl-Anatom.tsv']:
 add('suit/README.md',GITHUB+'DiedrichsenLab/cerebellar_atlases/master/README.md')
 add('destrieux.tgz','https://www.nitrc.org/frs/download.php/11942/destrieux2009.tgz')
 add('juelich-fsl.tgz','https://www.nitrc.org/frs/download.php/12096/Juelich.tgz')
-add('mni152.nii.gz',GITHUB+'niivue/niivue-demo-images/main/mni152.nii.gz')
+add('fsl-mni152-brain.nii.gz','https://templateflow.s3.amazonaws.com/tpl-MNI152NLin6Asym/tpl-MNI152NLin6Asym_res-01_desc-brain_T1w.nii.gz')
 add('aal-original.tar.gz','https://www.gin.cnrs.fr/AAL_files/aal_for_SPM12.tar.gz')
 add('aal3.tar.gz','https://www.gin.cnrs.fr/wp-content/uploads/AAL3v2_for_SPM12.tar.gz')
 add('colin27.nii.gz','https://templateflow.s3.amazonaws.com/tpl-MNIColin27/tpl-MNIColin27_T1w.nii.gz')

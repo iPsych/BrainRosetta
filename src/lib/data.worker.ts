@@ -2,9 +2,28 @@
 import { gunzipSync } from 'fflate';
 import { sample } from './coordinates';
 import type { Atlas, MeshData, Vec3 } from './types';
+import { mapPoints } from './transforms';
+import type { TransformCatalog, TransformField, TransformSpec } from './transforms';
 declare const self: DedicatedWorkerGlobalScope;
 const volumes=new Map<string,{data:Uint16Array,prob?:Uint16Array}>();
 const pending=new Map<string,Promise<{data:Uint16Array,prob?:Uint16Array}>>();
+let transformCatalog:Promise<TransformCatalog>|undefined;
+const fields=new Map<string,Promise<TransformField>>();
+function catalog(base:string){
+  if(!transformCatalog)transformCatalog=fetch(base+'transforms/catalog.json').then(r=>{if(!r.ok)throw new Error('Transform catalogue could not be loaded.');return r.json();}).catch(e=>{transformCatalog=undefined;throw e;});
+  return transformCatalog;
+}
+function field(spec:TransformSpec,base:string):Promise<TransformField>{
+  if(!fields.has(spec.id))fields.set(spec.id,(async()=>{
+    const b=await bytes(base+spec.file+'?v='+spec.sha256),n=spec.dims.reduce((a,b)=>a*b,1);
+    if(b.length!==n*7)throw new Error('Transform field size does not match its manifest.');
+    const hash=await crypto.subtle.digest('SHA-256',b.slice().buffer);
+    const hex=[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
+    if(hex!==spec.sha256)throw new Error('Transform checksum mismatch. Reload to fetch a consistent version.');
+    return {spec,displacements:new Int16Array(b.slice(0,n*6).buffer),valid:b.slice(n*6)};
+  })().catch(e=>{fields.delete(spec.id);throw e;}));
+  return fields.get(spec.id)!;
+}
 async function bytes(url:string){
   const r=await fetch(url);if(!r.ok)throw new Error(`Could not load atlas asset (${r.status}). Try again.`);
   const b=new Uint8Array(await r.arrayBuffer());
@@ -26,13 +45,20 @@ async function volume(atlas:Atlas,base:string){
   try{return await task;}finally{pending.delete(atlas.id);}
 }
 self.onmessage=async(event)=>{
-  const {requestId,type,atlas,base,points,url}=event.data;
+  const {requestId,type,atlas,base,points,url,sourceSpace,allowApproximate}=event.data;
   try{
     if(type==='query'){
+      const mappings=sourceSpace===atlas.space
+        ?(points as Vec3[]).map(input=>({sourceSpace,targetSpace:atlas.space,input,mm:input,status:'native' as const,transformIds:[],transformHashes:[]}))
+        :await mapPoints(await catalog(base),sourceSpace,atlas.space,points,!!allowApproximate,spec=>field(spec,base));
+      if(mappings.every(m=>!m.mm)){
+        self.postMessage({requestId,result:mappings.map(mapping=>({id:0,status:mapping.status==='outside-domain'?'outside-transform':'transform-unavailable',mapping}))});return;
+      }
       const {data,prob}=await volume(atlas,base);
-      const results=(points as Vec3[]).map(mm=>{
-        const r=sample(data,atlas.dims,atlas.inverseAffine,mm);
-        if(prob&&r.status!=='outside'){
+      const results=mappings.map(mapping=>{
+        if(!mapping.mm)return {id:0,status:mapping.status==='outside-domain'?'outside-transform':'transform-unavailable',mapping};
+        const r=sample(data,atlas.dims,atlas.inverseAffine,mapping.mm);r.mapping=mapping;
+        if(prob&&r.voxel&&r.status!=='outside'){
           const [x,y,z]=r.voxel, offset=((x*atlas.dims[1]+y)*atlas.dims[2]+z)*6;
           r.probabilities=[0,1,2].map(i=>({id:prob[offset+i*2],value:prob[offset+i*2+1]})).filter(p=>p.value>0);
         }

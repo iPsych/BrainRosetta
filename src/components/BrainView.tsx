@@ -5,7 +5,7 @@ import { RotateCcw, Camera, Maximize2 } from 'lucide-react';
 import { loadMeshes } from '../lib/data';
 import type { Atlas, MeshData, Vec3 } from '../lib/types';
 
-interface Props { atlas:Atlas; selected:Set<number>; focused:number|null; hemisphere:string; opacity:number; mode:'glass'|'solid'; clip:number; point:Vec3; onPick:(id:number,point:Vec3)=>void; onReady:()=>void }
+interface Props { atlas:Atlas; selected:Set<number>; focused:number|null; hemisphere:string; opacity:number; mode:'glass'|'solid'; clip:number; point:Vec3|null; onPick:(id:number,point:Vec3)=>void; onReady:()=>void }
 type SceneState={scene:THREE.Scene;camera:THREE.PerspectiveCamera;renderer:THREE.WebGLRenderer;controls:OrbitControls;meshes:THREE.Mesh<THREE.BufferGeometry,THREE.MeshStandardMaterial>[];shell:THREE.Mesh|null;marker:THREE.Group;render:()=>void};
 function geometry(m:MeshData){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(m.positions,3));g.setIndex(new THREE.BufferAttribute(m.indices,1));g.computeVertexNormals();return g;}
 function dispose(obj:THREE.Object3D){obj.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();const m=Array.isArray(o.material)?o.material:[o.material];m.forEach(x=>x.dispose());}});}
@@ -30,7 +30,7 @@ export default function BrainView(props:Props){
       if(p.hemisphere==='L')mat.clippingPlanes=[...planes,new THREE.Plane(new THREE.Vector3(-1,0,0),0)];
       if(p.hemisphere==='R')mat.clippingPlanes=[...planes,new THREE.Plane(new THREE.Vector3(1,0,0),0)];
     }
-    s.marker.position.set(...p.point);s.render();
+    s.marker.visible=!!p.point;if(p.point)s.marker.position.set(...p.point);s.render();
   };
   useEffect(()=>{
     if(!host.current)return;let s:SceneState;let frame=0;

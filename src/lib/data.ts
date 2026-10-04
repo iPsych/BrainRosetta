@@ -12,7 +12,7 @@ export function getAtlas(summary:AtlasSummary):Promise<Atlas>{
   if(!manifests.has(summary.id))manifests.set(summary.id,fetch(dataUrl(summary.manifest)).then(r=>{if(!r.ok)throw new Error('Atlas metadata could not be loaded.');return r.json();}).catch(e=>{manifests.delete(summary.id);throw e;}));
   return manifests.get(summary.id)!;
 }
-export const query=(atlas:Atlas,points:Vec3[])=>request<Lookup[]>({type:'query',atlas,points,base:dataUrl('')});
+export const query=(atlas:Atlas,points:Vec3[],sourceSpace=atlas.space,allowApproximate=false)=>request<Lookup[]>({type:'query',atlas,points,sourceSpace,allowApproximate,base:dataUrl('')});
 export const loadMeshes=(path:string)=>request<MeshData[]>({type:'meshes',url:dataUrl(path)});
 
 export function download(name:string,text:string,type='text/plain'){

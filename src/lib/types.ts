@@ -17,6 +17,6 @@ export interface Atlas extends Omit<AtlasSummary, 'manifest'> {
   sha256: string; probabilityNote?: string;
 }
 export interface Point { mm: Vec3; space: string; method: string }
-export interface Lookup { id: number; voxel: Vec3; status: 'label' | 'unlabeled' | 'outside'; probabilities?: { id: number; value: number }[] }
+export interface Lookup { id: number; voxel?: Vec3; status: 'label' | 'unlabeled' | 'outside' | 'transform-unavailable' | 'outside-transform'; mapping?: import('./transforms').Mapping; probabilities?: { id: number; value: number }[] }
 export interface MeshData { id: number; positions: Float32Array; indices: Uint32Array }
 export interface TreeNode { key: string; label: string; children: TreeNode[]; ids: number[]; region?: Region }
