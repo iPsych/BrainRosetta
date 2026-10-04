@@ -1,5 +1,6 @@
 import type { Point } from './types';
-export interface Session {atlas:string;point:Point;selected:number[];pins:string[];opacity:number;mode:'glass'|'solid';hemisphere:string;approx:boolean;clip:number}
+import type { ColorMode } from './colors';
+export interface Session {atlas:string;point:Point;selected:number[];pins:string[];opacity:number;mode:'glass'|'solid';hemisphere:string;approx:boolean;clip:number;colorMode:ColorMode;outlines:boolean}
 export function readSession():Partial<Session>{
   try{
     const params=new URLSearchParams(location.hash.slice(1));
@@ -13,6 +14,8 @@ export function readSession():Partial<Session>{
     if(typeof s.approx==='boolean')out.approx=s.approx;
     if(typeof s.clip==='number'&&s.clip>=0&&s.clip<=100)out.clip=s.clip;
     if(s.mode==='glass'||s.mode==='solid')out.mode=s.mode;
+    if(s.colorMode==='enhanced'||s.colorMode==='original')out.colorMode=s.colorMode;
+    if(typeof s.outlines==='boolean')out.outlines=s.outlines;
     if(['all','L','R','M'].includes(s.hemisphere))out.hemisphere=s.hemisphere;
     return out;
   }catch{return {};}

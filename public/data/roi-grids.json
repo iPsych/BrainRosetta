@@ -1,0 +1,113 @@
+[
+  {
+    "id": "MNI152NLin2009cAsym",
+    "space": "MNI152NLin2009cAsym",
+    "label": "TemplateFlow MNI2009c asymmetric nonlinear, 1 mm",
+    "dims": [
+      193,
+      229,
+      193
+    ],
+    "affine": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -96.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -132.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -78.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "referenceSha256": "97cee2cf7f51388d76d7b3632c8375d688d0fa171e1bede81fcef23726bb3d73"
+  },
+  {
+    "id": "MNI152NLin6Asym",
+    "space": "MNI152NLin6Asym",
+    "label": "TemplateFlow FSL MNI152 asymmetric nonlinear, 1 mm",
+    "dims": [
+      182,
+      218,
+      182
+    ],
+    "affine": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -91.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -126.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "referenceSha256": "72f8edc99d7e696da7717db20b73897d8da5909d7f30b1c9a7e2a79e9f64ff2f"
+  },
+  {
+    "id": "MNIColin27",
+    "space": "MNIColin27",
+    "label": "Colin27, 1 mm",
+    "dims": [
+      181,
+      217,
+      181
+    ],
+    "affine": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -90.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        -126.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -72.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "referenceSha256": "4906f888266b52869eb1746d3a17320a2ee118f0863d405558fd414c50614a00"
+  }
+]

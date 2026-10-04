@@ -3,7 +3,7 @@ export type Matrix = number[][];
 export type Hemisphere = 'L' | 'R' | 'M' | 'B';
 export interface Region {
   id: number; name: string; original: string; abbreviation?: string;
-  hemisphere: Hemisphere; path: string[]; color: string;
+  hemisphere: Hemisphere; path: string[]; color: string; enhancedColor?: string;
   centroid: Vec3; focus: Vec3; voxelCount: number; volume: number; sourceId?: number;
 }
 export interface AtlasSummary {
@@ -15,6 +15,7 @@ export interface Atlas extends Omit<AtlasSummary, 'manifest'> {
   labels: string; nifti: string; meshes: string; probabilities?: string;
   source: string; citation: string; license: string; notes: string; hierarchySource: string;
   sha256: string; probabilityNote?: string;
+  colorProvenance?: 'source-lut'|'generated-groups'; enhancedColorMethod?: string;
 }
 export interface Point { mm: Vec3; space: string; method: string }
 export interface Lookup { id: number; voxel?: Vec3; status: 'label' | 'unlabeled' | 'outside' | 'transform-unavailable' | 'outside-transform'; mapping?: import('./transforms').Mapping; probabilities?: { id: number; value: number }[] }

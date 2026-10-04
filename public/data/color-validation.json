@@ -1,0 +1,1508 @@
+{
+  "version": 1,
+  "metric": "CIEDE2000 on quantized sRGB; not a perception guarantee under lighting or color-vision deficiency",
+  "adjacency": "face-touching nonzero native labels; union across shared-mesh resolutions",
+  "atlases": {
+    "aal3-1mm": {
+      "edges": 603,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 557,
+        "below10": 603,
+        "identical": 557
+      },
+      "enhanced": {
+        "min": 39.48117624483874,
+        "median": 54.37729164873139,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "486953ac2d25841ded16ad2d0d302d824fc1468a0bd942f7c6b17cec041830be"
+    },
+    "schaefer-100-7Networks-2mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.09157334361236319,
+        "median": 32.00635054752446,
+        "below5": 126,
+        "below10": 126,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 16.470132756404915,
+        "median": 43.51308832601535,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "bbfdf936ef621e06a54ec42f9587157c013ee84414e0b36279e75f173ccb7b66"
+    },
+    "schaefer-100-7Networks-1mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.09157334361236319,
+        "median": 32.00635054752446,
+        "below5": 126,
+        "below10": 126,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 16.470132756404915,
+        "median": 43.51308832601535,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "1c94de0f0342b69d279dc596ecfeedc26c7ef168d9aa6287fcd29a0fc4b2388e"
+    },
+    "schaefer-100-17Networks-2mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.09521006562951084,
+        "median": 43.81194120679529,
+        "below5": 63,
+        "below10": 65,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 15.695517409842806,
+        "median": 45.027523216073696,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "c412d5c90e973f9612499abd764b80d1e63e8a6c3e8151d62e38f9f9ab60ce01"
+    },
+    "schaefer-100-17Networks-1mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.09521006562951084,
+        "median": 43.81194120679529,
+        "below5": 63,
+        "below10": 65,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 15.695517409842806,
+        "median": 45.027523216073696,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "7649351211cd06dba2bfaee1245aa1b8c2a37a347bb9e64e3c7c759bf0f77fe3"
+    },
+    "schaefer-100-Kong2022_17Networks-2mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.0,
+        "median": 44.76125004902533,
+        "below5": 50,
+        "below10": 52,
+        "identical": 5
+      },
+      "enhanced": {
+        "min": 13.652140906587194,
+        "median": 47.165707117335835,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "b3a8603d89669e5beba4098a875ee94028d8503a88b2dfb2f8220f9473ebbbac"
+    },
+    "schaefer-100-Kong2022_17Networks-1mm": {
+      "edges": 361,
+      "original": {
+        "min": 0.0,
+        "median": 44.76125004902533,
+        "below5": 50,
+        "below10": 52,
+        "identical": 5
+      },
+      "enhanced": {
+        "min": 13.652140906587194,
+        "median": 47.165707117335835,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "205d4bd69a3a0ef2fcc46109a9049b50b59513c2b5445075e0f97f2c49575fa2"
+    },
+    "schaefer-200-7Networks-2mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.07673098288612493,
+        "median": 31.352481300750192,
+        "below5": 334,
+        "below10": 334,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.795759547180593,
+        "median": 39.79650810220318,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "4a6de7092ee7bca0a904559a783f095664a5c63e8051b1f29e6f0d7a26afdbc9"
+    },
+    "schaefer-200-7Networks-1mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.07673098288612493,
+        "median": 31.352481300750192,
+        "below5": 334,
+        "below10": 334,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.795759547180593,
+        "median": 39.79650810220318,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "57456ceee3e07e288cbebfaf9fa43e71c9bf7748f2374f0f93ca51e39af8938c"
+    },
+    "schaefer-200-17Networks-2mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.013312695683499149,
+        "median": 39.445612358853325,
+        "below5": 228,
+        "below10": 229,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.573564586678952,
+        "median": 43.72092524930071,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "02b41f91f09873b2b9191e4ce6a5468f18a2fa30c7c0019a83ae7a46619dd43e"
+    },
+    "schaefer-200-17Networks-1mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.013312695683499149,
+        "median": 39.445612358853325,
+        "below5": 228,
+        "below10": 229,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.573564586678952,
+        "median": 43.72092524930071,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "2387ced9ab035b0052db5e5afaa426b6c939e1b781a313e3ea91814c1bbf927a"
+    },
+    "schaefer-200-Kong2022_17Networks-2mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.0,
+        "median": 40.747695472058375,
+        "below5": 146,
+        "below10": 147,
+        "identical": 10
+      },
+      "enhanced": {
+        "min": 15.300914836118894,
+        "median": 45.599700763700106,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "172fcccbf005ab8f9ee22c831f0801efacbb2041d479e9cb164ebc71cfe7c73b"
+    },
+    "schaefer-200-Kong2022_17Networks-1mm": {
+      "edges": 784,
+      "original": {
+        "min": 0.0,
+        "median": 40.747695472058375,
+        "below5": 146,
+        "below10": 147,
+        "identical": 10
+      },
+      "enhanced": {
+        "min": 15.300914836118894,
+        "median": 45.599700763700106,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "ee23d6bd081ea71a116406692ae25974a91290eed60c6670b16fd58a15efed33"
+    },
+    "schaefer-300-7Networks-2mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 2.1429535789406877,
+        "below5": 624,
+        "below10": 624,
+        "identical": 6
+      },
+      "enhanced": {
+        "min": 12.85632724157756,
+        "median": 34.2338569839676,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "32e8c297823fa88d3fd39951c2d0201ed0e5d70da06e2e1d1b7fc0c3188a64eb"
+    },
+    "schaefer-300-7Networks-1mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 2.1429535789406877,
+        "below5": 624,
+        "below10": 624,
+        "identical": 6
+      },
+      "enhanced": {
+        "min": 12.85632724157756,
+        "median": 34.2338569839676,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "b328a86a5473b7a0a4b3f6873e7f54ff6a780cca006a2bdd33fc91a666319986"
+    },
+    "schaefer-300-17Networks-2mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 34.1133089067182,
+        "below5": 426,
+        "below10": 426,
+        "identical": 1
+      },
+      "enhanced": {
+        "min": 12.40642527260584,
+        "median": 40.598918453367865,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "48ef7dae74dc7adea7cbdec43d5ea01374cb95a44aecdecb415c113953902bd6"
+    },
+    "schaefer-300-17Networks-1mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 34.1133089067182,
+        "below5": 426,
+        "below10": 426,
+        "identical": 1
+      },
+      "enhanced": {
+        "min": 12.40642527260584,
+        "median": 40.598918453367865,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "2c8accefaaababcdc2e899a8ea336cc1382ea105772915cf88c35cb2d9bc1d43"
+    },
+    "schaefer-300-Kong2022_17Networks-2mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 39.61543447303742,
+        "below5": 282,
+        "below10": 282,
+        "identical": 11
+      },
+      "enhanced": {
+        "min": 12.556045876928938,
+        "median": 44.79968479327971,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "97cb487e1aab8f37f4704927b24022c83205670e2c89d902e5394d382dd87a7d"
+    },
+    "schaefer-300-Kong2022_17Networks-1mm": {
+      "edges": 1221,
+      "original": {
+        "min": 0.0,
+        "median": 39.61543447303742,
+        "below5": 282,
+        "below10": 282,
+        "identical": 11
+      },
+      "enhanced": {
+        "min": 12.556045876928938,
+        "median": 44.79968479327971,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "21f1e386195b380989ae71c04310fe86550116cfd8fce8efc199e87bdc311894"
+    },
+    "schaefer-400-7Networks-2mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.0708282543190866,
+        "median": 1.6820123466795283,
+        "below5": 878,
+        "below10": 878,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.612810729198976,
+        "median": 34.5164149213418,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "1cf1e6cffe786f57e92eac43c18a7b32cb6223a0ed71c54eeba383af2a356b64"
+    },
+    "schaefer-400-7Networks-1mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.0708282543190866,
+        "median": 1.6820123466795283,
+        "below5": 878,
+        "below10": 878,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.612810729198976,
+        "median": 34.5164149213418,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "ad43fb3da49e5c95dce4c28847722518ca7b312e136b3a0f755baa5de6d39807"
+    },
+    "schaefer-400-17Networks-2mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.013249585652842103,
+        "median": 31.603622549994412,
+        "below5": 656,
+        "below10": 656,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.97453862754296,
+        "median": 39.85870194113321,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "c65fbad6fade9bc85094f881f065d14a65875728a9050b3d84145af8a96e2b61"
+    },
+    "schaefer-400-17Networks-1mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.013249585652842103,
+        "median": 31.603622549994412,
+        "below5": 656,
+        "below10": 656,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.97453862754296,
+        "median": 39.85870194113321,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "e107f475e424d66c26fa6d591e26ef00ea05a61dcad7448ad1483e04fa6a2156"
+    },
+    "schaefer-400-Kong2022_17Networks-2mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.0,
+        "median": 37.94542457439907,
+        "below5": 407,
+        "below10": 409,
+        "identical": 11
+      },
+      "enhanced": {
+        "min": 12.562662060989604,
+        "median": 43.70511287167801,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "cbf8bbc843598790f519b94aab0757bfd516d7cca9ce2b1358b7acfe5e987c89"
+    },
+    "schaefer-400-Kong2022_17Networks-1mm": {
+      "edges": 1644,
+      "original": {
+        "min": 0.0,
+        "median": 37.94542457439907,
+        "below5": 407,
+        "below10": 409,
+        "identical": 11
+      },
+      "enhanced": {
+        "min": 12.562662060989604,
+        "median": 43.70511287167801,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "769ebfe282d80fb292bf7e0ad0b9448e6af3af9ca29f35bc612f945ed059ac8a"
+    },
+    "schaefer-500-7Networks-2mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 1.3752919095855067,
+        "below5": 1227,
+        "below10": 1227,
+        "identical": 3
+      },
+      "enhanced": {
+        "min": 11.986347307076297,
+        "median": 33.05019435477885,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "5475ecf34b2ab1ac88ed754a02b2cd2a9e4693e3ce8aab30485a0f423e0eea49"
+    },
+    "schaefer-500-7Networks-1mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 1.3752919095855067,
+        "below5": 1227,
+        "below10": 1227,
+        "identical": 3
+      },
+      "enhanced": {
+        "min": 11.986347307076297,
+        "median": 33.05019435477885,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "afc0a617b1d4f4390d84220811a1794d08f3b4ce3a724c59456805dfb1610d70"
+    },
+    "schaefer-500-17Networks-2mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 29.265567875247747,
+        "below5": 936,
+        "below10": 939,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.817155584916115,
+        "median": 37.78349644616323,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "53982fcae98c6e36b78942c359195512fa78b5f002030d99b46afb0fd8055011"
+    },
+    "schaefer-500-17Networks-1mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 29.265567875247747,
+        "below5": 936,
+        "below10": 939,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.817155584916115,
+        "median": 37.78349644616323,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "015130d325098137965288fea4d585ed9fc18de8d60b3f314852607b9766c530"
+    },
+    "schaefer-500-Kong2022_17Networks-2mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 37.169429770718565,
+        "below5": 653,
+        "below10": 655,
+        "identical": 12
+      },
+      "enhanced": {
+        "min": 12.266131078117706,
+        "median": 42.552320480121026,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "7096c2e43765eebc7f01475d33ad7c7bcfa865fc3be24b5fcc873bc793815089"
+    },
+    "schaefer-500-Kong2022_17Networks-1mm": {
+      "edges": 2182,
+      "original": {
+        "min": 0.0,
+        "median": 37.169429770718565,
+        "below5": 653,
+        "below10": 655,
+        "identical": 12
+      },
+      "enhanced": {
+        "min": 12.266131078117706,
+        "median": 42.552320480121026,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "a0b33f436fbeb79c36dd5974bdcd94ecccdabe9b6ab056744426af8afafb6795"
+    },
+    "schaefer-600-7Networks-2mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.0708282543190866,
+        "median": 1.3595069672871372,
+        "below5": 1512,
+        "below10": 1512,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.188501236475712,
+        "median": 32.67658684005063,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "de15c92dd9d7a82d747ff279f1927630dbcf49de133cd015b69e5be883470339"
+    },
+    "schaefer-600-7Networks-1mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.0708282543190866,
+        "median": 1.3595069672871372,
+        "below5": 1512,
+        "below10": 1512,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 12.188501236475712,
+        "median": 32.67658684005063,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "6d53720388e4a380c637d6202c852ed66634df68bed1a20fd29703d6dd50ee13"
+    },
+    "schaefer-600-17Networks-2mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.01322648597381937,
+        "median": 22.75254015491236,
+        "below5": 1208,
+        "below10": 1210,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.712472507182998,
+        "median": 35.69521950446757,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "e1fdd19196a4879cab9d479b3b6c3245cd68db21cb41c548a40c2ee77a31ef42"
+    },
+    "schaefer-600-17Networks-1mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.01322648597381937,
+        "median": 22.75254015491236,
+        "below5": 1208,
+        "below10": 1210,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.712472507182998,
+        "median": 35.69521950446757,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "51ba63110b9d5d06abab725800da40099579b04e76332fc6db04dc34daa5e675"
+    },
+    "schaefer-600-Kong2022_17Networks-2mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.0,
+        "median": 32.879625330343046,
+        "below5": 856,
+        "below10": 859,
+        "identical": 13
+      },
+      "enhanced": {
+        "min": 12.408227392197247,
+        "median": 40.48297826418643,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "fa559b2f0116541522fdfcd77386f82755b26e4de3488f3c2b116f07ee0e99b3"
+    },
+    "schaefer-600-Kong2022_17Networks-1mm": {
+      "edges": 2612,
+      "original": {
+        "min": 0.0,
+        "median": 32.879625330343046,
+        "below5": 856,
+        "below10": 859,
+        "identical": 13
+      },
+      "enhanced": {
+        "min": 12.408227392197247,
+        "median": 40.48297826418643,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "5c38fcabbd018bbdc8b85b41ee38fa0d38af85441e55b8c8c8157c0863c94b43"
+    },
+    "schaefer-700-7Networks-2mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 1.2105739795610906,
+        "below5": 1892,
+        "below10": 1892,
+        "identical": 6
+      },
+      "enhanced": {
+        "min": 11.419562149110732,
+        "median": 32.099290089302244,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "0f8eec14bc72507d1ea519dba7228f139e450a1da33849b428bc510262183c32"
+    },
+    "schaefer-700-7Networks-1mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 1.2105739795610906,
+        "below5": 1892,
+        "below10": 1892,
+        "identical": 6
+      },
+      "enhanced": {
+        "min": 11.419562149110732,
+        "median": 32.099290089302244,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "7d224455a87b6568bf9aec4f207121d88bdfb016a533ca3e28a2811a9407dc00"
+    },
+    "schaefer-700-17Networks-2mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 16.900446616262407,
+        "below5": 1503,
+        "below10": 1506,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.373867635506782,
+        "median": 35.96093592703942,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "d859b9eb9216908b6c5d7afba268bc9d9c49589ae29c29096ae451384ff777d9"
+    },
+    "schaefer-700-17Networks-1mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 16.900446616262407,
+        "below5": 1503,
+        "below10": 1506,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.373867635506782,
+        "median": 35.96093592703942,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "0a519dcc19dfd1f2af1dd749ee6f6f5eef9fd9d96648e6ad9eaadc8c18cbc191"
+    },
+    "schaefer-700-Kong2022_17Networks-2mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 32.514094855820204,
+        "below5": 1115,
+        "below10": 1119,
+        "identical": 9
+      },
+      "enhanced": {
+        "min": 11.772142326493551,
+        "median": 39.08583254139245,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "63c279b4398a39b6c4f52263f2a1c672f1334a9bc7647e8f4b82f110b7a08184"
+    },
+    "schaefer-700-Kong2022_17Networks-1mm": {
+      "edges": 3152,
+      "original": {
+        "min": 0.0,
+        "median": 32.514094855820204,
+        "below5": 1115,
+        "below10": 1119,
+        "identical": 9
+      },
+      "enhanced": {
+        "min": 11.772142326493551,
+        "median": 39.08583254139245,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "ded478291ad3ecac84c8404019a7c1fa75785175b3e1b282789a5ffa584360fc"
+    },
+    "schaefer-800-7Networks-2mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.07040791858649859,
+        "median": 1.1903839980981235,
+        "below5": 2287,
+        "below10": 2287,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.016213379656104,
+        "median": 30.91912380046593,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "c20f510009dc5bf4a4186260044876498004e8c32829b05c4a2711e5d734b334"
+    },
+    "schaefer-800-7Networks-1mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.07040791858649859,
+        "median": 1.1903839980981235,
+        "below5": 2287,
+        "below10": 2287,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.016213379656104,
+        "median": 30.91912380046593,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "24931cb547268aacbda8ccbd94f01b45dc657df8d1857cb18111f4118ee89216"
+    },
+    "schaefer-800-17Networks-2mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.0,
+        "median": 2.509308724980368,
+        "below5": 1857,
+        "below10": 1863,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 11.333149182358685,
+        "median": 34.26717262034699,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "00c9f2773972d07bad14de87911e47a2ddf1030f570d0623728d1e974828a2ea"
+    },
+    "schaefer-800-17Networks-1mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.0,
+        "median": 2.509308724980368,
+        "below5": 1857,
+        "below10": 1863,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 11.333149182358685,
+        "median": 34.26717262034699,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "41d2dcc5ea0f5b29a53299f615c98e0c4093b5d0a213bdcd4d6bcf41a3e5caac"
+    },
+    "schaefer-800-Kong2022_17Networks-2mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.0,
+        "median": 31.348952991507574,
+        "below5": 1404,
+        "below10": 1407,
+        "identical": 12
+      },
+      "enhanced": {
+        "min": 11.238896517246026,
+        "median": 38.104319191828914,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "e2bc83a65cd3d2c6520255192ceeb6a2e5a43fa434bdc36c65676c925a06566c"
+    },
+    "schaefer-800-Kong2022_17Networks-1mm": {
+      "edges": 3699,
+      "original": {
+        "min": 0.0,
+        "median": 31.348952991507574,
+        "below5": 1404,
+        "below10": 1407,
+        "identical": 12
+      },
+      "enhanced": {
+        "min": 11.238896517246026,
+        "median": 38.104319191828914,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "5f05a02cd6f3cdb12ed64e9d106242e7279d3a9cf364d83fcf8f1e06b33a7604"
+    },
+    "schaefer-900-7Networks-2mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 1.224963019754935,
+        "below5": 2624,
+        "below10": 2624,
+        "identical": 5
+      },
+      "enhanced": {
+        "min": 11.859133882908054,
+        "median": 30.98515225225972,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "0989e8b96cd90a3a927d72e6eac4cb0d3fd4826936583a4145f8092e9517a611"
+    },
+    "schaefer-900-7Networks-1mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 1.224963019754935,
+        "below5": 2624,
+        "below10": 2624,
+        "identical": 5
+      },
+      "enhanced": {
+        "min": 11.859133882908054,
+        "median": 30.98515225225972,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "3fee0c7e6fe117ce06ce7d6ac8ede95c15dd0430b091b5acecea17409c97472d"
+    },
+    "schaefer-900-17Networks-2mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 14.696882600272724,
+        "below5": 2092,
+        "below10": 2096,
+        "identical": 3
+      },
+      "enhanced": {
+        "min": 10.240927287785746,
+        "median": 34.18621325774354,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "f3ee6c81280af89956895191aae687ce8467d0d9ec9183b7c17c79dd9d1df283"
+    },
+    "schaefer-900-17Networks-1mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 14.696882600272724,
+        "below5": 2092,
+        "below10": 2096,
+        "identical": 3
+      },
+      "enhanced": {
+        "min": 10.240927287785746,
+        "median": 34.18621325774354,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "1f6b3acba376530398e0e6191300d4f7e7cd3e8eb022a4f3b970be1416808adc"
+    },
+    "schaefer-900-Kong2022_17Networks-2mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 31.005460028985276,
+        "below5": 1609,
+        "below10": 1613,
+        "identical": 18
+      },
+      "enhanced": {
+        "min": 11.772142326493551,
+        "median": 37.427132495589774,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "6b4175f83eae94f733b234b0a9c2997f83bab79cb83d4b13ebcfb8c8b8dfddc1"
+    },
+    "schaefer-900-Kong2022_17Networks-1mm": {
+      "edges": 4211,
+      "original": {
+        "min": 0.0,
+        "median": 31.005460028985276,
+        "below5": 1609,
+        "below10": 1613,
+        "identical": 18
+      },
+      "enhanced": {
+        "min": 11.772142326493551,
+        "median": 37.427132495589774,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "14d11dbf0c58ba421c0fd6765527f1a16a5960766142c73f0d05272187fa6e7a"
+    },
+    "schaefer-1000-7Networks-2mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.07146599995078988,
+        "median": 1.1668137839737698,
+        "below5": 3040,
+        "below10": 3040,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.171761943136104,
+        "median": 30.430249316900763,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "db762075f3467dabe4e74b578b3a3536a34d078456afc9b62d5ba2396eeda8fc"
+    },
+    "schaefer-1000-7Networks-1mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.07146599995078988,
+        "median": 1.1668137839737698,
+        "below5": 3040,
+        "below10": 3040,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 11.171761943136104,
+        "median": 30.430249316900763,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "efab8fea462336344fbf78e052dd4998af7a1285960161c1b6909ec669ea3c2f"
+    },
+    "schaefer-1000-17Networks-2mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.0,
+        "median": 1.7924208078914097,
+        "below5": 2511,
+        "below10": 2519,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.428481168915228,
+        "median": 33.296839107557155,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "10c45a7c687a33a65d08da0483e2e600568a49e1c4acdf5d1c8d583ea07c3c28"
+    },
+    "schaefer-1000-17Networks-1mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.0,
+        "median": 1.7924208078914097,
+        "below5": 2511,
+        "below10": 2519,
+        "identical": 2
+      },
+      "enhanced": {
+        "min": 10.428481168915228,
+        "median": 33.296839107557155,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "15cae32ae0863c27f3c577da268da15594d11cec4f3f217d35f376417d88ea89"
+    },
+    "schaefer-1000-Kong2022_17Networks-2mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.0,
+        "median": 29.268700845346427,
+        "below5": 1940,
+        "below10": 1944,
+        "identical": 13
+      },
+      "enhanced": {
+        "min": 11.750125218374475,
+        "median": 36.07249031764039,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "8aa2b4056eb10be07da091a44fcf53f85aa445e79382f5da84ce6491b2a4564f"
+    },
+    "schaefer-1000-Kong2022_17Networks-1mm": {
+      "edges": 4814,
+      "original": {
+        "min": 0.0,
+        "median": 29.268700845346427,
+        "below5": 1940,
+        "below10": 1944,
+        "identical": 13
+      },
+      "enhanced": {
+        "min": 11.750125218374475,
+        "median": 36.07249031764039,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "bba2a05988c778d433d329c0664ef20233349fa53c33c370528becd7ad7d417e"
+    },
+    "julich-3.1": {
+      "edges": 1481,
+      "original": {
+        "min": 0.0,
+        "median": 41.81243337118515,
+        "below5": 40,
+        "below10": 101,
+        "identical": 22
+      },
+      "enhanced": {
+        "min": 15.73200636054741,
+        "median": 46.27348484644978,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "dece494c48b68b82a6b33ddbb57168046f67a38bf82d4ff05be48295d2d39a24"
+    },
+    "juelich-fsl": {
+      "edges": 444,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 227,
+        "below10": 227,
+        "identical": 227
+      },
+      "enhanced": {
+        "min": 39.48117624483874,
+        "median": 52.79018069036922,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "555706e404fde9db3e758ece7f1551f9aaa53983610f713fc6a5ff785382ba3d"
+    },
+    "harvard-oxford-cort": {
+      "edges": 140,
+      "original": {
+        "min": 0.0,
+        "median": 9.82934853708924,
+        "below5": 69,
+        "below10": 71,
+        "identical": 69
+      },
+      "enhanced": {
+        "min": 44.16812476546655,
+        "median": 54.59916491821215,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "826dc52b2d60ac377403202a24dce1ed52f92e9df2f1e67d033b5863f0a4ba25"
+    },
+    "harvard-oxford-sub": {
+      "edges": 66,
+      "original": {
+        "min": 0.0,
+        "median": 26.804508741440007,
+        "below5": 26,
+        "below10": 26,
+        "identical": 26
+      },
+      "enhanced": {
+        "min": 42.96889719919491,
+        "median": 54.82448458996059,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "bbb93c44b44a1c0276335ecab0a130092f3a7b1aa06a7d5dcedd9722435983e8"
+    },
+    "brainnetome": {
+      "edges": 959,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 959,
+        "below10": 959,
+        "identical": 959
+      },
+      "enhanced": {
+        "min": 39.22161460798227,
+        "median": 54.22036286043763,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "5c229de06a3bf065d5273ef9856b167d9d2d7533c38895ac2dba96df3e6e400c"
+    },
+    "tian-s1": {
+      "edges": 19,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 19,
+        "below10": 19,
+        "identical": 19
+      },
+      "enhanced": {
+        "min": 52.61525838364654,
+        "median": 75.9673842097784,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "76912e6f09fba4ecef57cc3f1fdac97d1493d2ecfec44bb8bff643d34aa6d0e3"
+    },
+    "tian-s2": {
+      "edges": 51,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 51,
+        "below10": 51,
+        "identical": 51
+      },
+      "enhanced": {
+        "min": 48.486335282402344,
+        "median": 60.486800374806776,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "f04131b824df20d0a11aeb2ef3c19d2d9496c7875c1c164c98a2873dd155ba6e"
+    },
+    "tian-s3": {
+      "edges": 102,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 102,
+        "below10": 102,
+        "identical": 102
+      },
+      "enhanced": {
+        "min": 48.264295388437375,
+        "median": 55.71473904329399,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "aaf0cc43649a31f331ed049c468a41d222e06fd40b296a3cb13d39a4f2a366c8"
+    },
+    "tian-s4": {
+      "edges": 111,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 111,
+        "below10": 111,
+        "identical": 111
+      },
+      "enhanced": {
+        "min": 44.2722177743661,
+        "median": 59.133138837375,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "1d9e2081c3bc96d130e905eb89f7b986b230d761d52e7143079aab434e077a44"
+    },
+    "suit": {
+      "edges": 138,
+      "original": {
+        "min": 0.0,
+        "median": 42.01962269888511,
+        "below5": 1,
+        "below10": 7,
+        "identical": 1
+      },
+      "enhanced": {
+        "min": 19.151204284073067,
+        "median": 44.50234098743503,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "ff1541a368d0a3cd61c61725dbbaf66f884930b903f6ee8e72fd16cca88f2079"
+    },
+    "destrieux": {
+      "edges": 501,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 276,
+        "below10": 276,
+        "identical": 276
+      },
+      "enhanced": {
+        "min": 38.956801985039476,
+        "median": 54.37783011863097,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "c999752b876d7567c30ece34034013b0ce5a3b8b4c281caf50bc0a68959eefa0"
+    },
+    "aal": {
+      "edges": 449,
+      "original": {
+        "min": 0.0,
+        "median": 12.593314290589916,
+        "below5": 192,
+        "below10": 200,
+        "identical": 192
+      },
+      "enhanced": {
+        "min": 39.22161460798227,
+        "median": 54.37783011863097,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "3e73465a81dd0b074c96fb43e37015079ed46fcb7620d6ad0191629a275dc85d"
+    },
+    "desikan": {
+      "edges": 457,
+      "original": {
+        "min": 0.0,
+        "median": 24.26385372171346,
+        "below5": 163,
+        "below10": 171,
+        "identical": 163
+      },
+      "enhanced": {
+        "min": 28.767186053979703,
+        "median": 48.60806804068626,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "4302b197fb50651443adb0be1c1f0b8f5788eace0cd613827c98ff50233e9df5"
+    },
+    "glasser": {
+      "edges": 1487,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 1381,
+        "below10": 1381,
+        "identical": 1381
+      },
+      "enhanced": {
+        "min": 39.22161460798227,
+        "median": 53.17811916861504,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "0db1f32888a90732e1f23da03782753677ed2df3aaf79daef7562af294c91ea7"
+    },
+    "jhu-labels": {
+      "edges": 121,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 121,
+        "below10": 121,
+        "identical": 121
+      },
+      "enhanced": {
+        "min": 44.16812476546655,
+        "median": 54.94750768938857,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "5d8545183f67c99e4c01cd42d5dae9933313ffc3afe99c0a45d67295d32493c0"
+    },
+    "jhu-tracts": {
+      "edges": 17,
+      "original": {
+        "min": 0.0,
+        "median": 0.0,
+        "below5": 17,
+        "below10": 17,
+        "identical": 17
+      },
+      "enhanced": {
+        "min": 54.37729164873139,
+        "median": 75.9673842097784,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-glasbey-v1",
+      "labelHash": "bbd73242c0378ce57e5095f6ed69191252e995f38c97024bf4555ea1b96e3c9a"
+    },
+    "yeo-7": {
+      "edges": 19,
+      "original": {
+        "min": 31.26999082143958,
+        "median": 48.52261341182715,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 44.37902502718598,
+        "median": 52.882154961716644,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "7cf0977301fe923d4919257c81274803ee122bc7b89751aadd7e6b78bd78ce14"
+    },
+    "yeo-17": {
+      "edges": 75,
+      "original": {
+        "min": 14.618585563068095,
+        "median": 47.28283398579779,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "enhanced": {
+        "min": 25.74702163925788,
+        "median": 49.10903753589549,
+        "below5": 0,
+        "below10": 0,
+        "identical": 0
+      },
+      "method": "neighbor-tone-v1",
+      "labelHash": "32953c0660f9f143970a3597c6719846cc759a6412709c2cfc8a9628d18f6d8b"
+    }
+  }
+}

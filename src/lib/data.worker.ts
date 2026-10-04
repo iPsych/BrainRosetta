@@ -2,14 +2,17 @@
 import { gunzipSync } from 'fflate';
 import { sample } from './coordinates';
 import type { Atlas, MeshData, Vec3 } from './types';
-import { mapPoints } from './transforms';
+import { findTransformPath, mapPoints } from './transforms';
 import { sha256Hex } from './checksum';
+import { createRoiMask } from './roi';
+import { writeNifti } from './nifti';
 import type { TransformCatalog, TransformField, TransformSpec } from './transforms';
 declare const self: DedicatedWorkerGlobalScope;
 const volumes=new Map<string,{data:Uint16Array,prob?:Uint16Array}>();
 const pending=new Map<string,Promise<{data:Uint16Array,prob?:Uint16Array}>>();
 let transformCatalog:Promise<TransformCatalog>|undefined;
 const fields=new Map<string,Promise<TransformField>>();
+const roiJobs=new Map<number,boolean>();
 function catalog(base:string){
   if(!transformCatalog)transformCatalog=fetch(base+'transforms/catalog.json').then(r=>{if(!r.ok)throw new Error('Transform catalogue could not be loaded.');return r.json();}).catch(e=>{transformCatalog=undefined;throw e;});
   return transformCatalog;
@@ -46,8 +49,40 @@ async function volume(atlas:Atlas,base:string){
 }
 self.onmessage=async(event)=>{
   const {requestId,type,atlas,base,points,url,sourceSpace,allowApproximate}=event.data;
+  if(type==='cancel-roi'){if(roiJobs.has(event.data.cancelId))roiJobs.set(event.data.cancelId,true);return;}
   try{
-    if(type==='query'){
+    if(type==='roi'){
+      roiJobs.set(requestId,false);
+      const {selected,target,kind}=event.data;
+      self.postMessage({requestId,progress:{stage:'Loading atlas and transforms',percent:0}});
+      let forward:TransformField[]=[],backward:TransformField[]=[];
+      if(target.space!==atlas.space){
+        const c=await catalog(base),f=findTransformPath(c.transforms,atlas.space,target.space),b=findTransformPath(c.transforms,target.space,atlas.space);
+        if(!f||!b)throw new Error('No verified transform is available for this ROI export. Use the native atlas space.');
+        [forward,backward]=await Promise.all([Promise.all(f.map(s=>field(s,base))),Promise.all(b.map(s=>field(s,base)))]);
+      }
+      const {data}=await volume(atlas,base);
+      if(await sha256Hex(new Uint8Array(data.buffer,data.byteOffset,data.byteLength))!==atlas.sha256)throw new Error('Atlas checksum mismatch. Reload before exporting an ROI.');
+      const result=await createRoiMask(atlas,data,selected,target,kind,forward,backward,{
+        cancelled:()=>!!roiJobs.get(requestId),progress:progress=>self.postMessage({requestId,progress}),
+      });
+      const metadata={application:'BrainRosetta',format:'NIfTI-1',maskKind:kind,
+        atlas:atlas.id,atlasName:atlas.name,atlasVariant:atlas.variant,atlasSource:atlas.source,atlasCitation:atlas.citation,atlasLabelSha256:atlas.sha256,sourceSpace:atlas.space,targetSpace:target.space,
+        sourceGrid:{dims:atlas.dims,affine:atlas.affine},
+        targetGrid:target,interpolation:result.native?'none (native grid)':'nearest-neighbor',
+        pointTransformDirection:'output template → source atlas (pull resampling)',
+        transforms:backward.map(f=>({id:f.spec.id,sha256:f.spec.sha256})),
+        coverageTransforms:forward.map(f=>({id:f.spec.id,sha256:f.spec.sha256})),
+        regions:atlas.regions.filter((r:{id:number})=>selected.includes(r.id)).map((r:{id:number;original:string})=>({id:r.id,name:r.original,outputValue:kind==='binary'?1:r.id,sourceVoxels:result.sourceCounts[r.id],outputVoxels:result.outputCounts[r.id]})),
+        invalidTargetVoxels:result.invalidTargetVoxels,
+        coverage:'Selected source voxel centers and output mask boundaries checked. Unsupported target locations outside the ROI are background.',
+        note:'Template registration is an anatomical estimate. This is not registration of an individual MRI.',
+      };
+      const buffer=writeNifti(result.data,target,metadata);
+      if(roiJobs.get(requestId))throw new Error('ROI export canceled.');
+      const filename=`BrainRosetta_${atlas.id}_space-${target.space}_${kind==='binary'?'mask':'labels'}.nii`;
+      self.postMessage({requestId,result:{buffer,filename,metadata}},[buffer]);
+    }else if(type==='query'){
       const mappings=sourceSpace===atlas.space
         ?(points as Vec3[]).map(input=>({sourceSpace,targetSpace:atlas.space,input,mm:input,status:'native' as const,transformIds:[],transformHashes:[]}))
         :await mapPoints(await catalog(base),sourceSpace,atlas.space,points,!!allowApproximate,spec=>field(spec,base));
@@ -78,4 +113,5 @@ self.onmessage=async(event)=>{
       self.postMessage({requestId,result},transfer);
     }
   }catch(error){self.postMessage({requestId,error:error instanceof Error?error.message:String(error)});}
+  finally{if(type==='roi')roiJobs.delete(requestId);}
 };

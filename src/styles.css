@@ -10,3 +10,11 @@
 .eyebrow{color:#647d79;font-size:9px}.approx-toggle{color:#60745c;font-size:10px}.coordinate-note,.small-muted{color:#6e806a}.region-detail dl>div{font-size:11px}.comparison-atlas,.comparison-main small{font-size:10px;color:#647c57}.region-detail dt{color:#6f8268}.slice-labels{color:#647d79}
 
 .space-notice.registered{background:#f1f7f6;color:#356a63}.space-notice.registered svg{color:#356a63}
+
+.color-mode-control{display:flex;align-items:center;gap:6px;font-size:10px;color:#687e7a}
+.color-mode-control select{max-width:150px;padding:6px;border:1px solid var(--border);border-radius:5px;background:#fff;color:var(--ink);font-size:10px}
+.outline-control{display:flex;align-items:center;gap:8px;font-size:12px;margin:18px 0;color:var(--ink)}
+@media(max-width:1200px){.color-mode-control>span{display:none}}
+@media(max-width:560px){.viewer-controls{gap:6px;flex-wrap:wrap;height:auto;min-height:53px;padding-top:8px;padding-bottom:8px}.viewer-controls .opacity-control{display:none}.color-mode-control select{max-width:136px}}
+
+.roi-progress{display:grid;gap:8px;font-size:11px;color:var(--teal)}.roi-progress progress{width:100%;accent-color:var(--teal)}.roi-saved p{overflow-wrap:anywhere;color:var(--teal)}

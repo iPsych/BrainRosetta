@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
+import * as nifti from 'nifti-reader-js';
 
 test('real atlas lookup, tree selection, transforms, export and atlas switching',async({page,baseURL})=>{
   const errors:string[]=[];const external:string[]=[];
@@ -158,4 +159,97 @@ test('known poor landmark neighborhoods cannot silently fall back to unchanged c
   await page.getByLabel('Atlas family').selectOption('Schaefer');
   await expect(page.locator('.empty-point')).toContainText('excluded area');
   const result=await exportJson(page);expect(result.results[0].status).toBe('outside-transform');expect(result.results[0].x).toBe('');
+});
+
+test('parcel contrast stays stable, preserves original LUT colors and restores shared appearance',async({page})=>{
+  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
+  page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await expect(page.getByLabel('Region colors')).toHaveValue('enhanced');
+  await page.getByLabel('Atlas family').selectOption('Schaefer');
+  await expect(page.getByLabel('Atlas variant')).toBeVisible();
+  await page.getByLabel('Atlas variant').selectOption('schaefer-1000-7Networks-2mm');
+  await expect(page.locator('.workspace-toolbar')).toContainText('1000 regions');
+  await expect(page.locator('.canvas-loading')).toHaveCount(0);await expect(page.locator('.slice-status')).toHaveCount(0);
+  await page.getByRole('button',{name:'Clear',exact:true}).click();
+  await page.getByLabel('Search regions').fill('695');
+  const a=page.locator('[data-region="695"]');await a.locator('input').check();
+  const color=await a.locator('.region-color').evaluate(el=>getComputedStyle(el).backgroundColor);
+  await page.getByLabel('Search regions').fill('696');
+  const b=page.locator('[data-region="696"]');await b.locator('input').check();
+  expect(await b.locator('.region-color').evaluate(el=>getComputedStyle(el).backgroundColor)).not.toBe(color);
+  await page.getByLabel('Search regions').fill('695');
+  await expect(a.locator('.region-color')).toHaveCSS('background-color',color);
+  const enhanced=await exportJson(page);
+  expect(enhanced.display.colorMode).toBe('enhanced');
+  expect(enhanced.selectedRegions.find((r:{id:number})=>r.id===695).displayColor).not.toBe('#047609');
+  await page.getByLabel('Search regions').fill('');
+  await page.getByRole('button',{name:'Show all',exact:true}).click();
+  await page.screenshot({path:'/private/tmp/brainrosetta-enhanced-colors.png'});
+  await page.getByLabel('Region colors').selectOption('original');
+  await page.getByLabel('Search regions').fill('695');
+  await expect(a.locator('.region-color')).toHaveCSS('background-color','rgb(4, 118, 9)');
+  const original=await exportJson(page);expect(original.point).toEqual(enhanced.point);
+  expect(original.selectedRegions.find((r:{id:number})=>r.id===695).displayColor).toBe('#047609');
+  await page.getByLabel('Search regions').fill('');
+  await page.screenshot({path:'/private/tmp/brainrosetta-original-colors.png'});
+  await page.getByLabel('Display settings').click();await page.getByLabel('Show parcel outlines').uncheck();await page.getByLabel('Close dialog').click();
+  await page.getByRole('button',{name:'Share view'}).click();await expect(page).toHaveURL(/#view=/);await page.reload();
+  await expect(page.getByLabel('Region colors')).toHaveValue('original');
+  await page.getByLabel('Display settings').click();await expect(page.getByLabel('Show parcel outlines')).not.toBeChecked();
+  expect(errors).toEqual([]);
+});
+
+test('exports the checked regions as a native binary NIfTI mask',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByRole('button',{name:'Export',exact:true}).click();
+  await expect(page.getByLabel('ROI mask export')).toContainText('2 checked regions');
+  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'Save ROI mask · .nii',exact:true}).click();
+  const d=await pending;await d.saveAs('/private/tmp/brainrosetta-roi-native.nii');
+  const bytes=await readFile((await d.path())!),buffer=Uint8Array.from(bytes).buffer,h=nifti.readHeader(buffer)!;
+  expect(h.dims.slice(1,4)).toEqual([181,217,181]);expect(h.datatypeCode).toBe(2);
+  const values=new Uint8Array(nifti.readImage(h,buffer));expect(new Set(values)).toEqual(new Set([0,1]));
+  const atlas=JSON.parse(await readFile('public/data/aal3-1mm/manifest.json','utf8'));
+  expect(values.reduce((a,b)=>a+b,0)).toBe(atlas.regions.filter((r:{id:number})=>[1,2].includes(r.id)).reduce((n:number,r:{voxelCount:number})=>n+r.voxelCount,0));
+  const metadata=JSON.parse(new TextDecoder().decode(nifti.readExtensionData(h,buffer)).replace(/\0+$/,''));
+  expect(metadata.targetSpace).toBe('MNIColin27');expect(metadata.interpolation).toBe('none (native grid)');
+});
+
+test('exports a JHU ROI into the MNI2009c grid using nonlinear pull resampling',async({page})=>{
+  test.setTimeout(180000);
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByLabel('Atlas family').selectOption('JHU');await expect(page.locator('.workspace-toolbar')).toContainText('JHU white matter');
+  await page.getByRole('button',{name:'Clear',exact:true}).click();await page.getByLabel('Search regions').fill('Genu of corpus callosum');
+  await page.locator('[data-region="3"] .region-name').click();await expect(page.locator('.region-detail')).toContainText('Genu of corpus callosum');
+  await page.getByRole('button',{name:'Export',exact:true}).click();
+  await page.getByLabel('ROI output template').selectOption('MNI152NLin2009cAsym');
+  const pending=page.waitForEvent('download',{timeout:150000});await page.getByRole('button',{name:'Save ROI mask · .nii',exact:true}).click();
+  const d=await pending;await d.saveAs('/private/tmp/brainrosetta-roi-mni2009.nii');
+  const buffer=Uint8Array.from(await readFile((await d.path())!)).buffer,h=nifti.readHeader(buffer)!;
+  expect(h.dims.slice(1,4)).toEqual([193,229,193]);expect(h.affine).toEqual([[1,0,0,-96],[0,1,0,-132],[0,0,1,-78],[0,0,0,1]]);
+  const metadata=JSON.parse(new TextDecoder().decode(nifti.readExtensionData(h,buffer)).replace(/\0+$/,''));
+  expect(metadata.transforms.map((t:{id:string})=>t.id)).toEqual(['tf-2009-to-6']);
+  expect(metadata.regions.map((r:{id:number})=>r.id)).toEqual([3]);expect(metadata.regions[0].outputVoxels).toBeGreaterThan(5000);
+  expect(new Set(new Uint8Array(nifti.readImage(h,buffer)))).toEqual(new Set([0,1]));
+  await expect(page.locator('.roi-saved')).toContainText('Saved');
+  await page.screenshot({path:'/private/tmp/brainrosetta-roi-export.png'});
+});
+
+test('ROI cancellation leaves native labeled export available and unsupported templates disabled',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByRole('button',{name:'Export',exact:true}).click();
+  await page.getByLabel('ROI output template').selectOption('MNI152NLin2009cAsym');
+  await page.getByRole('button',{name:'Save ROI mask · .nii',exact:true}).click();
+  await page.getByRole('button',{name:'Cancel ROI export',exact:true}).click();
+  await expect(page.getByRole('button',{name:'Save ROI mask · .nii',exact:true})).toBeEnabled();
+  await page.getByLabel('ROI output template').selectOption('native');
+  await page.getByLabel('ROI mask values').selectOption('labels');
+  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'Save ROI mask · .nii',exact:true}).click();
+  const d=await pending,buffer=Uint8Array.from(await readFile((await d.path())!)).buffer,h=nifti.readHeader(buffer)!;
+  expect(h.datatypeCode).toBe(512);expect(new Set(new Uint16Array(nifti.readImage(h,buffer)))).toEqual(new Set([0,1,2]));
+  await page.getByLabel('Close dialog').click();await page.getByLabel('Atlas family').selectOption('Brainnetome');
+  await expect(page.locator('.workspace-toolbar')).toContainText('Brainnetome');
+  await page.getByRole('button',{name:'Export',exact:true}).click();
+  await expect(page.getByLabel('ROI output template').locator('option[value="MNI152NLin2009cAsym"]')).toHaveJSProperty('disabled',true);
+  await expect(page.getByLabel('ROI output template')).toHaveValue('native');
 });

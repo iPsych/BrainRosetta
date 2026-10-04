@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { ChevronDown, ChevronRight, Search, ChevronsDownUp, ListFilter } from 'lucide-react';
 import { buildTree, matchRegion } from '../lib/tree';
 import type { Atlas, Region, TreeNode } from '../lib/types';
-interface Props {atlas:Atlas;selected:Set<number>;focused:number|null;hemisphere:string;onHemisphere:(h:string)=>void;onSelect:(ids:number[],on:boolean)=>void;onFocus:(r:Region)=>void;}
+import { regionColor, type ColorMode } from '../lib/colors';
+interface Props {atlas:Atlas;colorMode:ColorMode;selected:Set<number>;focused:number|null;hemisphere:string;onHemisphere:(h:string)=>void;onSelect:(ids:number[],on:boolean)=>void;onFocus:(r:Region)=>void;}
 function Check({checked,partial,onChange,label}:{checked:boolean;partial:boolean;onChange:()=>void;label:string}){const ref=useRef<HTMLInputElement>(null);useEffect(()=>{if(ref.current)ref.current.indeterminate=partial;},[partial]);return <input ref={ref} type="checkbox" checked={checked} aria-label={label} onChange={onChange}/>;}
 export default function RegionTree(p:Props){
   const [search,setSearch]=useState(''),[open,setOpen]=useState<Set<string>>(new Set());
@@ -20,7 +21,7 @@ export default function RegionTree(p:Props){
     const count=node.ids.filter(id=>p.selected.has(id)).length;
     if(node.region){const r=node.region;return <div key={node.key} className={`tree-row leaf ${p.focused===r.id?'focused':''}`} data-region={r.id} style={{paddingLeft:12+depth*13}}>
       <Check checked={count>0} partial={false} label={`Show ${r.original}`} onChange={()=>p.onSelect([r.id],!count)}/>
-      <button className="region-name" onClick={()=>p.onFocus(r)} title={r.original}><span className="region-color" style={{background:r.color}}/>{r.path.at(-1)===r.name?(r.hemisphere==='L'?'Left':r.hemisphere==='R'?'Right':r.hemisphere==='M'?'Midline':r.name):r.name}<span className="region-id">{r.id}</span></button>
+      <button className="region-name" onClick={()=>p.onFocus(r)} title={r.original}><span className="region-color" style={{background:regionColor(r,p.colorMode)}}/>{r.path.at(-1)===r.name?(r.hemisphere==='L'?'Left':r.hemisphere==='R'?'Right':r.hemisphere==='M'?'Midline':r.name):r.name}<span className="region-id">{r.id}</span></button>
     </div>;}
     const expanded=open.has(node.key)||!!search;
     return <div key={node.key} className="tree-branch"><div className={`tree-row branch depth-${depth}`} style={{paddingLeft:8+depth*13}}>

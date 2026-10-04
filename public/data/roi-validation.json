@@ -1,0 +1,28 @@
+{
+  "native": {
+    "atlas": "aal3-1mm",
+    "regions": [
+      1,
+      2
+    ],
+    "exactVoxelMatch": true,
+    "exactAffineMatch": true,
+    "sha256": "8b1363e10edf171c8e5510416ebd9b3a2fc15a8af373af59be9b06c042f1de2e"
+  },
+  "nonlinear": {
+    "atlas": "jhu-labels",
+    "regions": [
+      3
+    ],
+    "target": "MNI152NLin2009cAsym",
+    "referenceEngine": "antsApplyTransforms",
+    "antsSuiteVersion": "ANTs Version: 2.2.0\nCompiled: Nov  9 2019 22:05:00",
+    "referenceTransformSha256": "2e3869a07b96aec406e0419ca2e434afc54882d37cc212b933b139d1b63a4dfe",
+    "referenceVoxels": 9360,
+    "browserVoxels": 9362,
+    "differentVoxels": 30,
+    "dice": 0.9983976070932593,
+    "sha256": "a1b3a79fb2f26441054041bbfe6f29ec66f226209a1542940f2dfd31bfef80e4"
+  },
+  "scope": "One native and one nonlinear browser export independently checked. Small boundary differences arise from packaged displacement interpolation. These numerical checks do not establish whole-brain anatomical accuracy."
+}
