@@ -56,6 +56,8 @@ Fields are downloaded on demand, decompressed and checked by SHA256 in the worke
 
 An unavailable route is distinguished from an invalid coordinate, out-of-domain mapping, or failed/checksum-mismatched download. The optional unchanged-coordinate fallback is available only when no route exists. It never overrides registration failures or exclusions.
 
+Checksum verification uses browser SubtleCrypto when available and a bundled SHA-256 implementation otherwise. This also supports HTTP static hosts, where browsers do not expose SubtleCrypto. Both paths verify the same manifest hash.
+
 A successful coordinate transform does not guarantee a destination label. For example, JHU white-matter coordinates can map successfully into MNI2009c while remaining outside HCP-MMP's cortical labels. The interface reports successful mapping separately from an unlabeled destination; it does not substitute a nearby cortical parcel.
 
 Exports include original and destination coordinates, template names, mapping status, ordered transform IDs, field checksums, and atlas provenance. `mappingStatus=registered` means a nonlinear map was applied. `approximate` marks unchanged-template-coordinate fallback or Talairach conversion; its being false does not imply zero anatomical registration error. Talairach remains the separate approximate Lancaster affine conversion.

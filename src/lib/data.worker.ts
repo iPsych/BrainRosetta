@@ -3,6 +3,7 @@ import { gunzipSync } from 'fflate';
 import { sample } from './coordinates';
 import type { Atlas, MeshData, Vec3 } from './types';
 import { mapPoints } from './transforms';
+import { sha256Hex } from './checksum';
 import type { TransformCatalog, TransformField, TransformSpec } from './transforms';
 declare const self: DedicatedWorkerGlobalScope;
 const volumes=new Map<string,{data:Uint16Array,prob?:Uint16Array}>();
@@ -17,8 +18,7 @@ function field(spec:TransformSpec,base:string):Promise<TransformField>{
   if(!fields.has(spec.id))fields.set(spec.id,(async()=>{
     const b=await bytes(base+spec.file+'?v='+spec.sha256),n=spec.dims.reduce((a,b)=>a*b,1);
     if(b.length!==n*7)throw new Error('Transform field size does not match its manifest.');
-    const hash=await crypto.subtle.digest('SHA-256',b.slice().buffer);
-    const hex=[...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
+    const hex=await sha256Hex(b);
     if(hex!==spec.sha256)throw new Error('Transform checksum mismatch. Reload to fetch a consistent version.');
     return {spec,displacements:new Int16Array(b.slice(0,n*6).buffer),valid:b.slice(n*6)};
   })().catch(e=>{fields.delete(spec.id);throw e;}));
