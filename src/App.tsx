@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Brain, ArrowUpRight, ChevronDown, Crosshair, Download, ExternalLink, FileUp, Info, Layers, Link2, SlidersHorizontal, X, Check, Plus, PanelLeftClose, PanelRightClose, AlertCircle } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, Crosshair, Download, ExternalLink, FileUp, Info, Layers, Link2, SlidersHorizontal, X, Check, Plus, PanelLeftClose, PanelRightClose, AlertCircle } from 'lucide-react';
 import BrainView from './components/BrainView';
 import RegionTree from './components/RegionTree';
 import Slices from './components/Slices';
@@ -111,12 +111,12 @@ function App(){
     }catch(e){setBatchError(e instanceof Error?e.message:'Import failed');}finally{setBatchBusy(false);if(coordUpload.current)coordUpload.current.value='';}
   };
   const region=atlas?.regions.find(r=>r.id===focused);
-  if(!atlas)return <div className="startup"><Brain size={38}/><h1>BrainRosetta</h1><p>{error||'Opening your atlas workspace…'}</p>{error?<button onClick={()=>location.reload()}>Retry</button>:<span className="spinner"/>}</div>;
+  if(!atlas)return <div className="startup"><img src={`${import.meta.env.BASE_URL}icons/brainrosetta-96.png`} width={64} height={64} alt=""/><h1>BrainRosetta</h1><p>{error||'Opening your atlas workspace…'}</p>{error?<button onClick={()=>location.reload()}>Retry</button>:<span className="spinner"/>}</div>;
   const summaries=catalog.filter(a=>a.family===atlas.family);
   const families=[...new Set(catalog.map(a=>a.family))];
   const mismatch=point.space!==atlas.space;
   return <div className="app">
-    <header className="app-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();setDrawer('about');}}><span className="brand-mark"><Brain size={24} strokeWidth={1.5}/></span><span>Brain<span className="brand-light">Rosetta</span><small>A SHARED LANGUAGE FOR THE BRAIN</small></span></a>
+    <header className="app-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();setDrawer('about');}}><span className="brand-mark"><img src={`${import.meta.env.BASE_URL}icons/brainrosetta-96.png`} width={42} height={42} alt=""/></span><span>Brain<span className="brand-light">Rosetta</span><small>A SHARED LANGUAGE FOR THE BRAIN</small></span></a>
       <div className="atlas-picker"><span className="picker-label"><Layers size={15}/> ATLAS</span><div className="select-wrap"><select aria-label="Atlas family" value={atlas.family} onChange={e=>setAtlasId(catalog.find(a=>a.family===e.target.value)!.id)}>{families.map(f=><option key={f}>{f}</option>)}</select><ChevronDown size={14}/></div>{summaries.length>1&&<div className="select-wrap variant"><select aria-label="Atlas variant" value={atlas.id} onChange={e=>setAtlasId(e.target.value)}>{summaries.map(a=><option key={a.id} value={a.id}>{a.name} · {a.variant}</option>)}</select><ChevronDown size={14}/></div>}</div>
       <div className="header-actions"><button className="text-button" onClick={()=>setDrawer('import')}><FileUp size={16}/><span>Import</span></button><button className="text-button" onClick={()=>setDrawer('export')}><Download size={16}/><span>Export</span></button><button className="share-button" onClick={share}><Link2 size={16}/>Share view</button><button className="icon-button" aria-label="About and atlas sources" title="About and atlas sources" onClick={()=>setDrawer('about')}><Info size={18}/></button></div>
     </header>
