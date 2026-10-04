@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1000}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
+await page.goto(process.env.BRAINROSETTA_URL||'http://127.0.0.1:5173');
+await page.waitForTimeout(8000);
+await page.screenshot({path:'/private/tmp/brainrosetta-first.png'});
+console.log(JSON.stringify({errors,body:(await page.locator('body').innerText()).slice(0,2400)},null,2));
+await browser.close();

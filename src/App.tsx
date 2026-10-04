@@ -1,0 +1,148 @@
+import { useEffect, useRef, useState } from 'react';
+import { Brain, ArrowUpRight, ChevronDown, Crosshair, Download, ExternalLink, FileUp, Info, Layers, Link2, SlidersHorizontal, X, Check, Plus, PanelLeftClose, PanelRightClose, AlertCircle } from 'lucide-react';
+import BrainView from './components/BrainView';
+import RegionTree from './components/RegionTree';
+import Slices from './components/Slices';
+import { csvCell, download, getAtlas, getCatalog, query } from './lib/data';
+import { applyAffine, mniToTal, parseCoordinates, talToMni } from './lib/coordinates';
+import { readSession, shareUrl } from './lib/session';
+import type { Atlas, AtlasSummary, Lookup, Point, Region, Vec3 } from './lib/types';
+
+const initial=readSession();
+type Comparison={atlas:Atlas;lookup?:Lookup;error?:string;approximate?:boolean};
+const DEFAULT_PINS=['schaefer-400-7Networks-2mm','julich-3.1','harvard-oxford-cort'];
+const hemiName=(h:string)=>({L:'Left hemisphere',R:'Right hemisphere',M:'Midline',B:'Bilateral / unsplit'}[h]||h);
+function App(){
+  const [catalog,setCatalog]=useState<AtlasSummary[]>([]),[atlasId,setAtlasId]=useState(initial.atlas||'aal3-1mm'),[atlas,setAtlas]=useState<Atlas|null>(null);
+  const [error,setError]=useState(''),[busy,setBusy]=useState(true),[toast,setToast]=useState('');
+  const [selected,setSelected]=useState<Set<number>>(new Set(initial.selected||[1,2])),[focused,setFocused]=useState<number|null>(1);
+  const [point,setPoint]=useState<Point>(initial.point||{mm:[-38,-8,50],space:'MNIColin27',method:'MNI coordinate'});
+  const [lookup,setLookup]=useState<Lookup|null>(null),[lookupBusy,setLookupBusy]=useState(false);
+  const [mode,setMode]=useState<'glass'|'solid'>(initial.mode||'glass'),[opacity,setOpacity]=useState(initial.opacity??.17),[clip,setClip]=useState(initial.clip??100),[hemisphere,setHemisphere]=useState(initial.hemisphere||'all');
+  const [pins,setPins]=useState<string[]>(initial.pins||DEFAULT_PINS),[comparisons,setComparisons]=useState<Comparison[]>([]),[compareBusy,setCompareBusy]=useState(false),[approx,setApprox]=useState(initial.approx??false);
+  const [inputMode,setInputMode]=useState('mni'),[coords,setCoords]=useState<string[]>(point.mm.map(String)),[coordError,setCoordError]=useState('');
+  const [drawer,setDrawer]=useState<'about'|'settings'|'export'|'import'|null>(null),[pinMenu,setPinMenu]=useState(false),[pinSearch,setPinSearch]=useState('');
+  const [leftOpen,setLeftOpen]=useState(true),[rightOpen,setRightOpen]=useState(true),[localFile,setLocalFile]=useState<File|null>(null),[localSpace,setLocalSpace]=useState('MNIColin27');
+  const [batchBusy,setBatchBusy]=useState(false),[batchError,setBatchError]=useState('');
+  const savedSelections=useRef(new Map<string,Set<number>>()),prevAtlas=useRef(''),coordUpload=useRef<HTMLInputElement>(null);
+  const toastTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
+  const notify=(s:string)=>{setToast(s);if(toastTimer.current)clearTimeout(toastTimer.current);toastTimer.current=setTimeout(()=>setToast(''),4500);};
+  useEffect(()=>{getCatalog().then(setCatalog).catch(e=>{setError(e.message);setBusy(false);});return()=>{if(toastTimer.current)clearTimeout(toastTimer.current);};},[]);
+  useEffect(()=>{if(!catalog.length)return;let cancelled=false;setBusy(true);setError('');
+    const summary=catalog.find(a=>a.id===atlasId)||catalog[0];if(summary.id!==atlasId)setAtlasId(summary.id);
+    getAtlas(summary).then(a=>{if(cancelled)return;
+      if(prevAtlas.current&&prevAtlas.current!==a.id){setSelected(savedSelections.current.get(a.id)||new Set());setFocused(null);setClip(100);setHemisphere('all');}
+      prevAtlas.current=a.id;setAtlas(a);setBusy(false);setLocalFile(null);setLocalSpace(a.space);
+    }).catch(e=>{if(!cancelled){setError(e.message);setBusy(false);}});return()=>{cancelled=true;};
+  },[catalog,atlasId]);
+  useEffect(()=>{if(atlas)savedSelections.current.set(atlas.id,selected);},[selected,atlas]);
+  useEffect(()=>{
+    if(!atlas)return;let canceled=false;setLookup(null);setLookupBusy(true);
+    if(point.space!==atlas.space&&!approx){setFocused(null);setLookupBusy(false);return;}
+    query(atlas,[point.mm]).then(([r])=>{if(canceled)return;setLookup(r);if(r.id){setFocused(r.id);setSelected(prev=>new Set([...prev,r.id]));}else setFocused(null);}).catch(e=>{if(!canceled)notify(e.message);}).finally(()=>{if(!canceled)setLookupBusy(false);});
+    return()=>{canceled=true;};
+  },[atlas,point,approx]);
+  useEffect(()=>{
+    if(!atlas)return;let p=point.mm;
+    if(inputMode==='tal')p=mniToTal(p);
+    if(inputMode==='voxel')p=applyAffine(atlas.inverseAffine,p).map(Math.round) as Vec3;
+    setCoords(p.map(x=>inputMode==='voxel'?String(x):x.toFixed(1)));setCoordError('');
+  },[point,inputMode,atlas]);
+  useEffect(()=>{
+    if(!catalog.length)return;let canceled=false;setCompareBusy(true);
+    Promise.all(pins.filter(id=>id!==atlasId).map(async id=>{
+      const summary=catalog.find(a=>a.id===id);if(!summary)return null;
+      const a=await getAtlas(summary);
+      if(a.space!==point.space&&!approx)return {atlas:a,error:'Different reference template'};
+      try{const [r]=await query(a,[point.mm]);return {atlas:a,lookup:r,approximate:a.space!==point.space};}catch(e){return {atlas:a,error:e instanceof Error?e.message:'Lookup failed'};}
+    })).then(rows=>{if(!canceled)setComparisons(rows.filter(Boolean) as Comparison[]);}).catch(e=>{if(!canceled)notify(e.message);}).finally(()=>{if(!canceled)setCompareBusy(false);});
+    return()=>{canceled=true;};
+  },[catalog,pins,atlasId,point,approx]);
+  useEffect(()=>{const handler=(e:KeyboardEvent)=>{if(e.key==='Escape'){setDrawer(null);setPinMenu(false);}if(e.key==='/'&&!(e.target instanceof HTMLInputElement)&&!(e.target instanceof HTMLTextAreaElement)){e.preventDefault();document.querySelector<HTMLInputElement>('[aria-label="Search regions"]')?.focus();}};document.addEventListener('keydown',handler);return()=>document.removeEventListener('keydown',handler);},[]);
+  useEffect(()=>{
+    if(!drawer)return;
+    const previous=document.activeElement as HTMLElement|null;
+    const dialog=document.querySelector<HTMLElement>('[role="dialog"]');
+    const trap=(e:KeyboardEvent)=>{
+      if(e.key!=='Tab'||!dialog)return;
+      const items=[...dialog.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input:not([type="hidden"]), select')].filter(el=>el.getClientRects().length);
+      const first=items[0],last=items.at(-1);
+      if(e.shiftKey&&(document.activeElement===first||!dialog.contains(document.activeElement))){e.preventDefault();last?.focus();}
+      else if(!e.shiftKey&&(document.activeElement===last||!dialog.contains(document.activeElement))){e.preventDefault();first?.focus();}
+    };
+    document.addEventListener('keydown',trap);
+    return()=>{document.removeEventListener('keydown',trap);previous?.focus();};
+  },[drawer]);
+  const locate=()=>{
+    const p=coords.map(v=>v.trim()===''?NaN:Number(v)) as Vec3;
+    if(p.some(v=>!Number.isFinite(v))){setCoordError('Enter three finite coordinates.');return;}
+    if(!atlas)return;
+    if(inputMode==='voxel'&&p.some((v,i)=>!Number.isInteger(v)||v<0||v>=atlas.dims[i])){setCoordError(`Voxel indices must be integers within 0–${atlas.dims.map(n=>n-1).join(', 0–')}.`);return;}
+    const mm=inputMode==='tal'?talToMni(p):inputMode==='voxel'?applyAffine(atlas.affine,p):p;
+    setPoint({mm,space:atlas.space,method:inputMode==='tal'?'Lancaster pooled Talairach → MNI (approximate)':inputMode==='voxel'?'Native atlas voxel (0-based)':'Manual MNI coordinate'});setCoordError('');
+  };
+  const focus=(r:Region)=>{if(!atlas)return;setFocused(r.id);setSelected(prev=>new Set([...prev,r.id]));setPoint({mm:r.focus,space:atlas.space,method:'Verified in-region voxel'});};
+  const changeSelection=(ids:number[],on:boolean)=>setSelected(prev=>{const n=new Set(prev);ids.forEach(id=>on?n.add(id):n.delete(id));return n;});
+  const share=async()=>{const url=shareUrl({atlas:atlasId,point,selected:[...selected],pins,opacity,mode,hemisphere,approx,clip});history.replaceState(null,'',url);try{await navigator.clipboard.writeText(url);notify('View link copied');}catch{notify('View saved in the address bar. Copy the URL to share.');}};
+  const exportRows=()=>{
+    if(!atlas)return [];
+    return [{atlas,lookup:lookup||undefined,error:point.space!==atlas.space&&!approx?'Different reference template':undefined,approximate:point.space!==atlas.space},...comparisons].map(row=>{
+      const r=row.atlas.regions.find(r=>r.id===row.lookup?.id);
+      return {atlas:row.atlas.id,atlasName:row.atlas.name,space:row.atlas.space,inputSpace:point.space,x:point.mm[0],y:point.mm[1],z:point.mm[2],regionId:r?.id??'',region:r?.original??'',status:row.error||row.lookup?.status||'unavailable',approximate:!!row.approximate||point.method.includes('approximate'),method:point.method,citation:row.atlas.citation,source:row.atlas.source,atlasHash:row.atlas.sha256};
+    });
+  };
+  const saveCSV=(rows:Record<string,unknown>[],filename:string)=>{if(!rows.length)return;const keys=Object.keys(rows[0]);download(filename,[keys.map(csvCell).join(','),...rows.map(r=>keys.map(k=>csvCell(r[k])).join(','))].join('\n'),'text/csv');};
+  const batch=async(file:File)=>{
+    if(!atlas)return;setBatchBusy(true);setBatchError('');
+    try{
+      const raw=parseCoordinates(await file.text());const mm=raw.map(p=>inputMode==='tal'?talToMni(p):inputMode==='voxel'?applyAffine(atlas.affine,p):p);
+      if(inputMode==='voxel'&&raw.some(p=>p.some((v,i)=>!Number.isInteger(v)||v<0||v>=atlas.dims[i])))throw new Error('Batch contains a voxel index outside the selected atlas grid.');
+      const atlases=await Promise.all([atlas.id,...pins.filter(id=>id!==atlas.id&&catalog.some(a=>a.id===id))].map(id=>getAtlas(catalog.find(a=>a.id===id)!)));
+      const rows:Record<string,unknown>[]=[];
+      for(const a of atlases){
+        const compatible=a.space===atlas.space||approx;
+        const results=compatible?await query(a,mm):null;
+        mm.forEach((p,i)=>{const q=results?.[i],r=a.regions.find(r=>r.id===q?.id);rows.push({row:i+1,inputMode,inputX:raw[i][0],inputY:raw[i][1],inputZ:raw[i][2],x:p[0],y:p[1],z:p[2],inputSpace:atlas.space,atlas:a.id,space:a.space,regionId:r?.id??'',region:r?.original??'',status:compatible?q?.status:'Different reference template',approximate:a.space!==atlas.space||inputMode==='tal',method:inputMode==='tal'?'Lancaster pooled (approximate)':'Native coordinate',atlasHash:a.sha256});});
+      }
+      saveCSV(rows,'BrainRosetta-batch.csv');notify(`Exported ${raw.length} coordinates across ${atlases.length} atlases`);
+    }catch(e){setBatchError(e instanceof Error?e.message:'Import failed');}finally{setBatchBusy(false);if(coordUpload.current)coordUpload.current.value='';}
+  };
+  const region=atlas?.regions.find(r=>r.id===focused);
+  if(!atlas)return <div className="startup"><Brain size={38}/><h1>BrainRosetta</h1><p>{error||'Opening your atlas workspace…'}</p>{error?<button onClick={()=>location.reload()}>Retry</button>:<span className="spinner"/>}</div>;
+  const summaries=catalog.filter(a=>a.family===atlas.family);
+  const families=[...new Set(catalog.map(a=>a.family))];
+  const mismatch=point.space!==atlas.space;
+  return <div className="app">
+    <header className="app-header"><a className="brand" href="#" onClick={e=>{e.preventDefault();setDrawer('about');}}><span className="brand-mark"><Brain size={24} strokeWidth={1.5}/></span><span>Brain<span className="brand-light">Rosetta</span><small>A SHARED LANGUAGE FOR THE BRAIN</small></span></a>
+      <div className="atlas-picker"><span className="picker-label"><Layers size={15}/> ATLAS</span><div className="select-wrap"><select aria-label="Atlas family" value={atlas.family} onChange={e=>setAtlasId(catalog.find(a=>a.family===e.target.value)!.id)}>{families.map(f=><option key={f}>{f}</option>)}</select><ChevronDown size={14}/></div>{summaries.length>1&&<div className="select-wrap variant"><select aria-label="Atlas variant" value={atlas.id} onChange={e=>setAtlasId(e.target.value)}>{summaries.map(a=><option key={a.id} value={a.id}>{a.name} · {a.variant}</option>)}</select><ChevronDown size={14}/></div>}</div>
+      <div className="header-actions"><button className="text-button" onClick={()=>setDrawer('import')}><FileUp size={16}/><span>Import</span></button><button className="text-button" onClick={()=>setDrawer('export')}><Download size={16}/><span>Export</span></button><button className="share-button" onClick={share}><Link2 size={16}/>Share view</button><button className="icon-button" aria-label="About and atlas sources" title="About and atlas sources" onClick={()=>setDrawer('about')}><Info size={18}/></button></div>
+    </header>
+    <div className="workspace-toolbar"><div><span className="workspace-title">Atlas workspace</span><span className="toolbar-divider"/><span className="muted">{atlas.name} <span className="subtle">/</span> {atlas.regionCount} regions</span>{busy&&<span className="tiny-loading">Loading…</span>}</div><div><button className={!leftOpen?'active':''} title="Toggle region browser" aria-label="Toggle region browser" onClick={()=>setLeftOpen(!leftOpen)}><PanelLeftClose size={16}/></button><button className={!rightOpen?'active':''} title="Toggle details panel" aria-label="Toggle details panel" onClick={()=>setRightOpen(!rightOpen)}><PanelRightClose size={16}/></button></div></div>
+    {error&&<div role="alert" className="error-bar">{error}<button onClick={()=>location.reload()}>Retry</button></div>}
+    <main className={`workspace ${!leftOpen?'left-closed':''} ${!rightOpen?'right-closed':''}`}>
+      {leftOpen&&<RegionTree atlas={atlas} selected={selected} focused={focused} hemisphere={hemisphere} onHemisphere={setHemisphere} onSelect={changeSelection} onFocus={focus}/>}
+      <section className="viewer-panel" aria-label="Brain visualization"><div className="viewer-controls"><div className="segmented"><button className={mode==='glass'?'active':''} onClick={()=>setMode('glass')}>Glass brain</button><button className={mode==='solid'?'active':''} onClick={()=>setMode('solid')}>Solid</button></div><label className="opacity-control">Opacity<input aria-label="Brain opacity" type="range" min="0" max="0.6" step="0.01" value={opacity} onChange={e=>setOpacity(Number(e.target.value))}/><span>{Math.round(opacity*100)}%</span></label><button className="icon-button" aria-label="Display settings" title="Display settings" onClick={()=>setDrawer('settings')}><SlidersHorizontal size={17}/></button></div>
+        <BrainView atlas={atlas} selected={selected} focused={focused} hemisphere={hemisphere} opacity={opacity} mode={mode} clip={clip} point={point.mm} onPick={(id,mm)=>{setFocused(id);setSelected(prev=>new Set([...prev,id]));setPoint({mm,space:atlas.space,method:'3D mesh point; voxel label sampled independently'});}} onReady={()=>{}}/>
+        <div className="viewer-coordinate"><Crosshair size={14}/><span>{point.space}</span><code>{point.mm.map(v=>(v>=0?'+':'')+v.toFixed(1)).join('   ')}</code><span>mm</span>{point.method.includes('approximate')&&<span className="approx-label">Approximate transform</span>}</div>
+        <Slices atlas={atlas} point={point.mm} localFile={localFile} onPoint={mm=>setPoint({mm,space:atlas.space,method:'MRI slice voxel'})}/>
+      </section>
+      {rightOpen&&<aside className="details-panel"><section className="coordinate-panel"><div className="section-title"><h2><Crosshair size={16}/> Locate a point</h2><span className="unit-badge">{inputMode==='voxel'?'VOX':'mm'}</span></div><div className="segmented coordinate-modes">{[['mni','MNI'],['tal','Talairach'],['voxel','Voxel']].map(([id,label])=><button key={id} className={inputMode===id?'active':''} onClick={()=>setInputMode(id)}>{label}</button>)}</div><form onSubmit={e=>{e.preventDefault();locate();}}><div className="coordinate-inputs">{coords.map((v,i)=><label key={i}><span>{(inputMode==='voxel'?['i','j','k']:['X','Y','Z'])[i]}</span><input aria-label={`Coordinate ${['X','Y','Z'][i]}`} type="number" step={inputMode==='voxel'?1:'any'} value={v} onChange={e=>setCoords(prev=>prev.map((x,j)=>j===i?e.target.value:x))}/></label>)}</div><button className="locate-button" type="submit">Locate in brain<ArrowUpRight size={15}/></button></form><p className="coordinate-note">{inputMode==='tal'?'Lancaster pooled conversion · approximate':inputMode==='voxel'?`0-based indices · ${atlas.dims.join(' × ')} native grid`:atlas.space}</p>{coordError&&<p role="alert" className="inline-error">{coordError}</p>}
+        {mismatch&&<div className="space-notice"><AlertCircle size={14}/><span>Point is in {point.space}. {approx?'Comparing numeric coordinates approximately.':'A template transform is not packaged.'}</span></div>}
+      </section>
+      <section className="region-detail"><span className="eyebrow">{lookupBusy?'LOOKING UP…':'AT THIS LOCATION'}</span>{region?<><div className="region-title"><span style={{background:region.color}}/><h2>{region.name}</h2></div><p className="region-original">{region.original}</p><div className="detail-tags"><span>{hemiName(region.hemisphere)}</span><span>Label {region.id}</span></div><div className="breadcrumb">{region.path.slice(0,-1).join(' / ')}</div><dl><div><dt>Volume</dt><dd>{(region.volume/1000).toFixed(2)} cm³</dd></div><div><dt>Centroid (mm)</dt><dd>{region.centroid.map(v=>v.toFixed(1)).join(', ')}</dd></div><div><dt>Lookup voxel</dt><dd>{lookup?.voxel.join(', ')||'—'}</dd></div></dl>{lookup?.probabilities&&<div className="probabilities"><span className="eyebrow">SOURCE PROBABILITIES</span>{lookup.probabilities.map(p=><div key={p.id}><span>{atlas.regions.find(r=>r.id===p.id)?.name||`Label ${p.id}`}</span><b>{p.value}%</b></div>)}</div>}<button className="subtle-button" onClick={()=>focus(region)}>Go to a point inside this region<ArrowUpRight size={13}/></button></>:<div className="empty-point"><Crosshair size={24}/><p>{mismatch&&!approx?'Different reference template':lookup?.status==='outside'?'Outside the atlas volume':lookup?.status==='unlabeled'?'No atlas label at this point':'Select a region or enter coordinates'}</p><small>Use the tree or MRI slices to explore.</small></div>}</section>
+      <section className="comparison-panel"><div className="section-title"><h2>Across atlases</h2><button className="icon-button" aria-label="Add comparison atlas" title="Add comparison atlas" onClick={()=>setPinMenu(!pinMenu)}><Plus size={16}/></button></div><p className="small-muted">One location. Different perspectives.</p><label className="approx-toggle"><input type="checkbox" checked={approx} onChange={e=>setApprox(e.target.checked)}/><span>Allow approximate comparison between MNI templates</span></label>
+        {pinMenu&&<div className="pin-menu"><input placeholder="Find an atlas…" aria-label="Search comparison atlases" value={pinSearch} onChange={e=>setPinSearch(e.target.value)}/><div>{catalog.filter(a=>a.id!==atlas.id&&`${a.name} ${a.variant}`.toLowerCase().includes(pinSearch.toLowerCase())).map(a=><button key={a.id} disabled={!pins.includes(a.id)&&pins.length>=8} onClick={()=>setPins(prev=>prev.includes(a.id)?prev.filter(id=>id!==a.id):[...prev,a.id])}><span>{a.name}<small>{a.variant}</small></span>{pins.includes(a.id)&&<Check size={14}/>}</button>)}</div><small>Up to eight comparison atlases</small></div>}
+        <div className={compareBusy?'comparison-list updating':'comparison-list'} aria-busy={compareBusy}>{comparisons.map(row=>{const r=row.atlas.regions.find(r=>r.id===row.lookup?.id);return <div className="comparison-card" key={row.atlas.id}><button className="comparison-main" onClick={()=>setAtlasId(row.atlas.id)}><span className="comparison-atlas">{row.atlas.name}<ArrowUpRight size={12}/></span><strong>{r?.name||row.error||(row.lookup?.status==='outside'?'Outside volume':'Unlabeled')}</strong><small>{r?hemiName(r.hemisphere):row.atlas.space}{row.approximate?' · Approximate':''}</small></button><button className="remove-pin" aria-label={`Remove ${row.atlas.name} comparison`} onClick={()=>setPins(prev=>prev.filter(id=>id!==row.atlas.id))}><X size={12}/></button></div>;})}</div>{!comparisons.length&&!compareBusy&&<p className="small-muted">Add an atlas to compare its label here.</p>}
+      </section></aside>}
+    </main>
+    <footer className="app-footer"><span><span className="live-dot"/>All processing stays in your browser</span><button onClick={()=>setDrawer('about')}>{catalog.length} atlas variants <span>·</span> Sources & methodology<ArrowUpRight size={12}/></button><span className="footer-version">BrainRosetta / 0.1</span></footer>
+    {toast&&<div className="toast" role="status"><Check size={16}/>{toast}</div>}
+    {drawer&&<div className="drawer-backdrop" onClick={()=>setDrawer(null)}><section className="drawer" role="dialog" aria-modal="true" aria-label={drawer==='about'?'About BrainRosetta':drawer==='settings'?'Display settings':drawer==='import'?'Import data':'Export results'} onClick={e=>e.stopPropagation()}><div className="drawer-heading"><h2>{drawer==='about'?'About this atlas':drawer==='settings'?'Display settings':drawer==='import'?'Bring your coordinates':'Export & share'}</h2><button autoFocus className="icon-button" aria-label="Close dialog" onClick={()=>setDrawer(null)}><X size={20}/></button></div>
+      {drawer==='about'&&<><span className="eyebrow">{atlas.family}</span><h3>{atlas.name}</h3><p>{atlas.variant}</p><dl className="source-details"><div><dt>Reference space</dt><dd>{atlas.space}</dd></div><div><dt>Native voxel size</dt><dd>{atlas.resolution.join(' × ')} mm</dd></div><div><dt>Grid dimensions</dt><dd>{atlas.dims.join(' × ')}</dd></div><div><dt>License</dt><dd>{atlas.license}</dd></div></dl><p>{atlas.notes}</p><p className="method-note">{atlas.hierarchySource}. Region surfaces are smoothed display derivatives. Coordinate results come from the native label volume, never from the display mesh or a nearest-centroid guess.</p><h4>Citation</h4><p>{atlas.citation}</p><a className="source-link" href={atlas.source} target="_blank" rel="noreferrer">Original atlas source<ExternalLink size={14}/></a><h4>Coordinate interpretation</h4><p>MNI templates are not interchangeable. Results across different templates are blocked unless you enable approximate numeric-coordinate comparison. That option does not perform anatomical registration.</p><p>Talairach uses the Lancaster pooled affine and its inverse. This is an approximate conversion, identified in exports.</p><a className="source-link" href="https://www.brainmap.org/icbm2tal/" target="_blank" rel="noreferrer">Transformation reference<ExternalLink size={14}/></a><h4>Local by design</h4><p>Static atlas assets are downloaded on demand. Coordinate queries, local files, and exports stay on your device. No analytics, account, or processing server.</p></>}
+      {drawer==='settings'&&<><p>Reveal structures inside the brain with a clipping plane.</p><label className="setting-label">Sagittal clipping<span>{clip===100?'Off':`${Math.round(-90+clip*1.8)} mm`}</span><input aria-label="Sagittal clipping" type="range" min="0" max="100" value={clip} onChange={e=>setClip(Number(e.target.value))}/></label><label className="setting-label">Anatomical opacity<span>{Math.round(opacity*100)}%</span><input aria-label="Anatomical opacity" type="range" min="0" max=".6" step=".01" value={opacity} onChange={e=>setOpacity(Number(e.target.value))}/></label><p className="method-note">The amber crosshair marks the coordinate. Selected regions use atlas colors. MRI slices use neurological orientation with left/right labels.</p><button className="secondary-button" onClick={()=>{setOpacity(.17);setClip(100);setMode('glass');}}>Reset display settings</button></>}
+      {drawer==='export'&&<><p>Export this coordinate and its labels from the active and pinned atlases, including reference spaces and provenance.</p><button className="wide-button" disabled={lookupBusy||compareBusy} onClick={()=>saveCSV(exportRows(),'BrainRosetta-coordinate.csv')}><Download size={17}/>Coordinate results · CSV</button><button className="wide-button" disabled={lookupBusy||compareBusy} onClick={()=>download('BrainRosetta-coordinate.json',JSON.stringify({point,results:exportRows(),selectedRegions:atlas.regions.filter(r=>selected.has(r.id))},null,2),'application/json')}><Download size={17}/>Results & selected regions · JSON</button><button className="wide-button" onClick={share}><Link2 size={17}/>Copy a shareable view link</button><p className="small-muted">Use the camera button over the brain to save a PNG. A shared link contains atlas choices and coordinates; it never includes your local image.</p></>}
+      {drawer==='import'&&<><p>Import a CSV with <code>x,y,z</code> columns. The current coordinate mode is <strong>{inputMode==='tal'?'Talairach':inputMode==='voxel'?'0-based atlas voxels':'MNI millimeters'}</strong> in the context of {atlas.space}.</p><p>Batch lookup uses the active atlas and your comparison atlases, then downloads a CSV. Up to 10,000 rows.</p><input ref={coordUpload} type="file" accept=".csv,.tsv,.txt" hidden onChange={e=>{const f=e.target.files?.[0];if(f)void batch(f);}}/><button className="wide-button" disabled={batchBusy} onClick={()=>coordUpload.current?.click()}><FileUp size={17}/>{batchBusy?'Looking up coordinates…':'Choose coordinate file'}</button>{batchError&&<p className="inline-error" role="alert">{batchError}</p>}<hr/><h3>Local MRI background</h3><p>Load a NIfTI already aligned to the active atlas’s reference space. BrainRosetta does not register native-space scans.</p><label className="field-label">File reference space<select value={localSpace} onChange={e=>setLocalSpace(e.target.value)}>{[...new Set(catalog.map(a=>a.space))].map(s=><option key={s}>{s}</option>)}<option value="native">Native / unknown</option></select></label>{localSpace!==atlas.space?<p className="space-notice">Choose a file in {atlas.space} or switch to an atlas in your image’s space.</p>:<label className="wide-button file-button"><FileUp size={17}/>Choose aligned NIfTI<input type="file" accept=".nii,.nii.gz,.gz" onChange={e=>{const f=e.target.files?.[0];if(f){setLocalFile(f);setDrawer(null);notify('Local image selected. It stays on this device.');}}}/></label>}{localFile&&<button className="subtle-button" onClick={()=>{setLocalFile(null);notify('Template background restored');}}>Remove {localFile.name}</button>}</>}
+    </section></div>}
+  </div>;
+}
+export default App;

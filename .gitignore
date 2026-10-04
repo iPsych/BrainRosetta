@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.cache/
+.venv/
+test-results/
+playwright-report/
+*.tsbuildinfo
+__pycache__/
+.DS_Store

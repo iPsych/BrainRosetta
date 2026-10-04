@@ -1,0 +1,717 @@
+{
+  "atlasCount": 79,
+  "aal3SuppliedCsvMatches": true,
+  "checks": [
+    {
+      "atlas": "aal3-1mm",
+      "regions": 166,
+      "sha256": "486953ac2d25841ded16ad2d0d302d824fc1468a0bd942f7c6b17cec041830be",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-7Networks-2mm",
+      "regions": 100,
+      "sha256": "bbfdf936ef621e06a54ec42f9587157c013ee84414e0b36279e75f173ccb7b66",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-7Networks-1mm",
+      "regions": 100,
+      "sha256": "1c94de0f0342b69d279dc596ecfeedc26c7ef168d9aa6287fcd29a0fc4b2388e",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-17Networks-2mm",
+      "regions": 100,
+      "sha256": "c412d5c90e973f9612499abd764b80d1e63e8a6c3e8151d62e38f9f9ab60ce01",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-17Networks-1mm",
+      "regions": 100,
+      "sha256": "7649351211cd06dba2bfaee1245aa1b8c2a37a347bb9e64e3c7c759bf0f77fe3",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-Kong2022_17Networks-2mm",
+      "regions": 100,
+      "sha256": "b3a8603d89669e5beba4098a875ee94028d8503a88b2dfb2f8220f9473ebbbac",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-100-Kong2022_17Networks-1mm",
+      "regions": 100,
+      "sha256": "205d4bd69a3a0ef2fcc46109a9049b50b59513c2b5445075e0f97f2c49575fa2",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-7Networks-2mm",
+      "regions": 200,
+      "sha256": "4a6de7092ee7bca0a904559a783f095664a5c63e8051b1f29e6f0d7a26afdbc9",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-7Networks-1mm",
+      "regions": 200,
+      "sha256": "57456ceee3e07e288cbebfaf9fa43e71c9bf7748f2374f0f93ca51e39af8938c",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-17Networks-2mm",
+      "regions": 200,
+      "sha256": "02b41f91f09873b2b9191e4ce6a5468f18a2fa30c7c0019a83ae7a46619dd43e",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-17Networks-1mm",
+      "regions": 200,
+      "sha256": "2387ced9ab035b0052db5e5afaa426b6c939e1b781a313e3ea91814c1bbf927a",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-Kong2022_17Networks-2mm",
+      "regions": 200,
+      "sha256": "172fcccbf005ab8f9ee22c831f0801efacbb2041d479e9cb164ebc71cfe7c73b",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-200-Kong2022_17Networks-1mm",
+      "regions": 200,
+      "sha256": "ee23d6bd081ea71a116406692ae25974a91290eed60c6670b16fd58a15efed33",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-7Networks-2mm",
+      "regions": 300,
+      "sha256": "32e8c297823fa88d3fd39951c2d0201ed0e5d70da06e2e1d1b7fc0c3188a64eb",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-7Networks-1mm",
+      "regions": 300,
+      "sha256": "b328a86a5473b7a0a4b3f6873e7f54ff6a780cca006a2bdd33fc91a666319986",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-17Networks-2mm",
+      "regions": 300,
+      "sha256": "48ef7dae74dc7adea7cbdec43d5ea01374cb95a44aecdecb415c113953902bd6",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-17Networks-1mm",
+      "regions": 300,
+      "sha256": "2c8accefaaababcdc2e899a8ea336cc1382ea105772915cf88c35cb2d9bc1d43",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-Kong2022_17Networks-2mm",
+      "regions": 300,
+      "sha256": "97cb487e1aab8f37f4704927b24022c83205670e2c89d902e5394d382dd87a7d",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-300-Kong2022_17Networks-1mm",
+      "regions": 300,
+      "sha256": "21f1e386195b380989ae71c04310fe86550116cfd8fce8efc199e87bdc311894",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-7Networks-2mm",
+      "regions": 400,
+      "sha256": "1cf1e6cffe786f57e92eac43c18a7b32cb6223a0ed71c54eeba383af2a356b64",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-7Networks-1mm",
+      "regions": 400,
+      "sha256": "ad43fb3da49e5c95dce4c28847722518ca7b312e136b3a0f755baa5de6d39807",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-17Networks-2mm",
+      "regions": 400,
+      "sha256": "c65fbad6fade9bc85094f881f065d14a65875728a9050b3d84145af8a96e2b61",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-17Networks-1mm",
+      "regions": 400,
+      "sha256": "e107f475e424d66c26fa6d591e26ef00ea05a61dcad7448ad1483e04fa6a2156",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-Kong2022_17Networks-2mm",
+      "regions": 400,
+      "sha256": "cbf8bbc843598790f519b94aab0757bfd516d7cca9ce2b1358b7acfe5e987c89",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-400-Kong2022_17Networks-1mm",
+      "regions": 400,
+      "sha256": "769ebfe282d80fb292bf7e0ad0b9448e6af3af9ca29f35bc612f945ed059ac8a",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-7Networks-2mm",
+      "regions": 500,
+      "sha256": "5475ecf34b2ab1ac88ed754a02b2cd2a9e4693e3ce8aab30485a0f423e0eea49",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-7Networks-1mm",
+      "regions": 500,
+      "sha256": "afc0a617b1d4f4390d84220811a1794d08f3b4ce3a724c59456805dfb1610d70",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-17Networks-2mm",
+      "regions": 500,
+      "sha256": "53982fcae98c6e36b78942c359195512fa78b5f002030d99b46afb0fd8055011",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-17Networks-1mm",
+      "regions": 500,
+      "sha256": "015130d325098137965288fea4d585ed9fc18de8d60b3f314852607b9766c530",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-Kong2022_17Networks-2mm",
+      "regions": 500,
+      "sha256": "7096c2e43765eebc7f01475d33ad7c7bcfa865fc3be24b5fcc873bc793815089",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-500-Kong2022_17Networks-1mm",
+      "regions": 500,
+      "sha256": "a0b33f436fbeb79c36dd5974bdcd94ecccdabe9b6ab056744426af8afafb6795",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-7Networks-2mm",
+      "regions": 600,
+      "sha256": "de15c92dd9d7a82d747ff279f1927630dbcf49de133cd015b69e5be883470339",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-7Networks-1mm",
+      "regions": 600,
+      "sha256": "6d53720388e4a380c637d6202c852ed66634df68bed1a20fd29703d6dd50ee13",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-17Networks-2mm",
+      "regions": 600,
+      "sha256": "e1fdd19196a4879cab9d479b3b6c3245cd68db21cb41c548a40c2ee77a31ef42",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-17Networks-1mm",
+      "regions": 600,
+      "sha256": "51ba63110b9d5d06abab725800da40099579b04e76332fc6db04dc34daa5e675",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-Kong2022_17Networks-2mm",
+      "regions": 600,
+      "sha256": "fa559b2f0116541522fdfcd77386f82755b26e4de3488f3c2b116f07ee0e99b3",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-600-Kong2022_17Networks-1mm",
+      "regions": 600,
+      "sha256": "5c38fcabbd018bbdc8b85b41ee38fa0d38af85441e55b8c8c8157c0863c94b43",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-7Networks-2mm",
+      "regions": 700,
+      "sha256": "0f8eec14bc72507d1ea519dba7228f139e450a1da33849b428bc510262183c32",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-7Networks-1mm",
+      "regions": 700,
+      "sha256": "7d224455a87b6568bf9aec4f207121d88bdfb016a533ca3e28a2811a9407dc00",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-17Networks-2mm",
+      "regions": 700,
+      "sha256": "d859b9eb9216908b6c5d7afba268bc9d9c49589ae29c29096ae451384ff777d9",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-17Networks-1mm",
+      "regions": 700,
+      "sha256": "0a519dcc19dfd1f2af1dd749ee6f6f5eef9fd9d96648e6ad9eaadc8c18cbc191",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-Kong2022_17Networks-2mm",
+      "regions": 700,
+      "sha256": "63c279b4398a39b6c4f52263f2a1c672f1334a9bc7647e8f4b82f110b7a08184",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-700-Kong2022_17Networks-1mm",
+      "regions": 700,
+      "sha256": "ded478291ad3ecac84c8404019a7c1fa75785175b3e1b282789a5ffa584360fc",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-7Networks-2mm",
+      "regions": 800,
+      "sha256": "c20f510009dc5bf4a4186260044876498004e8c32829b05c4a2711e5d734b334",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-7Networks-1mm",
+      "regions": 800,
+      "sha256": "24931cb547268aacbda8ccbd94f01b45dc657df8d1857cb18111f4118ee89216",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-17Networks-2mm",
+      "regions": 800,
+      "sha256": "00c9f2773972d07bad14de87911e47a2ddf1030f570d0623728d1e974828a2ea",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-17Networks-1mm",
+      "regions": 800,
+      "sha256": "41d2dcc5ea0f5b29a53299f615c98e0c4093b5d0a213bdcd4d6bcf41a3e5caac",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-Kong2022_17Networks-2mm",
+      "regions": 800,
+      "sha256": "e2bc83a65cd3d2c6520255192ceeb6a2e5a43fa434bdc36c65676c925a06566c",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-800-Kong2022_17Networks-1mm",
+      "regions": 800,
+      "sha256": "5f05a02cd6f3cdb12ed64e9d106242e7279d3a9cf364d83fcf8f1e06b33a7604",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-7Networks-2mm",
+      "regions": 900,
+      "sha256": "0989e8b96cd90a3a927d72e6eac4cb0d3fd4826936583a4145f8092e9517a611",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-7Networks-1mm",
+      "regions": 900,
+      "sha256": "3fee0c7e6fe117ce06ce7d6ac8ede95c15dd0430b091b5acecea17409c97472d",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-17Networks-2mm",
+      "regions": 900,
+      "sha256": "f3ee6c81280af89956895191aae687ce8467d0d9ec9183b7c17c79dd9d1df283",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-17Networks-1mm",
+      "regions": 900,
+      "sha256": "1f6b3acba376530398e0e6191300d4f7e7cd3e8eb022a4f3b970be1416808adc",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-Kong2022_17Networks-2mm",
+      "regions": 900,
+      "sha256": "6b4175f83eae94f733b234b0a9c2997f83bab79cb83d4b13ebcfb8c8b8dfddc1",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-900-Kong2022_17Networks-1mm",
+      "regions": 900,
+      "sha256": "14d11dbf0c58ba421c0fd6765527f1a16a5960766142c73f0d05272187fa6e7a",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-7Networks-2mm",
+      "regions": 1000,
+      "sha256": "db762075f3467dabe4e74b578b3a3536a34d078456afc9b62d5ba2396eeda8fc",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-7Networks-1mm",
+      "regions": 1000,
+      "sha256": "efab8fea462336344fbf78e052dd4998af7a1285960161c1b6909ec669ea3c2f",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-17Networks-2mm",
+      "regions": 1000,
+      "sha256": "10c45a7c687a33a65d08da0483e2e600568a49e1c4acdf5d1c8d583ea07c3c28",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-17Networks-1mm",
+      "regions": 1000,
+      "sha256": "15cae32ae0863c27f3c577da268da15594d11cec4f3f217d35f376417d88ea89",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-Kong2022_17Networks-2mm",
+      "regions": 1000,
+      "sha256": "8aa2b4056eb10be07da091a44fcf53f85aa445e79382f5da84ce6491b2a4564f",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "schaefer-1000-Kong2022_17Networks-1mm",
+      "regions": 1000,
+      "sha256": "bba2a05988c778d433d329c0664ef20233349fa53c33c370528becd7ad7d417e",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "julich-3.1",
+      "regions": 414,
+      "sha256": "dece494c48b68b82a6b33ddbb57168046f67a38bf82d4ff05be48295d2d39a24",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "juelich-fsl",
+      "regions": 121,
+      "sha256": "555706e404fde9db3e758ece7f1551f9aaa53983610f713fc6a5ff785382ba3d",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "harvard-oxford-cort",
+      "regions": 48,
+      "sha256": "826dc52b2d60ac377403202a24dce1ed52f92e9df2f1e67d033b5863f0a4ba25",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "harvard-oxford-sub",
+      "regions": 21,
+      "sha256": "bbb93c44b44a1c0276335ecab0a130092f3a7b1aa06a7d5dcedd9722435983e8",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "brainnetome",
+      "regions": 246,
+      "sha256": "5c229de06a3bf065d5273ef9856b167d9d2d7533c38895ac2dba96df3e6e400c",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "tian-s1",
+      "regions": 16,
+      "sha256": "76912e6f09fba4ecef57cc3f1fdac97d1493d2ecfec44bb8bff643d34aa6d0e3",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "tian-s2",
+      "regions": 32,
+      "sha256": "f04131b824df20d0a11aeb2ef3c19d2d9496c7875c1c164c98a2873dd155ba6e",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "tian-s3",
+      "regions": 50,
+      "sha256": "aaf0cc43649a31f331ed049c468a41d222e06fd40b296a3cb13d39a4f2a366c8",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "tian-s4",
+      "regions": 54,
+      "sha256": "1d9e2081c3bc96d130e905eb89f7b986b230d761d52e7143079aab434e077a44",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "suit",
+      "regions": 34,
+      "sha256": "ff1541a368d0a3cd61c61725dbbaf66f884930b903f6ee8e72fd16cca88f2079",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "destrieux",
+      "regions": 148,
+      "sha256": "c999752b876d7567c30ece34034013b0ce5a3b8b4c281caf50bc0a68959eefa0",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "aal",
+      "regions": 116,
+      "sha256": "3e73465a81dd0b074c96fb43e37015079ed46fcb7620d6ad0191629a275dc85d",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "desikan",
+      "regions": 70,
+      "sha256": "4302b197fb50651443adb0be1c1f0b8f5788eace0cd613827c98ff50233e9df5",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "glasser",
+      "regions": 360,
+      "sha256": "0db1f32888a90732e1f23da03782753677ed2df3aaf79daef7562af294c91ea7",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "jhu-labels",
+      "regions": 50,
+      "sha256": "5d8545183f67c99e4c01cd42d5dae9933313ffc3afe99c0a45d67295d32493c0",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "jhu-tracts",
+      "regions": 20,
+      "sha256": "bbd73242c0378ce57e5095f6ed69191252e995f38c97024bf4555ea1b96e3c9a",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "yeo-7",
+      "regions": 7,
+      "sha256": "7cf0977301fe923d4919257c81274803ee122bc7b89751aadd7e6b78bd78ce14",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    },
+    {
+      "atlas": "yeo-17",
+      "regions": 17,
+      "sha256": "32953c0660f9f143970a3597c6719846cc759a6412709c2cfc8a9628d18f6d8b",
+      "gridMatchesNifti": true,
+      "allFocusPointsInside": true,
+      "voxelCountsAndVolumes": true,
+      "meshIndicesValid": true
+    }
+  ]
+}

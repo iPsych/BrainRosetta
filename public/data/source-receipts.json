@@ -1,0 +1,1041 @@
+[
+  {
+    "file": "Schaefer2018_100Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_100Parcels_7Networks_order.txt",
+    "sha256": "ca212790d0103949c8cfa0f7689f5935cad0d1fbfc06506f1fdf7986bee72786",
+    "bytes": 4169
+  },
+  {
+    "file": "Schaefer2018_100Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "23d54226fc7fe5a1b20844a1c8f8d8e23b59888f6442d7590eb983dd8e682e9a",
+    "bytes": 233605
+  },
+  {
+    "file": "Schaefer2018_100Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "101cb2e643531826e5d52d35751f3cf7134c394b08b8ce0affa259a224350f67",
+    "bytes": 52328
+  },
+  {
+    "file": "Schaefer2018_100Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_100Parcels_17Networks_order.txt",
+    "sha256": "542de73a04c37a12bd80c9dba31b5d1e98ece57e31a79f022c0eaa6af3146984",
+    "bytes": 4516
+  },
+  {
+    "file": "Schaefer2018_100Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "f90e8ca5a41e66f6db40f1555f9c78207c59c0827addebe5825d9c9a4f0c9146",
+    "bytes": 233863
+  },
+  {
+    "file": "Schaefer2018_100Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "5f85dbe3c5eadd1892c8b6e6363a504b97784b6c74591be036e77cac6511c0e9",
+    "bytes": 52474
+  },
+  {
+    "file": "Schaefer2018_100Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_100Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "f7bccba3ef5c0f271c59ffa64daa3e7ca8c1997af35b4622cb58e9a9ecb9d318",
+    "bytes": 4471
+  },
+  {
+    "file": "Schaefer2018_100Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "4c1156b58b39db2365a396a2482fbb0439ae2973ec65ff016f18c8765ba18c90",
+    "bytes": 233877
+  },
+  {
+    "file": "Schaefer2018_100Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_100Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "679a12bf03c16dfa3bf0c8325936329e515e16915561262ccf2558653aab2c93",
+    "bytes": 52493
+  },
+  {
+    "file": "Schaefer2018_200Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_200Parcels_7Networks_order.txt",
+    "sha256": "42927810db2d272189c63c08927f8b2b4c9eac402f26e08e80d5ce70e7dd29f9",
+    "bytes": 8482
+  },
+  {
+    "file": "Schaefer2018_200Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "a47808f907f175f2e83f2c941bc68a766a8991b238e98457e9d27a8760ea21ec",
+    "bytes": 259065
+  },
+  {
+    "file": "Schaefer2018_200Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "474accdd951ecf80624cd445a1cb07a3caf93bb581bf55588da6f6e63189f2e7",
+    "bytes": 59537
+  },
+  {
+    "file": "Schaefer2018_200Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_200Parcels_17Networks_order.txt",
+    "sha256": "8b6f9643d8ba87e12062b22e164e82835a18ee63055119f92ce2ca5c6688dc95",
+    "bytes": 9097
+  },
+  {
+    "file": "Schaefer2018_200Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "360d582d9cc12946a1f6eb7fc3a79789d04bbba43f14376920f02011611034f6",
+    "bytes": 259405
+  },
+  {
+    "file": "Schaefer2018_200Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "4acee11cf3f11f744334a5a2f00b9c7d215720651dfadf2a8a1f40e9a5338343",
+    "bytes": 59657
+  },
+  {
+    "file": "Schaefer2018_200Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_200Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "bf8a9f57ab33100c5ab821fcc91c384f3faf997cc3754e04bd678dcea006fbe9",
+    "bytes": 9008
+  },
+  {
+    "file": "Schaefer2018_200Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "05ca706ba1b5bbe274a4a945d0c51845d8c0edb60d284705451a18c227785f7f",
+    "bytes": 259900
+  },
+  {
+    "file": "Schaefer2018_200Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_200Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "66a0de235acc5b20fc8dac5f308395cef6a9dc4e17bf0588b27b63b19a1fa648",
+    "bytes": 59934
+  },
+  {
+    "file": "Schaefer2018_300Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_300Parcels_7Networks_order.txt",
+    "sha256": "29c92430f61c9f43525cf4fb8647db20976469f78a49f653fbe54899016ae367",
+    "bytes": 12814
+  },
+  {
+    "file": "Schaefer2018_300Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "4b8f470f55acec8c8287168e5df256796a80d03b7c7c3a31c87af79dac540988",
+    "bytes": 278661
+  },
+  {
+    "file": "Schaefer2018_300Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "7f7c295a2da320e2a035a7474678ec44a01c330c9009f3e7d2f83ae5b98f9108",
+    "bytes": 64685
+  },
+  {
+    "file": "Schaefer2018_300Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_300Parcels_17Networks_order.txt",
+    "sha256": "1793a5f124814b613930d47a9bcfdba4007da4fe04dea0c4e15db0e48eeec571",
+    "bytes": 13700
+  },
+  {
+    "file": "Schaefer2018_300Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "8e7cee69a6f34b74557f0fe7230bbc9e5df95e8c08f42ab367f69caa739ac680",
+    "bytes": 279017
+  },
+  {
+    "file": "Schaefer2018_300Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "6b2a97b6b9c372b4a01e4f7de589f91a257c38ee20893ce00c9d184be0254466",
+    "bytes": 64800
+  },
+  {
+    "file": "Schaefer2018_300Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_300Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "4b8c4cef99091c620a75bc4f6dca48adfdbc872ae98f520336a0ef7b0598ce5b",
+    "bytes": 13586
+  },
+  {
+    "file": "Schaefer2018_300Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "ec5f369ff16ba90c44bfb392f9b45fd0ec0351117749db70c99178ed5c2e8b17",
+    "bytes": 279225
+  },
+  {
+    "file": "Schaefer2018_300Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_300Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "f78facb27111c8d25d81e5fdf79a1b8f4aad9fcd8e04eada00d0554620f2657f",
+    "bytes": 64851
+  },
+  {
+    "file": "Schaefer2018_400Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_400Parcels_7Networks_order.txt",
+    "sha256": "f62cdc9de9696e11bda9fe1cd51fc013b1da27ba180d2dcead8f3fd94bf3cbc1",
+    "bytes": 17152
+  },
+  {
+    "file": "Schaefer2018_400Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "abb8032840af30603995fd59634fd6bcd816088870de9061bbf90ad42c408d4d",
+    "bytes": 295901
+  },
+  {
+    "file": "Schaefer2018_400Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "359da271b5d569ae76112693ef4f303cb744c5e060306ca45eca40bddacc85ac",
+    "bytes": 69474
+  },
+  {
+    "file": "Schaefer2018_400Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_400Parcels_17Networks_order.txt",
+    "sha256": "53982b50021d4966aa612da0fe31b585cbf54d2cd53d42b68c3e4237c1fe4765",
+    "bytes": 18315
+  },
+  {
+    "file": "Schaefer2018_400Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "99fd6f176737a1032a33a737af1c0af62f72d611201c45aceebdabe0bb0bf98b",
+    "bytes": 295838
+  },
+  {
+    "file": "Schaefer2018_400Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "b275e31a5052434a2202f5ef0d6fd2e3cfa539453ae3af3975bf9bbeef58fd4c",
+    "bytes": 69464
+  },
+  {
+    "file": "Schaefer2018_400Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_400Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "75d96cf46362161ae90da6ea386aa26bedc6f2d1c404ec3c246bd9fef048de45",
+    "bytes": 18131
+  },
+  {
+    "file": "Schaefer2018_400Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "f98c90826c243a4d8975a6243f440d4867b954dcbc98b3c9f7e890d19a72c75e",
+    "bytes": 296914
+  },
+  {
+    "file": "Schaefer2018_400Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_400Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "e0f3161fb4827807fc5fb95060b92f2f023bea2129b3619e6ad570e0ef4de076",
+    "bytes": 69770
+  },
+  {
+    "file": "Schaefer2018_500Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_500Parcels_7Networks_order.txt",
+    "sha256": "91063249dea4744f598959bfb631918ed446bad0275fc0cb1c25150a4365662c",
+    "bytes": 21485
+  },
+  {
+    "file": "Schaefer2018_500Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "43fda69f053d1428e6759b981d6aeb95dd3d23f4ffc79ad386c5a915a3f8b569",
+    "bytes": 309462
+  },
+  {
+    "file": "Schaefer2018_500Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "fdb099b2c6d500723fe8fddaa8e64eb5b77cc7a302a97c2dea1eeff03d6913d0",
+    "bytes": 72454
+  },
+  {
+    "file": "Schaefer2018_500Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_500Parcels_17Networks_order.txt",
+    "sha256": "c5a926edf5b588fae98de75eca5db337248fcbf7a271bef15d9f4fdc4018e2dc",
+    "bytes": 22963
+  },
+  {
+    "file": "Schaefer2018_500Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "c0a4ebdf189c20389a48dd25f293fc3bd1cd6ba80a640109651c5f93367b6511",
+    "bytes": 309729
+  },
+  {
+    "file": "Schaefer2018_500Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "baa3677cfc33514a6f1597363aecdd239198301116987658f5d27f393bf0141a",
+    "bytes": 72528
+  },
+  {
+    "file": "Schaefer2018_500Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_500Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "9d0deb266f77ce6eb6c0bfbb7fdd36111dab0ca8adac0538938512773439b1da",
+    "bytes": 22671
+  },
+  {
+    "file": "Schaefer2018_500Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "0aaeee3c00381a22df1f7b0880f9df16a2a9a00aeab70a33929cca2b6b0e9023",
+    "bytes": 310457
+  },
+  {
+    "file": "Schaefer2018_500Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_500Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "721e327bf7c6bf58314d88e6565426ef008839e97b04ade415fdd478caacb541",
+    "bytes": 72772
+  },
+  {
+    "file": "Schaefer2018_600Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_600Parcels_7Networks_order.txt",
+    "sha256": "5b1a7bc71a925322db8c6a71b7ac37c448ba85670f1465521fa4fdbc1cc0c11c",
+    "bytes": 25917
+  },
+  {
+    "file": "Schaefer2018_600Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "2f6c1f2a501a3895bc8ea72fd75a1cd2e25693a9c233317d2c90d6d7de946d9c",
+    "bytes": 322540
+  },
+  {
+    "file": "Schaefer2018_600Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "8df4c734ed4c406e9aa5155252af3b9a62fcf451d2ba52b4151be7544d3f8b0d",
+    "bytes": 76252
+  },
+  {
+    "file": "Schaefer2018_600Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_600Parcels_17Networks_order.txt",
+    "sha256": "c850799a0ba95cd9cb376aff88abb89891b87a1b770b6935fb7fa1e836522ee7",
+    "bytes": 27680
+  },
+  {
+    "file": "Schaefer2018_600Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "9432051fbef0925902f2c5d3a9a6d6172f93b6f6e02696715cfeb53361da37db",
+    "bytes": 322370
+  },
+  {
+    "file": "Schaefer2018_600Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "71959d9034d688c0d8764396ce161ced5cd7a663adf771c4ac2971efe5e3982b",
+    "bytes": 76373
+  },
+  {
+    "file": "Schaefer2018_600Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_600Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "cf574c3afddd28438c4fe1dc0e1af9c8f088bb4208739980c63fdbfa2b70cfc5",
+    "bytes": 27291
+  },
+  {
+    "file": "Schaefer2018_600Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "4f24d7ddd97d294deacff3a4145a12b4bc56645f3771704b07aa6402ee83a2c5",
+    "bytes": 323083
+  },
+  {
+    "file": "Schaefer2018_600Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_600Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "cc4b810a0f743acba658100b1404e72c7ba7fb5989f98618d86876938ec0b6a0",
+    "bytes": 76600
+  },
+  {
+    "file": "Schaefer2018_700Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_700Parcels_7Networks_order.txt",
+    "sha256": "1e7ccbad717fe0ed7e78c0c3ffea9121e5a1da79ccb4bedf14bfba985059b6df",
+    "bytes": 30094
+  },
+  {
+    "file": "Schaefer2018_700Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "799c7b4da5dee50a5d4ac57ed88ae00fe08ac6cf63f4734360e4696038310f83",
+    "bytes": 333199
+  },
+  {
+    "file": "Schaefer2018_700Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "03123510e317b78e9a493211ecbab37459d576a8bdc36098f72f8d04ac663a5f",
+    "bytes": 79559
+  },
+  {
+    "file": "Schaefer2018_700Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_700Parcels_17Networks_order.txt",
+    "sha256": "5c605181904a0920f2c4758c71984660144de225f1787a29aa1786a838542722",
+    "bytes": 32256
+  },
+  {
+    "file": "Schaefer2018_700Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "2e23f291d085a0aee0aac1b39b63dc12f76458bde61a92c4cfddb872b3a590ea",
+    "bytes": 334243
+  },
+  {
+    "file": "Schaefer2018_700Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "b2b6028f1f023835540aa1a9d4e89b66cfe99514ec02e9ca62f53b320c8b978c",
+    "bytes": 79740
+  },
+  {
+    "file": "Schaefer2018_700Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_700Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "cbb5dea5b0158a99a09b14bf1ced971cabea36c510f148dc71a15d52e887cb82",
+    "bytes": 31849
+  },
+  {
+    "file": "Schaefer2018_700Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "184b219feebb19e367d48ab7c3632258884c646db3da77c6b91dfed9afe999aa",
+    "bytes": 335470
+  },
+  {
+    "file": "Schaefer2018_700Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_700Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "6341e90f16ef61da6e457d4ad47f03f3cd0fff773cdb588d1fcac9d3020f27b9",
+    "bytes": 80280
+  },
+  {
+    "file": "Schaefer2018_800Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_800Parcels_7Networks_order.txt",
+    "sha256": "e22e4da942a28a0bbebcc58c774a32642091d5c23c4a233f410975f90b91b401",
+    "bytes": 34468
+  },
+  {
+    "file": "Schaefer2018_800Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "e05b956f59b84357139c6062887723b784886cab0136667d2177ae8e2ec54669",
+    "bytes": 342981
+  },
+  {
+    "file": "Schaefer2018_800Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "6efb33251522d7ec0dcaf9898b9cbb32f73622387967db537bc4bcbee5b37a3c",
+    "bytes": 82352
+  },
+  {
+    "file": "Schaefer2018_800Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_800Parcels_17Networks_order.txt",
+    "sha256": "aa782d9af0cf8e9a7658b2a4865b7801421f6fdb560ed4f0f3602491e57644cd",
+    "bytes": 37004
+  },
+  {
+    "file": "Schaefer2018_800Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "664fa1426364b8bc87fafdb2adc943a70075b8c89a949eec8227dbb7d0720888",
+    "bytes": 343255
+  },
+  {
+    "file": "Schaefer2018_800Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "eb98f4b17c3e8237301efefeb56ff43c4cd2f6cc0d06a7faf6c0ae6411873742",
+    "bytes": 82326
+  },
+  {
+    "file": "Schaefer2018_800Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_800Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "c5394059f6ac8086891c12cb0e72538b145d1f5328ab5740e3f621de92893fbd",
+    "bytes": 36402
+  },
+  {
+    "file": "Schaefer2018_800Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "515de4a23347c1441a55f730dd636cc547e75b439c43d08fd9028f848cfb4da0",
+    "bytes": 344826
+  },
+  {
+    "file": "Schaefer2018_800Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_800Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "d3cba152685d04da48f826d96614703f24f1adabbb2d4ea2b589bdaeee5d1f9d",
+    "bytes": 82821
+  },
+  {
+    "file": "Schaefer2018_900Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_900Parcels_7Networks_order.txt",
+    "sha256": "91c019bd27dcca127e47fdc8b3edd2511af9ef6da1255144a742e2a8041f261c",
+    "bytes": 38893
+  },
+  {
+    "file": "Schaefer2018_900Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "e779ff44af3e5cf580a808740806e7655828b37f3fa56b0f289bf3d5e71ac3f6",
+    "bytes": 351453
+  },
+  {
+    "file": "Schaefer2018_900Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "b751d41f79f2be8dc5ad7a3d2aced971961009724679696adef17a0f1273d0da",
+    "bytes": 84410
+  },
+  {
+    "file": "Schaefer2018_900Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_900Parcels_17Networks_order.txt",
+    "sha256": "f9d57ba28c2aafafc7f549621507d554c6696726bad02764ff71f0b1b8a43425",
+    "bytes": 41736
+  },
+  {
+    "file": "Schaefer2018_900Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "afb93e373dfb8cbe8363898d748692edbfc871b01a3c016221c740abc11d10b5",
+    "bytes": 351988
+  },
+  {
+    "file": "Schaefer2018_900Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "0b49439b6f3c0cfbd893660e85fd478de03d3878ea4a893a9d875c2d34f74421",
+    "bytes": 84763
+  },
+  {
+    "file": "Schaefer2018_900Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_900Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "159b30b713792f0b9e7a2728e6ef72cebc07ca371074c322dcad4fa8ba218dec",
+    "bytes": 41030
+  },
+  {
+    "file": "Schaefer2018_900Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "4abec77c10d45cd7df18b36114dc26c06eec9cdb63f85bc46eda7e12b72278a8",
+    "bytes": 353540
+  },
+  {
+    "file": "Schaefer2018_900Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_900Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "da88ae812eb95f36207ad8f1f72c607ac937a5ebd5f1d3cbaf837a4ddbc829d6",
+    "bytes": 85194
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_7Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_1000Parcels_7Networks_order.txt",
+    "sha256": "7badc134a11bdcac50cb2cd5d2543c9301d3f9e5a10bd595493931e8eae68463",
+    "bytes": 43241
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_7Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "c656b627c745255aa3fdfb2aa8027085bcfdb715a639bacfab0c652a6c2832df",
+    "bytes": 361365
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_7Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "4dd1611aebe3a828bcb02474d5b07a05e9cae56a733e707fd1277cfce9a1a380",
+    "bytes": 87326
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_1000Parcels_17Networks_order.txt",
+    "sha256": "09657cbf777c9ab6924f394a39fe54d7acece40f792bdfc64374fb40f8f903f8",
+    "bytes": 46310
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "da7a071cee53c2020188313d38a6e67e8558de4cae7169b8ddca29ac6fb49975",
+    "bytes": 361253
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "6cec87e7957cdd9f5ec46cc78b8946f8d67bf25dbddd98a0664408b45efe139f",
+    "bytes": 87265
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_Kong2022_17Networks_order.txt",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/freeview_lut/Schaefer2018_1000Parcels_Kong2022_17Networks_order.txt",
+    "sha256": "d5ec2bff321d56993d0cadb089613f9994471143c985488b547566a0f031d3d8",
+    "bytes": 45587
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_Kong2022_17Networks_order_FSLMNI152_1mm.nii.gz",
+    "sha256": "d3da45a79c968fb3a72fe95697a444a1b8f597ddcbc856c5fd9015673f90fcf3",
+    "bytes": 361683
+  },
+  {
+    "file": "Schaefer2018_1000Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "url": "https://raw.githubusercontent.com/ThomasYeoLab/CBIG/634f676630929a71297852d01dd92a287103e861/stable_projects/brain_parcellation/Schaefer2018_LocalGlobal/Parcellations/MNI/Schaefer2018_1000Parcels_Kong2022_17Networks_order_FSLMNI152_2mm.nii.gz",
+    "sha256": "75386cafe510821c5ba82518c2f1502095b458759cfb0891246ff5402fe82551",
+    "bytes": 87379
+  },
+  {
+    "file": "julich/JulichBrainAtlas31_LH.nii.gz",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/Juelich31/JulichBrainAtlas31_LH.nii.gz",
+    "sha256": "acf7cde25f9c2f60ac5859adb6c68e058e16f77bf47d7f6f1f4f1d3d659a5258",
+    "bytes": 102554
+  },
+  {
+    "file": "julich/JulichBrainAtlas31_RH.nii.gz",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/Juelich31/JulichBrainAtlas31_RH.nii.gz",
+    "sha256": "86e13371b23073c818ee32ca8051d20ab4a75399631d95f0f124b3d6b531d85e",
+    "bytes": 103601
+  },
+  {
+    "file": "julich/ICBM2009asym.nii.gz",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/Juelich31/ICBM2009asym.nii.gz",
+    "sha256": "e593e3285b4600458406ed8edce75325cf7e46a1cf5ac056c53fb4ac4fea90ce",
+    "bytes": 1886970
+  },
+  {
+    "file": "julich/Julich.json",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/Juelich31/Julich.json",
+    "sha256": "e3515e33899eada21e6ad09e611d356c549b12292e84619a4c2cfa702123e066",
+    "bytes": 13439
+  },
+  {
+    "file": "julich/README.md",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/Juelich31/README.md",
+    "sha256": "b2762eee2f54f814bd5562016645ef06dfd36f79a37ea028b9f721611427c271",
+    "bytes": 1078
+  },
+  {
+    "file": "brainnetome/bnatlas.nii.gz",
+    "url": "https://raw.githubusercontent.com/brainnetome/bnatlasviewer/master/content/bnatlas.nii.gz",
+    "sha256": "32d363266acf7ff7c2ab67fd99b19ad8e0f63736cbd758dc12ebaf0c22b09e3f",
+    "bytes": 311301
+  },
+  {
+    "file": "brainnetome/bnatlas.nii.txt",
+    "url": "https://raw.githubusercontent.com/brainnetome/bnatlasviewer/master/content/bnatlas.nii.txt",
+    "sha256": "f454695a2e061a47abf85890341541ffe94cb96370dcfaa1eb335c707289002b",
+    "bytes": 3596
+  },
+  {
+    "file": "tian/Tian_Subcortex_S1_3T.nii",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S1_3T.nii",
+    "sha256": "a6f2e6ac166d1c2a960d193e9d91ca7d5de8b8382db7702c304ac89e3760e212",
+    "bytes": 3610868
+  },
+  {
+    "file": "tian/Tian_Subcortex_S1_3T_label.txt",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S1_3T_label.txt",
+    "sha256": "f8dc7acae3483952d41d49b9145b4d13c5bc28da1c410114a561a5efda55db8c",
+    "bytes": 113
+  },
+  {
+    "file": "tian/Tian_Subcortex_S2_3T.nii",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S2_3T.nii",
+    "sha256": "e79ee80b0a9c698e3c7257785f288cff6a68cfee8802830cb2a1b7141d10740f",
+    "bytes": 3610868
+  },
+  {
+    "file": "tian/Tian_Subcortex_S2_3T_label.txt",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S2_3T_label.txt",
+    "sha256": "f1c498182107b1a3ceae737f3c140e8053e045d0e9ec0a71bfa05ae8a17d2be5",
+    "bytes": 285
+  },
+  {
+    "file": "tian/Tian_Subcortex_S3_3T.nii",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S3_3T.nii",
+    "sha256": "df86741fedcf5814cf9c91817f794f19b92e149f057335a5568b5fc32bb17bc7",
+    "bytes": 3610868
+  },
+  {
+    "file": "tian/Tian_Subcortex_S3_3T_label.txt",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S3_3T_label.txt",
+    "sha256": "66f0415163459e4b9e8524efeff138b8889a04f635c6e053f663c93fbacb215d",
+    "bytes": 533
+  },
+  {
+    "file": "tian/Tian_Subcortex_S4_3T.nii",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S4_3T.nii",
+    "sha256": "07346e8a5203147da617995bdeb57c91f61e36dc65c6407bf94d5d87bfc31ce3",
+    "bytes": 3610868
+  },
+  {
+    "file": "tian/Tian_Subcortex_S4_3T_label.txt",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/Group-Parcellation/3T/Subcortex-Only/Tian_Subcortex_S4_3T_label.txt",
+    "sha256": "cf83c88cddc3254ced389be1788cd172db4a01cb00f205fdd428804d994b930b",
+    "bytes": 591
+  },
+  {
+    "file": "tian/README.md",
+    "url": "https://raw.githubusercontent.com/yetianmed/subcortex/master/README.md",
+    "sha256": "c18e0c02aa182c212f94580f3e6cabc8dde1165ed2ebb6d4d8a06d0b495cefcd",
+    "bytes": 12413
+  },
+  {
+    "file": "suit/atl-Anatom_space-MNI_dseg.nii",
+    "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/master/Diedrichsen_2009/atl-Anatom_space-MNI_dseg.nii",
+    "sha256": "434471d89ff329e6e14cdecb66998018fe0dcadbbe47781429148d0017598b72",
+    "bytes": 1324108
+  },
+  {
+    "file": "suit/atl-Anatom.tsv",
+    "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/master/Diedrichsen_2009/atl-Anatom.tsv",
+    "sha256": "dc682c847972bd37badaa979526cf22a25bc79cdf50f4f49c107391c517fe7ad",
+    "bytes": 767
+  },
+  {
+    "file": "suit/README.md",
+    "url": "https://raw.githubusercontent.com/DiedrichsenLab/cerebellar_atlases/master/README.md",
+    "sha256": "f6c544b949f5a20059f9f154c93d892909f2a9bf6bba74396a9b15a5df55246e",
+    "bytes": 10904
+  },
+  {
+    "file": "destrieux.tgz",
+    "url": "https://www.nitrc.org/frs/download.php/11942/destrieux2009.tgz",
+    "sha256": "d439fbf36a0c47ea3d12b2c33e0306043e6137b851f0829d6ca3dcb4af355a27",
+    "bytes": 167594
+  },
+  {
+    "file": "juelich-fsl.tgz",
+    "url": "https://www.nitrc.org/frs/download.php/12096/Juelich.tgz",
+    "sha256": "c2b04c25709eb2da4f67c7f1b34a7bee277f9900b33def830664c73b53967634",
+    "bytes": 3740787
+  },
+  {
+    "file": "mni152.nii.gz",
+    "url": "https://raw.githubusercontent.com/niivue/niivue-demo-images/main/mni152.nii.gz",
+    "sha256": "dbbd4542823c1e2b12265c9b7e3cf959ee02ff7829bbf05cdcfbecc0013a00fa",
+    "bytes": 4336029
+  },
+  {
+    "file": "aal-original.tar.gz",
+    "url": "https://www.gin.cnrs.fr/AAL_files/aal_for_SPM12.tar.gz",
+    "sha256": "1a2817b2745ceae8e92f97a82b8a8390965d8b636dd890348de7c908da18975b",
+    "bytes": 351343
+  },
+  {
+    "file": "aal3.tar.gz",
+    "url": "https://www.gin.cnrs.fr/wp-content/uploads/AAL3v2_for_SPM12.tar.gz",
+    "sha256": "63d08024303dd389671f58a6990dbdfce40c828d33af65f2d63c793e9ee5fef6",
+    "bytes": 1509686
+  },
+  {
+    "file": "colin27.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNIColin27/tpl-MNIColin27_T1w.nii.gz",
+    "sha256": "811416b120cca98d28762a5ca3fd9ecbed6c02c1bf0bac8b0ff037518089da3b",
+    "bytes": 14747884
+  },
+  {
+    "file": "colin27-mask.nii.gz",
+    "url": "https://templateflow.s3.amazonaws.com/tpl-MNIColin27/tpl-MNIColin27_desc-brain_mask.nii.gz",
+    "sha256": "21f4de9826077b54c991ec8d91109a0768f928de6ac40f70a8d63bd7650150eb",
+    "bytes": 136842
+  },
+  {
+    "file": "colin27-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/templateflow/tpl-MNIColin27/master/LICENSE",
+    "sha256": "3f9cccbb17f9adc793f933160b44e6a14849be4956fa237ea71d0145bdbf86b8",
+    "bytes": 700
+  },
+  {
+    "file": "desikan/Desikan_space-MNI152NLin6_res-2x2x2.nii.gz",
+    "url": "https://raw.githubusercontent.com/neurodata/neuroparc/master/atlases/label/Human/Desikan_space-MNI152NLin6_res-2x2x2.nii.gz",
+    "sha256": "c82866702cdafed74e053f5dca193f95c180d49693a0f38537bb2307ad932c5d",
+    "bytes": 58395
+  },
+  {
+    "file": "desikan/Desikan.csv",
+    "url": "https://raw.githubusercontent.com/neurodata/neuroparc/master/atlases/label/Human/Anatomical-labels-csv/Desikan.csv",
+    "sha256": "3745f9e175858236f7518ce0a8ec46a9fa205dbdc062d73b853a45c97939d835",
+    "bytes": 1929
+  },
+  {
+    "file": "desikan/Desikan_space-MNI152NLin6_res-2x2x2.json",
+    "url": "https://raw.githubusercontent.com/neurodata/neuroparc/master/atlases/label/Human/Metadata-json/Desikan_space-MNI152NLin6_res-2x2x2.json",
+    "sha256": "06e383a8da49f535b98b871ac711e1576c5cf550ecc0ad9e5849476569655e51",
+    "bytes": 17686
+  },
+  {
+    "file": "desikan/LICENSE.md",
+    "url": "https://raw.githubusercontent.com/neurodata/neuroparc/master/LICENSE.md",
+    "sha256": "85e3db4a482cf530c46a7eee14a094584f37aff2f6a2b11945b5fd6b51cb315d",
+    "bytes": 556
+  },
+  {
+    "file": "glasser/MNI_Glasser_HCP_v1.0.nii.gz",
+    "url": "https://raw.githubusercontent.com/mbedini/The-HCP-MMP1.0-atlas-in-FSL/master/MNI_Glasser_HCP_v1.0.nii.gz",
+    "sha256": "1fa0b064447ac2921d46528f4275c76d66652068e889ae070d81863232e6144c",
+    "bytes": 343154
+  },
+  {
+    "file": "glasser/HCP-Multi-Modal-Parcellation-1.0.xml",
+    "url": "https://raw.githubusercontent.com/mbedini/The-HCP-MMP1.0-atlas-in-FSL/master/HCP-Multi-Modal-Parcellation-1.0.xml",
+    "sha256": "7337cc6d99350fce87be17d1e2d6a6cbb83bf513a8aa00b984f3e13a630ede59",
+    "bytes": 28544
+  },
+  {
+    "file": "glasser/README.md",
+    "url": "https://raw.githubusercontent.com/mbedini/The-HCP-MMP1.0-atlas-in-FSL/master/README.md",
+    "sha256": "8c0f66bd5b002938362bea3b19b7b6f1b62caa79d14a64eea409fdfd0b236891",
+    "bytes": 7467
+  },
+  {
+    "file": "glasser/LICENSE.md",
+    "url": "https://raw.githubusercontent.com/mbedini/The-HCP-MMP1.0-atlas-in-FSL/master/LICENSE.md",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "bytes": 35149
+  },
+  {
+    "file": "jhu/JHU-labels.xml",
+    "url": "https://git.fmrib.ox.ac.uk/fsl/data_atlases/-/raw/master/JHU-labels.xml?inline=false",
+    "sha256": "84aaf30b7aa85a1f8cbb2b2afda368d9db515336dcc2b1df634e857dfa5b8218",
+    "bytes": 4768
+  },
+  {
+    "file": "jhu/JHU-tracts.xml",
+    "url": "https://git.fmrib.ox.ac.uk/fsl/data_atlases/-/raw/master/JHU-tracts.xml?inline=false",
+    "sha256": "d97e37ecca7c8675976f8e7d222e58aa3ce8b20243040c588c6cfcc5b1ab2a65",
+    "bytes": 2094
+  },
+  {
+    "file": "jhu/JHU-ICBM-labels-2mm.nii.gz",
+    "url": "https://git.fmrib.ox.ac.uk/fsl/data_atlases/-/raw/master/JHU/JHU-ICBM-labels-2mm.nii.gz?inline=false",
+    "sha256": "79a3badf78e91c861a10ec5b8eb277e17e6558d39ef93bfd1e365e7464cb9ebf",
+    "bytes": 9634
+  },
+  {
+    "file": "jhu/JHU-ICBM-tracts-maxprob-thr25-2mm.nii.gz",
+    "url": "https://git.fmrib.ox.ac.uk/fsl/data_atlases/-/raw/master/JHU/JHU-ICBM-tracts-maxprob-thr25-2mm.nii.gz?inline=false",
+    "sha256": "4b0907af42a707a4e470f78bd3a3f21099308d8b178bfb7100a765ac88923649",
+    "bytes": 6795
+  },
+  {
+    "file": "jhu/JHU-ICBM-tracts-prob-2mm.nii.gz",
+    "url": "https://git.fmrib.ox.ac.uk/fsl/data_atlases/-/raw/master/JHU/JHU-ICBM-tracts-prob-2mm.nii.gz?inline=false",
+    "sha256": "a8c3063896fa40902534ce95c2031244a8bffa2ad73f9c586585f4affefbb8f4",
+    "bytes": 176540
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr0-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr0-1mm.nii.gz",
+    "sha256": "66c408e78fe04266be5172c5a332d44225c7500545c8aede5956b31a53921622",
+    "bytes": 180388
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr0-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr0-2mm.nii.gz",
+    "sha256": "7cc29b28d24b39016a7f284132d737f9bbbe9926c6a92099b9e6428dfd798383",
+    "bytes": 36850
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-1mm.nii.gz",
+    "sha256": "109ab2c5b4958185ee061f75aa38c9afc37de273e0b2e02288f4ab12693b60d8",
+    "bytes": 146506
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr25-2mm.nii.gz",
+    "sha256": "586d76a7defd278fcea4d83d301994d7e096aa8272d26e3c7539b4f8ebd588c1",
+    "bytes": 29113
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-1mm.nii.gz",
+    "sha256": "35635a983af6de9edf1a24aaf9b4bba96f3a4dbdad756e99f058324424f42ced",
+    "bytes": 129144
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-maxprob-thr50-2mm.nii.gz",
+    "sha256": "8d399877dbb3ecf1ffd37438a1430fb276babac59baf976793b2a7755617cdff",
+    "bytes": 22629
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-prob-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-prob-1mm.nii.gz",
+    "sha256": "e1028f4c98641dc6b49667fc60bfa497899bcb6c13772fa9dcedba18ff58d173",
+    "bytes": 3412276
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cort-prob-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cort-prob-2mm.nii.gz",
+    "sha256": "0a978a190f805bec796a547a444d6b83e170ef47a4955db4337bbba48d2954ac",
+    "bytes": 513170
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr0-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr0-1mm.nii.gz",
+    "sha256": "dd61a65b72b5e514808d1c40c518f23607f9f86462255dac800234e48cf2f32a",
+    "bytes": 317381
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr0-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr0-2mm.nii.gz",
+    "sha256": "97dcab319b054ede80e53ad414659b1ba86ca8d1a840c30d4402d9d9200bc954",
+    "bytes": 62201
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr25-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr25-1mm.nii.gz",
+    "sha256": "74703890d03b2d32a766fc28c7caa50d1b419a479f3fde1651f34edba593305b",
+    "bytes": 266429
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr25-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr25-2mm.nii.gz",
+    "sha256": "26d8462347ec96a63bff47d17e880fa27ecc79c76c8e525c317a3c860418c202",
+    "bytes": 51205
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr50-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr50-1mm.nii.gz",
+    "sha256": "c98c65d1bfb4399a06c6ecfa83e56b2234a49027bdeb2a0ea1f8da404e2de6cf",
+    "bytes": 220027
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr50-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-maxprob-thr50-2mm.nii.gz",
+    "sha256": "90099fcbdb2e84640a7245be42cd61de1317793203542a4649dfe2dd6d10c880",
+    "bytes": 39111
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-prob-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-prob-1mm.nii.gz",
+    "sha256": "c0973f4a32d501a0208d5b87de9ef61d3da6eb3a1d32ffe00b632c8c1505c7f5",
+    "bytes": 6441470
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-cortl-prob-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-cortl-prob-2mm.nii.gz",
+    "sha256": "41efdb587a5c965b6f9014e2ac4362ba0929a58083bea179ebe9e1b549c7e5eb",
+    "bytes": 918168
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr0-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr0-1mm.nii.gz",
+    "sha256": "32ab3781ed71c011de3fde812760725a2b49eb073f4745f519bef357c971a385",
+    "bytes": 213539
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr0-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr0-2mm.nii.gz",
+    "sha256": "ec72eae15911d34d00a27060f2b3a042ffe8f0deefa26d6de64f6b874e13dd04",
+    "bytes": 43710
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr25-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr25-1mm.nii.gz",
+    "sha256": "b5b26dfbe147976021639d2f52d7e0c79a1fe6c46e840c8005251ec7f09fe149",
+    "bytes": 197724
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr25-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr25-2mm.nii.gz",
+    "sha256": "b7e0c54535885de6f3f04d17461a2959aa1df50bfbe9bd53b713925aabc6f330",
+    "bytes": 41196
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-1mm.nii.gz",
+    "sha256": "7a95bb149c3554ee20954b0556f46792496381261feb0eb279fe74f2e60c3590",
+    "bytes": 210234
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-maxprob-thr50-2mm.nii.gz",
+    "sha256": "4bc13d87728ec187219ff5ea8a8d35446a873beb96c97db1a84f39896b0f327f",
+    "bytes": 43245
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-prob-1mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-prob-1mm.nii.gz",
+    "sha256": "86e6f300ddde64f05e4259ffe1624f37adc57789928aca175156a8e21c2dfcee",
+    "bytes": 14636981
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/HarvardOxford-sub-prob-2mm.nii.gz",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/HarvardOxford-sub-prob-2mm.nii.gz",
+    "sha256": "f4201571883bb83e06828e37826b50fd9190f118e6593c906ccbe615b9564321",
+    "bytes": 2109756
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/labels",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/labels",
+    "sha256": "c9659394b6252949e44aebe2a8a8d4fceb18f25bb933367d876adb84989ce80f",
+    "bytes": 60
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford/relabel",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford/relabel",
+    "sha256": "367f47c1ecfa537ba1163cbf0ce8de6a970e3ff5d119e454fa53513e78ed598d",
+    "bytes": 209
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford-Cortical-Lateralized.xml",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford-Cortical-Lateralized.xml",
+    "sha256": "c4dcb7830b9006dc2f1f62ddb29f890122b0638a7418e0f6fb736f85f678f61b",
+    "bytes": 9366
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford-Cortical.xml",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford-Cortical.xml",
+    "sha256": "b8eb5ba5e787a4d3b442f75041f533f31b278a83e467bd2ab22438c1cff36581",
+    "bytes": 4335
+  },
+  {
+    "file": "nilearn/fsl/data/atlases/HarvardOxford-Subcortical.xml",
+    "url": "https://www.nitrc.org/frs/download.php/9902/HarvardOxford.tgz",
+    "archiveMember": "data/atlases/HarvardOxford-Subcortical.xml",
+    "sha256": "576f825bcc51e2afaa5411aef85858091fcaf823e27415f9f263fbca4743ba8b",
+    "bytes": 1968
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/FSL_MNI152_FreeSurferConformed_1mm.nii.gz",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/FSL_MNI152_FreeSurferConformed_1mm.nii.gz",
+    "sha256": "c22b60e0165ea326bf12a94da98c8b70ead7a3002ca389951a5f3329c3c4e5b6",
+    "bytes": 1677200
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_ColorLUT.txt",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_ColorLUT.txt",
+    "sha256": "e9916813b3e195c71892288cea623d4c1610664862792933f75f80b23f173ebb",
+    "bytes": 648
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm.nii.gz",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm.nii.gz",
+    "sha256": "4e4e33ee62349701d9ae6e603d107668838a7ad54ef6d1c7b5a219d66f8e86e5",
+    "bytes": 345045
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask.nii.gz",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_17Networks_MNI152_FreeSurferConformed1mm_LiberalMask.nii.gz",
+    "sha256": "5edbcb5275e859bf58bd9bc2254151e5080f0f572855d7db9e1e2a005635ad97",
+    "bytes": 291581
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_ColorLUT.txt",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_ColorLUT.txt",
+    "sha256": "f6e68af76dffac569c4e6b5d7cfe13036e5ce0a702192a3774ddae48af985e26",
+    "bytes": 288
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm.nii.gz",
+    "sha256": "a11cfeba3c88e25b6cd9c6d4b542ef67d3587bc674023bb8661447f213329d3f",
+    "bytes": 338795
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask.nii.gz",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo2011_7Networks_MNI152_FreeSurferConformed1mm_LiberalMask.nii.gz",
+    "sha256": "c8e2ee01cd23beb1c5424980e0922cce7417c26e3176432dd0074518144851d3",
+    "bytes": 271559
+  },
+  {
+    "file": "nilearn/yeo_2011/Yeo_JNeurophysiol11_MNI152/Yeo_JNeurophysiol11_MNI152_README",
+    "url": "ftp://surfer.nmr.mgh.harvard.edu/pub/data/Yeo_JNeurophysiol11_MNI152.zip",
+    "archiveMember": "Yeo_JNeurophysiol11_MNI152/Yeo_JNeurophysiol11_MNI152_README",
+    "sha256": "839f1990d7c4b058565d7f9beeaf00fabef4bd49510da366586856f730848086",
+    "bytes": 6122
+  }
+]
