@@ -200,6 +200,29 @@ test('parcel contrast stays stable, preserves original LUT colors and restores s
   expect(errors).toEqual([]);
 });
 
+test('AAL palettes bypass stale metadata and cannot inherit the legacy single-color mode',async({page})=>{
+  const metadataRequests:string[]=[];
+  page.on('request',r=>{if(r.url().includes('/manifest.json'))metadataRequests.push(r.url());});
+  // Reproduce an old shared AAL3 view that explicitly chose Original colors.
+  const view=new URLSearchParams({view:JSON.stringify({atlas:'aal3-1mm',colorMode:'original',selected:[1,2]})});
+  await page.goto('./#'+view);
+  await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await expect(page.getByLabel('Region colors')).toHaveValue('enhanced');
+  await expect(page.getByLabel('Region colors').locator('option[value="original"]')).toHaveJSProperty('disabled',true);
+  const left=page.locator('[data-region="1"] .region-color'),right=page.locator('[data-region="2"] .region-color');
+  expect(await left.evaluate(e=>getComputedStyle(e).backgroundColor)).not.toBe(await right.evaluate(e=>getComputedStyle(e).backgroundColor));
+  expect(metadataRequests.some(url=>/aal3-1mm\/manifest\.json\?v=[0-9a-f]{16}/.test(url))).toBe(true);
+  await page.getByLabel('Atlas family').selectOption('Schaefer');await expect(page.getByLabel('Atlas variant')).toBeVisible();
+  await page.getByLabel('Region colors').selectOption('original');
+  await expect(page.getByLabel('Region colors')).toHaveValue('original');
+  await page.getByLabel('Atlas family').selectOption('AAL');await expect(page.locator('.workspace-toolbar')).toContainText('116 regions');
+  await expect(page.getByLabel('Region colors')).toHaveValue('enhanced');
+  await page.getByLabel('Search regions').fill('Precentral');
+  const a=page.locator('[data-region="2001"] .region-color'),b=page.locator('[data-region="2002"] .region-color');
+  expect(await a.evaluate(e=>getComputedStyle(e).backgroundColor)).not.toBe(await b.evaluate(e=>getComputedStyle(e).backgroundColor));
+  await expect(page.getByLabel('Region colors').locator('option[value="original"]')).toHaveJSProperty('disabled',true);
+});
+
 test('exports the checked regions as a native binary NIfTI mask',async({page})=>{
   await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
   await page.getByRole('button',{name:'Export',exact:true}).click();
