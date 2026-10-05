@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import * as nifti from 'nifti-reader-js';
 
 test('About citation and Methods downloads use the archived DOI and current atlas',async({page})=>{
+  test.setTimeout(120000);
   await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
   await page.getByLabel('About and atlas sources').click();
   const dialog=page.getByRole('dialog');
@@ -10,7 +11,8 @@ test('About citation and Methods downloads use the archived DOI and current atla
   await expect(dialog.getByRole('link',{name:'BrainRosetta website'})).toHaveAttribute('href','https://ipsych.korea.ac.kr/BrainRosetta/');
   await expect(dialog.getByRole('link',{name:'Software DOI'})).toHaveAttribute('href','https://doi.org/10.5281/zenodo.23148682');
   await dialog.getByRole('button',{name:'Cite & Methods',exact:true}).click();
-  await expect(page.getByLabel('Coordinate Methods text')).toContainText('MNIColin27');
+  // A first visit downloads the pinned atlases and registration fields.
+  await expect(page.getByLabel('Coordinate Methods text')).toContainText('MNIColin27',{timeout:90000});
   for(const [button,filename,expected] of [['Download BibTeX','BrainRosetta.bib','@software'],['Download RIS','BrainRosetta.ris','TY  - COMP'],['Download Methods & references','BrainRosetta-methods.txt','Precentral_L']]){
     const pending=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();
     const file=await pending;expect(file.suggestedFilename()).toBe(filename);
