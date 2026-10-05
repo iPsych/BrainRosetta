@@ -6,6 +6,7 @@ import { findTransformPath, mapPoints } from './transforms';
 import { sha256Hex } from './checksum';
 import { createRoiMask } from './roi';
 import { writeNifti } from './nifti';
+import { softwareProvenance } from './citation';
 import type { TransformCatalog, TransformField, TransformSpec } from './transforms';
 declare const self: DedicatedWorkerGlobalScope;
 const volumes=new Map<string,{data:Uint16Array,prob?:Uint16Array}>();
@@ -66,7 +67,7 @@ self.onmessage=async(event)=>{
       const result=await createRoiMask(atlas,data,selected,target,kind,forward,backward,{
         cancelled:()=>!!roiJobs.get(requestId),progress:progress=>self.postMessage({requestId,progress}),
       });
-      const metadata={application:'BrainRosetta',format:'NIfTI-1',maskKind:kind,
+      const metadata={application:'BrainRosetta',software:softwareProvenance,format:'NIfTI-1',maskKind:kind,
         atlas:atlas.id,atlasName:atlas.name,atlasVariant:atlas.variant,atlasSource:atlas.source,atlasCitation:atlas.citation,atlasLabelSha256:atlas.sha256,sourceSpace:atlas.space,targetSpace:target.space,
         sourceGrid:{dims:atlas.dims,affine:atlas.affine},
         targetGrid:target,interpolation:result.native?'none (native grid)':'nearest-neighbor',

@@ -2,7 +2,13 @@
 
 A browser-based brain atlas explorer with hierarchical parcellations and coordinate lookup.
 
-[Open BrainRosetta](https://ipsych.github.io/BrainRosetta/)
+[Open BrainRosetta](https://ipsych.korea.ac.kr/BrainRosetta/)
+
+If you use BrainRosetta in your research, please cite:
+
+Kang, J. C. (2026). *BrainRosetta: A browser-based brain atlas explorer* (Version 0.1) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.23148682](https://doi.org/10.5281/zenodo.23148682)
+
+Please also cite the original atlases used in your analysis.
 
 © 2026 June Christoph Kang.
 

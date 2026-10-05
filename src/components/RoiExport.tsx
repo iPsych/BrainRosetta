@@ -2,6 +2,7 @@ import { useEffect,useRef,useState } from 'react';
 import { Download } from 'lucide-react';
 import { download,exportRoi,getRoiOptions } from '../lib/data';
 import { findTransformPath } from '../lib/transforms';
+import { roiMethods } from '../lib/citation';
 import type { Atlas } from '../lib/types';
 import type { MaskKind,RoiGrid } from '../lib/nifti';
 import type { RoiProgress,RoiResult } from '../lib/roi';
@@ -42,6 +43,6 @@ export default function RoiExport({atlas,selected}:{atlas:Atlas;selected:Set<num
     {!ids.length&&<p className="small-muted">Check one or more regions in the region tree first.</p>}
     {busy&&<div className="roi-progress" role="status"><progress max="100" value={progress?.percent||0}/><span>{progress?.stage||'Preparing export'} · {progress?.percent||0}%</span><button className="subtle-button" onClick={()=>controller.current?.abort()}>Cancel ROI export</button></div>}
     {error&&<p className="inline-error" role="alert">{error}</p>}
-    {result&&<div className="roi-saved" role="status"><p>Saved {result.filename}</p><button className="subtle-button" onClick={()=>download(result.filename.replace(/\.nii$/,'.json'),JSON.stringify(result.metadata,null,2),'application/json')}>Save ROI metadata · JSON</button></div>}
+    {result&&<div className="roi-saved" role="status"><p>Saved {result.filename}</p><button className="subtle-button" onClick={()=>download(result.filename.replace(/\.nii$/,'.json'),JSON.stringify(result.metadata,null,2),'application/json')}>Save ROI metadata · JSON</button><button className="subtle-button" onClick={()=>download(result.filename.replace(/\.nii$/,'-methods.txt'),roiMethods(result.metadata))}>Save ROI Methods · TXT</button></div>}
   </section>;
 }

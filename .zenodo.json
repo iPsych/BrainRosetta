@@ -1,0 +1,31 @@
+{
+  "title": "BrainRosetta: A browser-based brain atlas explorer",
+  "upload_type": "software",
+  "description": "BrainRosetta is a browser-based brain atlas explorer with hierarchical parcellations, template-aware coordinate lookup, and NIfTI ROI mask export. All processing runs locally in the browser. Third-party atlases and libraries retain their own licenses and citation requirements.",
+  "creators": [
+    {
+      "name": "Kang, June Christoph"
+    }
+  ],
+  "license": "cc-by-nc-4.0",
+  "access_right": "open",
+  "keywords": [
+    "neuroimaging",
+    "brain atlas",
+    "parcellation",
+    "MRI",
+    "NIfTI"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/iPsych/BrainRosetta",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://ipsych.korea.ac.kr/BrainRosetta/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

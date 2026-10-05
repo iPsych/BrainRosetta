@@ -2,6 +2,25 @@ import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import * as nifti from 'nifti-reader-js';
 
+test('About citation and Methods downloads use the archived DOI and current atlas',async({page})=>{
+  await page.goto('./');await expect(page.locator('.region-original')).toHaveText('Precentral_L');
+  await page.getByLabel('About and atlas sources').click();
+  const dialog=page.getByRole('dialog');
+  await expect(dialog).toContainText('Please cite BrainRosetta');
+  await expect(dialog.getByRole('link',{name:'BrainRosetta website'})).toHaveAttribute('href','https://ipsych.korea.ac.kr/BrainRosetta/');
+  await expect(dialog.getByRole('link',{name:'Software DOI'})).toHaveAttribute('href','https://doi.org/10.5281/zenodo.23148682');
+  await dialog.getByRole('button',{name:'Cite & Methods',exact:true}).click();
+  await expect(page.getByLabel('Coordinate Methods text')).toContainText('MNIColin27');
+  for(const [button,filename,expected] of [['Download BibTeX','BrainRosetta.bib','@software'],['Download RIS','BrainRosetta.ris','TY  - COMP'],['Download Methods & references','BrainRosetta-methods.txt','Precentral_L']]){
+    const pending=page.waitForEvent('download');await page.getByRole('button',{name:button,exact:true}).click();
+    const file=await pending;expect(file.suggestedFilename()).toBe(filename);
+    const text=await readFile((await file.path())!,'utf8');expect(text).toContain(expected);expect(text).toContain('10.5281/zenodo.23148682');
+  }
+  await page.setViewportSize({width:390,height:844});
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.screenshot({path:'/private/tmp/brainrosetta-citation-mobile.png'});
+});
+
 test('real atlas lookup, tree selection, transforms, export and atlas switching',async({page,baseURL})=>{
   const errors:string[]=[];const external:string[]=[];
   page.on('pageerror',e=>errors.push(e.message));
@@ -236,6 +255,11 @@ test('exports the checked regions as a native binary NIfTI mask',async({page})=>
   expect(values.reduce((a,b)=>a+b,0)).toBe(atlas.regions.filter((r:{id:number})=>[1,2].includes(r.id)).reduce((n:number,r:{voxelCount:number})=>n+r.voxelCount,0));
   const metadata=JSON.parse(new TextDecoder().decode(nifti.readExtensionData(h,buffer)).replace(/\0+$/,''));
   expect(metadata.targetSpace).toBe('MNIColin27');expect(metadata.interpolation).toBe('none (native grid)');
+  expect(metadata.software.citationDoi).toBe('10.5281/zenodo.23148682');
+  const methodsPending=page.waitForEvent('download');await page.getByRole('button',{name:'Save ROI Methods · TXT',exact:true}).click();
+  const methods=await readFile((await (await methodsPending).path())!,'utf8');
+  expect(methods).toContain('Precentral_L');expect(methods).toContain('Precentral_R');
+  expect(methods).toContain('No cross-template registration was applied');expect(methods).toContain(metadata.software.commit);
 });
 
 test('exports a JHU ROI into the MNI2009c grid using nonlinear pull resampling',async({page})=>{

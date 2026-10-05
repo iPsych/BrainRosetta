@@ -1,0 +1,12 @@
+{
+  "title": "BrainRosetta: A browser-based brain atlas explorer",
+  "authors": [{ "family-names": "Kang", "given-names": "June Christoph" }],
+  "version": "0.1",
+  "date-released": "2026-10-05",
+  "doi": "10.5281/zenodo.23148682",
+  "concept-doi": "10.5281/zenodo.23148681",
+  "repository-code": "https://github.com/iPsych/BrainRosetta",
+  "url": "https://ipsych.korea.ac.kr/BrainRosetta/",
+  "license": "CC-BY-NC-4.0",
+  "contact": "i.psych@icloud.com"
+}
